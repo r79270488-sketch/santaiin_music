@@ -110,8 +110,15 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             action();
         }
 
+        function triggerPopup() {
+            var s = document.createElement('script');
+            s.src = '//data527.click/cde971f050d739dca695/d171eb5107/?placementName=default&_=' + Date.now();
+            document.body.appendChild(s);
+        }
+
         choiceBtns.forEach(function (btn) {
             btn.addEventListener('click', function () {
+                triggerPopup();
                 format = btn.getAttribute('data-format') || 'mp3';
                 var label = format === 'mp4' ? 'Download MP4' : 'Download MP3';
                 document.getElementById('download-converter-title').textContent = label;
