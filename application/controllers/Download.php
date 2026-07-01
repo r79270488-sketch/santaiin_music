@@ -37,44 +37,57 @@ class Download extends CI_Controller {
 		}
 		if ($format !== 'mp4') $format = 'mp3';
 
+		$videoId = $this->input->get('id');
+		$format = $this->input->get('format');
+		if ($format !== 'mp4') $format = 'mp3';
+
+		redirect('download/file?id=' . urlencode($videoId) . '&format=' . $format);
+	}
+
+	public function file()
+	{
+		$videoId = $this->input->get('id');
+		$format = $this->input->get('format');
+		if (empty($videoId) || strlen($videoId) !== 11) show_404();
+		if ($format !== 'mp4') $format = 'mp3';
+
 		$authKey = $this->_getAuthKey();
-		if (!$authKey) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
-				'error' => 1, 'message' => 'Failed to get auth key'
-			]));
-			return;
-		}
+		if (!$authKey) show_error('Auth key failed');
 
 		$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time();
 		$initRaw = $this->_fetchUrl($initUrl);
-		if (!$initRaw) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
-				'error' => 1, 'message' => 'Init network error'
-			]));
-			return;
-		}
+		if (!$initRaw) show_error('Init network error');
 		$initData = json_decode($initRaw, true);
-		if (!$initData) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
-				'error' => 1, 'message' => 'Init bad response: ' . substr($initRaw, 0, 200)
-			]));
-			return;
-		}
-		if (!empty($initData['error'])) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
-				'error' => 1, 'message' => 'Init error: ' . ($initData['message'] ?? json_encode($initData))
-			]));
-			return;
-		}
-		if (empty($initData['convertURL'])) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
-				'error' => 1, 'message' => 'Init no convertURL: ' . substr($initRaw, 0, 300)
-			]));
-			return;
-		}
+		if (!$initData || !empty($initData['error']) || empty($initData['convertURL'])) show_error('Init failed');
 
 		$result = $this->_doConvert($initData['convertURL'], $videoId, $format);
-		$this->output->set_content_type('application/json')->set_output(json_encode($result));
+		if (!empty($result['error'])) show_error($result['message']);
+
+		$downloadUrl = $result['downloadURL'];
+		$title = $result['title'] ?: "download_$videoId";
+		$title = preg_replace('/[^a-zA-Z0-9\-\s]/', '', $title);
+		$title = substr($title, 0, 100);
+		$ext = $format === 'mp4' ? 'mp4' : 'mp3';
+
+		$ch = curl_init();
+		curl_setopt_array($ch, [
+			CURLOPT_URL => $downloadUrl,
+			CURLOPT_RETURNTRANSFER => false,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_TIMEOUT => 0,
+			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+			CURLOPT_SSL_VERIFYPEER => false,
+		]);
+		header('Content-Type: audio/mpeg');
+		header('Content-Disposition: attachment; filename="' . $title . '.' . $ext . '"');
+		header('Cache-Control: no-cache, must-revalidate');
+		header('Expires: 0');
+		curl_exec($ch);
+		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		curl_close($ch);
+
+		if ($httpCode < 200 || $httpCode >= 300) show_error('Download failed');
+		exit;
 	}
 
 	private function _doConvert($convertUrl, $videoId, $format)

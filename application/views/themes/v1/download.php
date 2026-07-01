@@ -56,23 +56,9 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         <?= siteAd('Ads1', 'ad-slot-inline'); ?>
                     </div>
 
-                    <div class="download-real-action">
-                        <div class="download-arrow-line">^^^^^^^</div>
-                        <button type="button" id="download-ad-button" class="download-ad-button">Download Ads</button>
-                        <div class="download-arrow-line">vvvvvvv</div>
-                        <div class="download-frame-box" data-frame-mp3="https://ytmp3.plus/button-api/#<?= rawurlencode($videoId); ?>|mp3" data-frame-mp4="https://ytmp3.plus/button-api/#<?= rawurlencode($videoId); ?>|mp4">
-                            <iframe
-                                id="download-frame"
-                                src="about:blank"
-                                width="300"
-                                height="54"
-                                title="Download"
-                                scrolling="no"
-                                loading="lazy"
-                                referrerpolicy="no-referrer"
-                                style="border:none;overflow:hidden;">
-                            </iframe>
-                        </div>
+                    <div class="download-loading" aria-live="polite">
+                        <span class="download-spinner"></span>
+                        <span>Mengkonversi, harap tunggu...</span>
                     </div>
 
                     <div class="download-ad-after">
@@ -98,14 +84,10 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
     (function () {
         var buttons = document.querySelectorAll('.download-gate-button');
         var converter = document.getElementById('download-converter');
-        var title = document.getElementById('download-converter-title');
-        var realAction = converter ? converter.querySelector('.download-real-action') : null;
-        var frameBox = converter ? converter.querySelector('.download-frame-box') : null;
-        var frame = document.getElementById('download-frame');
         var popup = document.getElementById('download-popup-ad');
         var popupClose = document.querySelectorAll('[data-download-popup-close]');
-        var adButton = document.getElementById('download-ad-button');
         var adClickUrl = <?= json_encode($adClickUrl); ?>;
+        var videoId = <?= json_encode($videoId); ?>;
         var popupKey = 'downloadPopupSeen:' + <?= json_encode($videoId); ?>;
 
         function openDownloadAdTab() {
@@ -142,18 +124,10 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         }
 
         function startDownloadGate(format) {
-            var label = format === 'mp4' ? 'Download Video' : 'Download MP3';
-            var frameUrl = frameBox ? frameBox.getAttribute('data-frame-' + format) : '';
-
-            if (!converter || !frame || !frameUrl) return;
-
+            if (!converter) return;
             converter.hidden = false;
-            realAction.hidden = false;
-            title.textContent = label;
-            frame.setAttribute('title', label);
-            frame.setAttribute('src', frameUrl);
-
             converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.location.href = '<?= base_url('download/file'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format;
         }
 
         buttons.forEach(function (button) {
@@ -169,8 +143,6 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                 startDownloadGate(button.getAttribute('data-format') || 'mp3');
             });
         });
-
-        if (adButton) adButton.addEventListener('click', openDownloadAdTab);
 
         popupClose.forEach(function (button) {
             button.addEventListener('click', hideDownloadPopup);
