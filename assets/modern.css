@@ -496,13 +496,8 @@ ul.socialicon li.text {
 .ad-slot {
     width: 100%;
     clear: both;
-    margin: 16px 0;
-    padding: 12px;
-    overflow: hidden;
+    margin: 12px 0;
     text-align: center;
-    background: var(--surface-soft);
-    border: 1px dashed var(--border);
-    border-radius: 8px;
 }
 
 .ad-slot-top {
@@ -517,15 +512,6 @@ ul.socialicon li.text {
     margin-bottom: 0;
 }
 
-.ad-label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--muted);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
 
 .ad-content {
     display: flex;
