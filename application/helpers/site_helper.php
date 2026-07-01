@@ -1,4 +1,38 @@
 <?php
+function _httpGet($url, $timeout = 15)
+{
+    if (function_exists('curl_init')) {
+        $ch = curl_init();
+        curl_setopt_array($ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_MAXREDIRS => 3,
+            CURLOPT_TIMEOUT => $timeout,
+            CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_HTTPHEADER => ['Accept: application/json'],
+        ]);
+        $result = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if ($result !== false && $result !== '' && $httpCode >= 200 && $httpCode < 300) {
+            return $result;
+        }
+    }
+
+    $ctx = stream_context_create([
+        'http' => [
+            'ignore_errors' => true,
+            'timeout' => $timeout,
+            'header' => "User-Agent: Mozilla/5.0\r\nAccept: application/json\r\n"
+        ],
+        'ssl' => ['verify_peer' => false, 'verify_peer_name' => false]
+    ]);
+    $result = @file_get_contents($url, false, $ctx);
+    return $result !== false ? $result : '';
+}
+
 function getConfig(){
 	static $config = null;
 	if ($config !== null) return $config;
@@ -111,15 +145,7 @@ function getSongLyrics($title)
     }
 
     $url = 'https://lrclib.net/api/search?' . http_build_query(['q' => $query]);
-    $context = stream_context_create([
-        'http' => [
-            'ignore_errors' => true,
-            'timeout' => 10,
-            'header' => "User-Agent: SantaiinMP3/1.0\r\nAccept: application/json\r\n"
-        ]
-    ]);
-
-    $json = @file_get_contents($url, false, $context);
+    $json = _httpGet($url, 10);
 
     if (!$json) {
         return '';
@@ -159,7 +185,7 @@ function getYoutubeTopSong($limit='20')
 
 		$trending = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&part=contentDetails&chart=mostPopular&maxResults='.$limit.'&videoCategoryId=10&type=video&key='.$getApiYoutube;
 
-		$json =  file_get_contents($trending);
+		$json =  _httpGet($trending, 15);
         $arr = json_decode($json,true);
         $i = 0 ;
         if(isset($arr['items'])){
@@ -222,15 +248,7 @@ function getYoutubePopularMusic($limit = 12, $region = 'ID')
         'key' => $apiKey
     ]);
 
-    $context = stream_context_create([
-        'http' => [
-            'ignore_errors' => true,
-            'timeout' => 15,
-            'header' => "User-Agent: Mozilla/5.0\r\nAccept: application/json\r\n"
-        ]
-    ]);
-
-    $json = @file_get_contents($url, false, $context);
+    $json = _httpGet($url, 15);
 
     if (!$json) {
         return [];
@@ -306,15 +324,7 @@ function getAppleNewReleases($country = 'id', $limit = 12)
     $arr = null;
 
     foreach ($urls as $url) {
-        $context = stream_context_create([
-            'http' => [
-                'ignore_errors' => true,
-                'timeout' => 15,
-                'header' => "User-Agent: Mozilla/5.0\r\nAccept: application/json\r\n"
-            ]
-        ]);
-
-        $json = @file_get_contents($url, false, $context);
+    $json = _httpGet($url, 15);
 
         if (!$json) {
             continue;
@@ -425,15 +435,7 @@ function getYoutubeVideoDetails($videoIds)
         'key' => get_apikey_youtube(),
     ]);
 
-    $context = stream_context_create([
-        'http' => [
-            'ignore_errors' => true,
-            'timeout' => 15,
-            'header' => "User-Agent: Mozilla/5.0\r\nAccept: application/json\r\n"
-        ]
-    ]);
-
-    $json = @file_get_contents($url, false, $context);
+    $json = _httpGet($url, 15);
 
     if (!$json) {
         return [];
@@ -571,15 +573,7 @@ function getYoutubeSearch($query){
 
 	$url = 'https://youtube.googleapis.com/youtube/v3/search?' . http_build_query($params);
 
-    $context = stream_context_create([
-        'http' => [
-            'ignore_errors' => true,
-            'timeout' => 15,
-            'header' => "User-Agent: Mozilla/5.0\r\nAccept: application/json\r\n"
-        ]
-    ]);
-
-	$json =  @file_get_contents($url, false, $context);
+    $json = _httpGet($url, 15);
 
     if (!$json) {
         return [];
@@ -652,16 +646,7 @@ function getItunesPlaylist($country = 'id', $limit = 20)
 
     // Endpoint Apple RSS baru
     $url = "https://rss.applemarketingtools.com/api/v2/{$country}/music/most-played/{$limit}/songs.json";
-
-    $context = stream_context_create([
-        'http' => [
-            'ignore_errors' => true,
-            'timeout' => 15,
-            'header' => "User-Agent: Mozilla/5.0\r\nAccept: application/json\r\n"
-        ]
-    ]);
-
-    $json = @file_get_contents($url, false, $context);
+    $json = _httpGet($url, 15);
 
     if (!$json) {
         log_message('error', 'Apple RSS gagal dibuka: ' . $url);
@@ -710,7 +695,7 @@ function getItunesSearch($query, $country = 'id', $limit = 20)
         'explicit'=> 'Yes'
     ]);
 
-    $json = @file_get_contents($url);
+    $json = _httpGet($url, 10);
 
     if (!$json) {
         return [];
@@ -753,8 +738,7 @@ function getQuickPicksFromItunesYoutube($country = 'id', $limit = 12)
     }
 
     $itunesUrl = "https://rss.itunes.apple.com/api/v1/" . $country . "/itunes-music/top-songs/all/" . $limit . "/explicit.json";
-
-    $itunesJson = @file_get_contents($itunesUrl);
+    $itunesJson = _httpGet($itunesUrl, 15);
 
     if (!$itunesJson) {
         return [];
@@ -826,14 +810,7 @@ function searchYoutubeOneVideo($query)
         'key' => $apiKey
     ]);
 
-    $context = stream_context_create([
-        'http' => [
-            'ignore_errors' => true,
-            'timeout' => 15
-        ]
-    ]);
-
-    $json = @file_get_contents($url, false, $context);
+    $json = _httpGet($url, 15);
 
     if (!$json) {
         return [];
