@@ -29,11 +29,11 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                     </h1>
 
                     <div class="download-choice">
-                        <button type="button" class="download-gate-button" data-format="mp3" data-label="Download MP3">
+                        <button type="button" class="download-gate-button" data-ad="0" data-label="Download MP3">
                             <i class="fas fa-music"></i> Download MP3
                         </button>
-                        <button type="button" class="download-gate-button download-gate-video" data-format="mp4" data-label="Download Video">
-                            <i class="fas fa-video"></i> Download Video
+                        <button type="button" class="download-gate-button" data-ad="1" data-label="Download MP3">
+                            <i class="fas fa-download"></i> Download MP3
                         </button>
                     </div>
 
@@ -50,24 +50,14 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                 </section>
 
                 <section id="download-converter" class="download-converter" hidden>
-                    <h2 id="download-converter-title">Download</h2>
+                    <h2 id="download-converter-title">Download MP3</h2>
 
                     <div class="download-ad-before">
                         <?= siteAd('Ads1', 'ad-slot-inline'); ?>
                     </div>
 
-                    <div class="download-loading" aria-live="polite">
-                        <span class="download-spinner"></span>
-                        <span id="download-status">Mengkonversi, harap tunggu...</span>
-                    </div>
-
-                    <div class="download-ready" hidden>
-                        <button type="button" id="download-clean" class="download-ad-button" style="margin-bottom:8px;">
-                            <i class="fas fa-download"></i> Download MP3
-                        </button>
-                        <button type="button" id="download-ads" class="download-ad-button">
-                            <i class="fas fa-download"></i> Download MP3
-                        </button>
+                    <div id="download-frame-wrap">
+                        <iframe id="download-frame" src="about:blank" width="100%" height="70" allowtransparency="true" style="border:none;overflow:hidden;"></iframe>
                     </div>
 
                     <div class="download-ad-after">
@@ -93,110 +83,43 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
     (function () {
         var buttons = document.querySelectorAll('.download-gate-button');
         var converter = document.getElementById('download-converter');
-        var loading = converter ? converter.querySelector('.download-loading') : null;
-        var ready = converter ? converter.querySelector('.download-ready') : null;
-        var status = document.getElementById('download-status');
-        var btnClean = document.getElementById('download-clean');
-        var btnAds = document.getElementById('download-ads');
+        var frame = document.getElementById('download-frame');
         var popup = document.getElementById('download-popup-ad');
         var popupClose = document.querySelectorAll('[data-download-popup-close]');
         var adClickUrl = <?= json_encode($adClickUrl); ?>;
         var videoId = <?= json_encode($videoId); ?>;
-        var popupKey = 'downloadPopupSeen:' + <?= json_encode($videoId); ?>;
-        var downloadUrl = '';
-        var downloadTitle = '';
 
         function openDownloadAdTab() {
             if (!adClickUrl) return;
             window.open(adClickUrl, '_blank', 'noopener,noreferrer');
         }
 
-        function showDownloadPopup() {
-            if (!popup) return;
-            popup.hidden = false;
-            document.body.classList.add('download-popup-open');
-        }
-
-        function hideDownloadPopup() {
-            if (!popup) return;
-            popup.hidden = true;
-            document.body.classList.remove('download-popup-open');
-        }
-
-        function showAutoPopupOnce() {
-            var hasSeen = false;
-            try {
-                hasSeen = window.sessionStorage.getItem(popupKey) === '1';
-            } catch (error) {
-                hasSeen = popup.getAttribute('data-shown') === '1';
-            }
-            if (hasSeen) return;
-            showDownloadPopup();
-            try {
-                window.sessionStorage.setItem(popupKey, '1');
-            } catch (error) {
-                popup.setAttribute('data-shown', '1');
-            }
-        }
-
-        function startDownload() {
-            if (!converter || !loading || !ready) return;
+        function showFrame() {
+            if (!converter || !frame) return;
             converter.hidden = false;
-            loading.hidden = false;
-            ready.hidden = true;
-            status.textContent = 'Mengkonversi, harap tunggu...';
+            frame.src = 'https://ap-yt.com/mp3/' + videoId;
             converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-            fetch('<?= base_url('download/fetch'); ?>?id=' + encodeURIComponent(videoId) + '&format=mp3')
-                .then(function (r) { return r.json(); })
-                .then(function (data) {
-                    if (data.error || !data.downloadURL) {
-                        status.textContent = 'Gagal: ' + (data.message || 'error');
-                        return;
-                    }
-                    downloadUrl = data.downloadURL;
-                    downloadTitle = data.title || 'download';
-                    loading.hidden = true;
-                    ready.hidden = false;
-                })
-                .catch(function () {
-                    status.textContent = 'Terjadi kesalahan, coba lagi.';
-                });
         }
-
-        btnClean.addEventListener('click', function () {
-            if (!downloadUrl) return;
-            window.location.href = '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(downloadUrl) + '&title=' + encodeURIComponent(downloadTitle);
-        });
-
-        btnAds.addEventListener('click', function () {
-            if (!downloadUrl) return;
-            openDownloadAdTab();
-            window.location.href = '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(downloadUrl) + '&title=' + encodeURIComponent(downloadTitle);
-        });
 
         buttons.forEach(function (button) {
             button.addEventListener('click', function () {
-                var label = button.getAttribute('data-label') || button.textContent.trim();
-                if (button.getAttribute('data-ad-opened') !== '1') {
+                var hasAd = button.getAttribute('data-ad') === '1';
+                if (hasAd && button.getAttribute('data-ad-opened') !== '1') {
                     button.setAttribute('data-ad-opened', '1');
-                    button.classList.add('is-ready');
-                    button.innerHTML = '<i class="fas fa-download"></i> Klik Lagi ' + label;
                     openDownloadAdTab();
+                    button.innerHTML = '<i class="fas fa-download"></i> Klik Lagi Download';
                     return;
                 }
-                startDownload();
+                showFrame();
             });
         });
 
         popupClose.forEach(function (button) {
-            button.addEventListener('click', hideDownloadPopup);
+            button.addEventListener('click', function () { popup.hidden = true; document.body.classList.remove('download-popup-open'); });
         });
 
         document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') hideDownloadPopup();
+            if (event.key === 'Escape') { popup.hidden = true; document.body.classList.remove('download-popup-open'); }
         });
-
-        window.setTimeout(showAutoPopupOnce, 700);
     })();
 </script>
