@@ -176,7 +176,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             finalBtn.addEventListener('click', function () {
                 if (!downloadUrl) return;
                 openDownloadAdTab();
-                window.open(downloadUrl, '_blank');
+                window.location.href = downloadUrl;
             });
         }
 
