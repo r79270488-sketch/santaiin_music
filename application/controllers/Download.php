@@ -45,7 +45,7 @@ class Download extends CI_Controller {
 			return;
 		}
 
-		$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey);
+		$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time();
 		$initRaw = $this->_fetchUrl($initUrl);
 		if (!$initRaw) {
 			$this->output->set_content_type('application/json')->set_output(json_encode([
@@ -158,6 +158,8 @@ class Download extends CI_Controller {
 
 	private function _apiRequest($url)
 	{
+		$sep = (strpos($url, '?') !== false) ? '&' : '?';
+		$url .= $sep . '_=' . time();
 		$res = $this->_fetchUrl($url);
 		return $res ? json_decode($res, true) : null;
 	}
@@ -173,6 +175,7 @@ class Download extends CI_Controller {
 				CURLOPT_MAXREDIRS => 5,
 				CURLOPT_TIMEOUT => 30,
 				CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+				CURLOPT_REFERER => 'https://api.ytmp3.biz/',
 				CURLOPT_SSL_VERIFYPEER => false,
 			]);
 			$result = curl_exec($ch);
@@ -192,7 +195,7 @@ class Download extends CI_Controller {
 				'timeout' => 30,
 				'follow_location' => true,
 				'max_redirects' => 5,
-				'header' => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\r\nAccept: */*\r\n"
+				'header' => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\r\nReferer: https://api.ytmp3.biz/\r\nAccept: */*\r\n"
 			],
 			'ssl' => ['verify_peer' => false, 'verify_peer_name' => false]
 		]);
