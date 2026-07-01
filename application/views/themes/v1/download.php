@@ -63,11 +63,11 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
                     <div class="download-ready" hidden>
                         <button type="button" id="btn-server-a" class="download-ad-button" style="margin-bottom:8px;">
-                            <i class="fas fa-download"></i> Download MP3
+                            <i class="fas fa-download"></i> Download
                         </button>
-                        <button type="button" id="btn-server-b" class="download-ad-button">
-                            <i class="fas fa-download"></i> Download MP3
-                        </button>
+                        <div id="btn-server-b-wrap">
+                            <iframe id="frame-server-b" src="about:blank" width="100%" height="70" allowtransparency="true" style="border:none;overflow:hidden;"></iframe>
+                        </div>
                     </div>
 
                     <div class="download-ad-after">
@@ -97,16 +97,10 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         var ready = converter ? converter.querySelector('.download-ready') : null;
         var status = document.getElementById('download-status');
         var btnA = document.getElementById('btn-server-a');
-        var btnB = document.getElementById('btn-server-b');
+        var frameB = document.getElementById('frame-server-b');
         var popup = document.getElementById('download-popup-ad');
-        var adClickUrl = <?= json_encode($adClickUrl); ?>;
         var videoId = <?= json_encode($videoId); ?>;
         var format = 'mp3';
-
-        function openAd() {
-            if (!adClickUrl) return;
-            window.open(adClickUrl, '_blank', 'noopener,noreferrer');
-        }
 
         function showLoading() {
             if (!converter || !loading || !ready) return;
@@ -122,21 +116,12 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             ready.hidden = false;
         }
 
-        function adGate(btn, dlUrl) {
-            if (btn.getAttribute('data-ad-opened') !== '1') {
-                btn.setAttribute('data-ad-opened', '1');
-                openAd();
-                btn.innerHTML = '<i class="fas fa-download"></i> Klik Lagi Download';
-                return;
-            }
-            window.location.href = dlUrl;
-        }
-
         choiceBtns.forEach(function (btn) {
             btn.addEventListener('click', function () {
                 format = btn.getAttribute('data-format') || 'mp3';
-                var label = format === 'mp4' ? 'Download Video' : 'Download MP3';
+                var label = format === 'mp4' ? 'Download MP4' : 'Download MP3';
                 document.getElementById('download-converter-title').textContent = label;
+                btnA.textContent = label;
 
                 showLoading();
 
@@ -149,9 +134,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         }
                         var proxyUrl = '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(data.downloadURL) + '&title=' + encodeURIComponent(data.title || 'download') + '&format=' + format;
                         btnA.setAttribute('data-url', proxyUrl);
-                        btnA.textContent = label;
-                        btnB.setAttribute('data-url', 'https://ap-yt.com/' + format + '/' + videoId);
-                        btnB.textContent = label;
+                        frameB.src = 'https://ap-yt.com/' + format + '/' + videoId;
                         showReady();
                     })
                     .catch(function () { status.textContent = 'Gagal, coba lagi.'; });
@@ -160,12 +143,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
         btnA.addEventListener('click', function () {
             var url = btnA.getAttribute('data-url');
-            if (url) adGate(btnA, url);
-        });
-
-        btnB.addEventListener('click', function () {
-            var url = btnB.getAttribute('data-url');
-            if (url) adGate(btnB, url);
+            if (url) window.location.href = url;
         });
     })();
 </script>

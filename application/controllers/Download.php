@@ -68,42 +68,8 @@ class Download extends CI_Controller {
 	public function proxy()
 	{
 		$downloadUrl = $this->input->get('url');
-		$title = $this->input->get('title') ?: 'download';
 		if (empty($downloadUrl)) show_404();
-
-		$format = $this->input->get('format');
-		if ($format !== 'mp4') $format = 'mp3';
-		$ext = $format === 'mp4' ? 'mp4' : 'mp3';
-		$title = preg_replace('/[^a-zA-Z0-9\-\s]/', '', $title);
-		$title = substr($title, 0, 100);
-
-		$ch = curl_init();
-		curl_setopt_array($ch, [
-			CURLOPT_URL => $downloadUrl,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_FOLLOWLOCATION => true,
-			CURLOPT_TIMEOUT => 60,
-			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-			CURLOPT_SSL_VERIFYPEER => false,
-			CURLOPT_REFERER => 'https://api.ytmp3.biz/',
-		]);
-		$data = curl_exec($ch);
-		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-		$contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
-		$error = curl_error($ch);
-		curl_close($ch);
-
-		if ($data === false || $data === '' || $httpCode < 200 || $httpCode >= 300) {
-			show_error('Download gagal: ' . ($error ?: "HTTP $httpCode"));
-			return;
-		}
-
-		$this->output
-			->set_content_type($contentType ?: 'audio/mpeg')
-			->set_header('Content-Disposition: attachment; filename="' . $title . '.' . $ext . '"')
-			->set_header('Cache-Control: no-cache, must-revalidate')
-			->set_header('Expires: 0')
-			->set_output($data);
+		redirect($downloadUrl);
 	}
 
 	private function _doConvert($convertUrl, $videoId, $format)
