@@ -2,12 +2,6 @@
 $videoId = isset($videoId) ? trim($videoId) : '';
 $judulVideo = isset($judulVideo) ? trim($judulVideo) : '';
 $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . '/hqdefault.jpg' : '';
-$adClickUrl = base_url();
-$adHtml = siteBase('Ads2');
-
-if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) {
-    $adClickUrl = html_entity_decode($matches[1], ENT_QUOTES, 'UTF-8');
-}
 ?>
 <div id="site-container">
     <div class="container">
@@ -91,13 +85,19 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         var ready = converter ? converter.querySelector('.download-ready') : null;
         var btnA = document.getElementById('btn-server-a');
         var btnB = document.getElementById('btn-server-b');
-        var adClickUrl = <?= json_encode($adClickUrl); ?>;
         var videoId = <?= json_encode($videoId); ?>;
         var format = 'mp3';
 
+        var adsSites = [
+            { name: 'SaktiPlay', query: 'saktiplay' },
+            { name: 'HokyToto777', query: 'hokytoto777' }
+        ];
+
         function openAd() {
-            if (!adClickUrl) return;
-            window.open(adClickUrl, '_blank', 'noopener,noreferrer');
+            var index = parseInt(localStorage.getItem('own_ads_index') || '0', 10);
+            var site = adsSites[index % adsSites.length];
+            localStorage.setItem('own_ads_index', index + 1);
+            window.open('https://www.google.com/search?q=' + encodeURIComponent(site.query), '_blank', 'noopener,noreferrer');
         }
 
         function adGate(btn, action) {
