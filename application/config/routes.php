@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['music/(:any)'] = 'Search/index/$1';
 $route['detail/(:any)'] = 'Detail/index/$1';
 $route['download/fetch'] = 'Download/fetch';
+$route['download/direct'] = 'Download/direct';
 $route['download/proxy'] = 'Download/proxy';
 $route['download'] = 'Download/index/$1';
 $route['search'] = 'Search/cari';

@@ -56,12 +56,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         <?= siteAd('Ads1', 'ad-slot-inline'); ?>
                     </div>
 
-                    <div class="download-loading" aria-live="polite">
-                        <span class="download-spinner"></span>
-                        <span id="download-status">Mengkonversi, harap tunggu...</span>
-                    </div>
-
-                    <div class="download-ready" hidden>
+                    <div class="download-ready">
                         <button type="button" id="btn-server-a" class="download-ad-button" style="margin-bottom:8px;">
                             <i class="fas fa-download"></i> Download
                         </button>
@@ -93,28 +88,12 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
     (function () {
         var choiceBtns = document.querySelectorAll('.download-gate-button');
         var converter = document.getElementById('download-converter');
-        var loading = converter ? converter.querySelector('.download-loading') : null;
         var ready = converter ? converter.querySelector('.download-ready') : null;
-        var status = document.getElementById('download-status');
         var btnA = document.getElementById('btn-server-a');
         var frameB = document.getElementById('frame-server-b');
         var popup = document.getElementById('download-popup-ad');
         var videoId = <?= json_encode($videoId); ?>;
         var format = 'mp3';
-
-        function showLoading() {
-            if (!converter || !loading || !ready) return;
-            converter.hidden = false;
-            loading.hidden = false;
-            ready.hidden = true;
-            status.textContent = 'Mengkonversi, harap tunggu...';
-            converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        function showReady() {
-            loading.hidden = true;
-            ready.hidden = false;
-        }
 
         choiceBtns.forEach(function (btn) {
             btn.addEventListener('click', function () {
@@ -123,21 +102,12 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                 document.getElementById('download-converter-title').textContent = label;
                 btnA.textContent = label;
 
-                showLoading();
-
-                fetch('<?= base_url('download/fetch'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format)
-                    .then(function (r) { return r.json(); })
-                    .then(function (data) {
-                        if (data.error || !data.downloadURL) {
-                            status.textContent = 'Gagal: ' + (data.message || 'error');
-                            return;
-                        }
-                        var proxyUrl = '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(data.downloadURL) + '&title=' + encodeURIComponent(data.title || 'download') + '&format=' + format;
-                        btnA.setAttribute('data-url', proxyUrl);
-                        frameB.src = 'https://ap-yt.com/' + format + '/' + videoId;
-                        showReady();
-                    })
-                    .catch(function () { status.textContent = 'Gagal, coba lagi.'; });
+                if (!converter || !ready) return;
+                converter.hidden = false;
+                ready.hidden = false;
+                btnA.setAttribute('data-url', '<?= base_url('download/direct'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format);
+                frameB.src = 'https://ap-yt.com/' + format + '/' + videoId;
+                converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 

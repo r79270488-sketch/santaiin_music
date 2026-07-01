@@ -65,6 +65,27 @@ class Download extends CI_Controller {
 		$this->output->set_content_type('application/json')->set_output(json_encode($result));
 	}
 
+	public function direct()
+	{
+		$videoId = $this->input->get('id');
+		$format = $this->input->get('format');
+		if (empty($videoId) || strlen($videoId) !== 11) show_404();
+		if ($format !== 'mp4') $format = 'mp3';
+
+		$authKey = $this->_getAuthKey();
+		if (!$authKey) show_error('Auth failed');
+
+		$initRaw = $this->_fetchUrl('https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time());
+		if (!$initRaw) show_error('Init failed');
+		$initData = json_decode($initRaw, true);
+		if (!$initData || empty($initData['convertURL'])) show_error('Init failed');
+
+		$result = $this->_doConvert($initData['convertURL'], $videoId, $format);
+		if (!empty($result['error'])) show_error($result['message']);
+
+		redirect($result['downloadURL']);
+	}
+
 	public function proxy()
 	{
 		$downloadUrl = $this->input->get('url');
