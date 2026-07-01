@@ -51,7 +51,11 @@
                             </a>
                             <div class="fast-download-slot">
                                 <div class="fast-download-title">Fast Download</div>
-                                <?= siteAd('Ads1', 'ad-slot-fast');?>
+                                <div style="padding:4px;">
+                                    <a href="#" class="primary-download js-own-ads" style="display:flex;width:100%;">
+                                        <i class="fas fa-bolt"></i> Download Cepat
+                                    </a>
+                                </div>
                             </div>
                         </section>
 
@@ -89,4 +93,28 @@
                 </div>
             </div>
         </div>
-    
+    </div>
+
+<script>
+(function () {
+    const sites = [
+        { name: 'SaktiPlay', query: 'saktiplay' },
+        { name: 'HokyToto777', query: 'hokytoto777' }
+    ];
+
+    function getNextSite() {
+        let index = parseInt(localStorage.getItem('own_ads_index') || '0', 10);
+        let site = sites[index % sites.length];
+        localStorage.setItem('own_ads_index', index + 1);
+        return site;
+    }
+
+    document.querySelectorAll('.js-own-ads').forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+            const site = getNextSite();
+            window.open('https://www.google.com/search?q=' + encodeURIComponent(site.query), '_blank', 'noopener,noreferrer');
+        });
+    });
+})();
+</script>
