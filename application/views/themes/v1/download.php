@@ -76,7 +76,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
 <div id="download-popup-ad" class="download-popup-ad" hidden>
     <div class="download-popup-backdrop" data-download-popup-close></div>
-    <div class="download-popup-box" role="dialog" aria-modal="true" aria-label="Advertisement">
+    <div class="download-popup-box" role="dialog" aria-modal="true">
         <button type="button" class="download-popup-close" data-download-popup-close aria-label="Tutup iklan">&times;</button>
         <div class="download-popup-content">
             <?= siteAd('Ads2', 'download-popup-slot'); ?>

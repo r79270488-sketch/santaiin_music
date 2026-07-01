@@ -93,9 +93,8 @@ function siteAd($key, $class = '')
 
     $class = trim('ad-slot ' . $class);
 
-    return '<div class="' . html_escape($class) . '" aria-label="Advertisement">'
-        . '<span class="ad-label">Advertisement</span>'
-        . '<div class="ad-content">' . $ad . '</div>'
+    return '<div class="' . html_escape($class) . '">'
+        . $ad
         . '</div>';
 }
 
