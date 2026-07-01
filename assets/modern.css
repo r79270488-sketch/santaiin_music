@@ -245,7 +245,7 @@ span.highlight {
 }
 
 .top-menu > li > a:hover,
-.top-menu > li.home > a {
+.top-menu > li.current-menu-item > a {
     color: #fff !important;
     background: var(--accent) !important;
     border-color: var(--accent);

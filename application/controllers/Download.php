@@ -135,18 +135,40 @@ class Download extends CI_Controller {
 
 	private function _fetchUrl($url)
 	{
-		$ch = curl_init();
-		curl_setopt_array($ch, [
-			CURLOPT_URL => $url,
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_FOLLOWLOCATION => true,
-			CURLOPT_TIMEOUT => 60,
-			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-			CURLOPT_SSL_VERIFYPEER => false,
+		if (function_exists('curl_init')) {
+			$ch = curl_init();
+			curl_setopt_array($ch, [
+				CURLOPT_URL => $url,
+				CURLOPT_RETURNTRANSFER => true,
+				CURLOPT_FOLLOWLOCATION => true,
+				CURLOPT_MAXREDIRS => 5,
+				CURLOPT_TIMEOUT => 30,
+				CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+				CURLOPT_SSL_VERIFYPEER => false,
+			]);
+			$result = curl_exec($ch);
+			$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+			$error = curl_error($ch);
+			curl_close($ch);
+			if ($result === false || $result === '') {
+				if ($error) siteLogMessage('error', 'cURL error: ' . $error . ' URL: ' . $url);
+				return false;
+			}
+			return $result;
+		}
+
+		$ctx = stream_context_create([
+			'http' => [
+				'ignore_errors' => true,
+				'timeout' => 30,
+				'follow_location' => true,
+				'max_redirects' => 5,
+				'header' => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\r\nAccept: */*\r\n"
+			],
+			'ssl' => ['verify_peer' => false, 'verify_peer_name' => false]
 		]);
-		$result = curl_exec($ch);
-		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-		curl_close($ch);
-		return ($httpCode >= 200 && $httpCode < 300) ? $result : false;
+		$result = @file_get_contents($url, false, $ctx);
+		if ($result === false) return false;
+		return $result;
 	}
 }

@@ -113,21 +113,29 @@
                         'Lagu India Bollywood',
                     ];
                     ?>
+                    <?php
+                    $uri = trim(uri_string(), '/');
+                    $isHome = $uri === '' || $uri === '/';
+                    $isLaguTerbaru = strpos($uri, 'music/lagu-terbaru') === 0;
+                    $isViralHits = strpos($uri, 'music/lagu-viral-hits') === 0;
+                    $isRilisTerbaru = strpos($uri, 'music/rilis-terbaru') === 0;
+                    $isViralTiktok = strpos($uri, 'music/lagu-viral-tiktok') === 0;
+                    ?>
                     <ul class="top-menu">
                         <li class="close-btn"><a id="close-menu-button" href="#" rel="nofollow">Close Menu x</a></li>
-                        <li class="home">
+                        <li class="home<?= $isHome ? ' current-menu-item' : ''; ?>">
                             <a href="<?= base_url('/') ?>" title="Kembali ke Beranda" itemprop="url"><span itemprop="name">Home</span></a>
                         </li>
-                        <li class="orange">
+                        <li class="orange<?= $isLaguTerbaru ? ' current-menu-item' : ''; ?>">
                             <a href="<?= search_permalink('lagu terbaru'); ?>" title="Lagu Terbaru" itemprop="url"><span itemprop="name">Lagu Terbaru</span></a>
                         </li>
-                        <li class="merah">
+                        <li class="merah<?= $isViralHits ? ' current-menu-item' : ''; ?>">
                             <a href="<?= search_permalink('lagu viral hits'); ?>" title="Lagu Viral Hits" itemprop="url"><span itemprop="name">Viral Hits</span></a>
                         </li>
-                        <li class="biru-tua">
+                        <li class="biru-tua<?= $isRilisTerbaru ? ' current-menu-item' : ''; ?>">
                             <a href="<?= search_permalink('rilis terbaru'); ?>" title="Rilis Terbaru" itemprop="url"><span itemprop="name">Rilis Terbaru</span></a>
                         </li>
-                        <li class="ungu">
+                        <li class="ungu<?= $isViralTiktok ? ' current-menu-item' : ''; ?>">
                             <a href="<?= search_permalink('lagu viral tiktok'); ?>" title="Lagu Viral Tiktok" itemprop="url"><span itemprop="name">Viral Tiktok</span></a>
                         </li>
                         <li class="hijau menu-item-has-children col-2">

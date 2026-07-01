@@ -73,9 +73,7 @@
                             <div class="featured text-center clearfix">
                                 <div id="video" class="tab-pane">
                                     <div class="embed-responsive embed-responsive-16by9">
-                                        <video width="100%" height="100%" id="youtube-video" playsinline preload="none">
-                                            <source type="video/x-youtube" src="https://www.youtube.com/watch?v=<?= $id_video;?>" />
-                                        </video>
+                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?= $id_video; ?>?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                                     </div>
                                 </div>
                             </div>

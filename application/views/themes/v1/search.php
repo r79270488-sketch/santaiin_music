@@ -13,18 +13,20 @@
                         <div itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
                             <span itemprop="keywords" content="Lagu,Download,Album,Lirik,Artis,Video,Mp3,Song"></span>
                             <span itemprop="publisher" content="Youtube"></span>
-                            <span itemprop="name" content="Memories Maroon 5"></span>
-                            <span itemprop="byArtist" content="Memories Maroon 5"></span>
+                            <span itemprop="name" content="<?= html_escape($title_parameter); ?>"></span>
+                            <span itemprop="byArtist" content="<?= html_escape($title_parameter); ?>"></span>
                             <div itemprop="track" itemscope="itemscope" itemtype="http://schema.org/ItemList">
-                                <span itemprop="numberOfItems" content="10"></span>
-                                    <!-- batas Music -->
+                                <span itemprop="numberOfItems" content="<?= count($music); ?>"></span>
+                                    <?php if (empty($music)): ?>
+                                    <p>Tidak ada hasil untuk "<?= html_escape($title_parameter); ?>". Coba kata kunci lain.</p>
+                                    <?php else: ?>
                                     <?php
                                     $i = 0;
                                     foreach ($music as $item) {
                                         $i++;
                                     ?>
                                 <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
-                                    <span itemprop="position" content="1"></span>
+                                    <span itemprop="position" content="<?= $i; ?>"></span>
                                     <div class="content-left pull-left">
                                         <img src="<?= $item['thumbnails'];?>" alt="<?= $item['judul'];?>" width="120" height="90" loading="lazy" itemprop="image" />
                                     </div>
@@ -43,7 +45,7 @@
                                     </div>
                                 </div>
                                 <?php } ?>
-                                <!-- End -->
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
