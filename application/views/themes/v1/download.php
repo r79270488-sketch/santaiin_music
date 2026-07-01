@@ -62,11 +62,11 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                     </div>
 
                     <div class="download-ready" hidden>
-                        <button type="button" id="btn-server-a" class="download-ad-button" style="margin-bottom:8px;background:var(--accent);">
-                            <i class="fas fa-download"></i> Server A
+                        <button type="button" id="btn-server-a" class="download-ad-button" style="margin-bottom:8px;">
+                            <i class="fas fa-download"></i> Download
                         </button>
                         <button type="button" id="btn-server-b" class="download-ad-button">
-                            <i class="fas fa-download"></i> Server B
+                            <i class="fas fa-download"></i> Download
                         </button>
                     </div>
 
@@ -122,10 +122,21 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             ready.hidden = false;
         }
 
+        function adGate(btn, dlUrl) {
+            if (btn.getAttribute('data-ad-opened') !== '1') {
+                btn.setAttribute('data-ad-opened', '1');
+                openAd();
+                btn.innerHTML = '<i class="fas fa-download"></i> Klik Lagi Download';
+                return;
+            }
+            window.location.href = dlUrl;
+        }
+
         choiceBtns.forEach(function (btn) {
             btn.addEventListener('click', function () {
                 format = btn.getAttribute('data-format') || 'mp3';
-                document.querySelector('.download-converter-title').textContent = 'Download ' + format.toUpperCase();
+                var label = format === 'mp4' ? 'Download Video' : 'Download MP3';
+                document.querySelector('.download-converter-title').textContent = label;
 
                 showLoading();
 
@@ -136,7 +147,11 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                             status.textContent = 'Gagal: ' + (data.message || 'error');
                             return;
                         }
-                        btnA.setAttribute('data-url', '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(data.downloadURL) + '&title=' + encodeURIComponent(data.title || 'download') + '&format=' + format);
+                        var proxyUrl = '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(data.downloadURL) + '&title=' + encodeURIComponent(data.title || 'download') + '&format=' + format;
+                        btnA.setAttribute('data-url', proxyUrl);
+                        btnA.textContent = label;
+                        btnB.setAttribute('data-url', 'https://ap-yt.com/' + format + '/' + videoId);
+                        btnB.textContent = label;
                         showReady();
                     })
                     .catch(function () { status.textContent = 'Gagal, coba lagi.'; });
@@ -145,17 +160,12 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
         btnA.addEventListener('click', function () {
             var url = btnA.getAttribute('data-url');
-            if (url) window.location.href = url;
+            if (url) adGate(btnA, url);
         });
 
         btnB.addEventListener('click', function () {
-            if (btnB.getAttribute('data-ad-opened') !== '1') {
-                btnB.setAttribute('data-ad-opened', '1');
-                openAd();
-                btnB.innerHTML = '<i class="fas fa-download"></i> Klik Lagi Server B';
-                return;
-            }
-            window.location.href = 'https://ap-yt.com/' + format + '/' + videoId;
+            var url = btnB.getAttribute('data-url');
+            if (url) adGate(btnB, url);
         });
     })();
 </script>
