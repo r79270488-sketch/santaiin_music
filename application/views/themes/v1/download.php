@@ -143,7 +143,9 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         return;
                     }
                     showLoading();
-                    showButton('https://ap-yt.com/mp3/' + videoId);
+                    setTimeout(function () {
+                        showButton('https://ap-yt.com/mp3/' + videoId);
+                    }, 1500);
                 }
             });
         });
