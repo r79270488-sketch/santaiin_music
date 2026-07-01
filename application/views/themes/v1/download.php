@@ -56,12 +56,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         <?= siteAd('Ads1', 'ad-slot-inline'); ?>
                     </div>
 
-                    <div class="download-loading" aria-live="polite">
-                        <span class="download-spinner"></span>
-                        <span>Tunggu <strong id="download-countdown">3</strong> detik, link download sedang disiapkan.</span>
-                    </div>
-
-                    <div class="download-real-action" hidden>
+                    <div class="download-real-action">
                         <div class="download-arrow-line">^^^^^^^</div>
                         <button type="button" id="download-ad-button" class="download-ad-button">Download Ads</button>
                         <div class="download-arrow-line">vvvvvvv</div>
@@ -104,8 +99,6 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         var buttons = document.querySelectorAll('.download-gate-button');
         var converter = document.getElementById('download-converter');
         var title = document.getElementById('download-converter-title');
-        var countdown = document.getElementById('download-countdown');
-        var loading = converter ? converter.querySelector('.download-loading') : null;
         var realAction = converter ? converter.querySelector('.download-real-action') : null;
         var frameBox = converter ? converter.querySelector('.download-frame-box') : null;
         var frame = document.getElementById('download-frame');
@@ -114,7 +107,6 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         var adButton = document.getElementById('download-ad-button');
         var adClickUrl = <?= json_encode($adClickUrl); ?>;
         var popupKey = 'downloadPopupSeen:' + <?= json_encode($videoId); ?>;
-        var timer = null;
 
         function openDownloadAdTab() {
             if (!adClickUrl) return;
@@ -152,32 +144,16 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         function startDownloadGate(format) {
             var label = format === 'mp4' ? 'Download Video' : 'Download MP3';
             var frameUrl = frameBox ? frameBox.getAttribute('data-frame-' + format) : '';
-            var seconds = 3;
 
             if (!converter || !frame || !frameUrl) return;
 
-            window.clearInterval(timer);
             converter.hidden = false;
-            loading.hidden = false;
-            realAction.hidden = true;
-            frame.setAttribute('src', 'about:blank');
+            realAction.hidden = false;
             title.textContent = label;
-            if (adButton) adButton.textContent = label;
-            countdown.textContent = seconds;
+            frame.setAttribute('title', label);
+            frame.setAttribute('src', frameUrl);
 
             converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-            timer = window.setInterval(function () {
-                seconds -= 1;
-                countdown.textContent = seconds;
-                if (seconds <= 0) {
-                    window.clearInterval(timer);
-                    loading.hidden = true;
-                    realAction.hidden = false;
-                    frame.setAttribute('title', label);
-                    frame.setAttribute('src', frameUrl);
-                }
-            }, 1000);
         }
 
         buttons.forEach(function (button) {
