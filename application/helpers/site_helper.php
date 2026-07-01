@@ -549,11 +549,16 @@ function isSingleMusicVideo($title, $duration, $categoryId)
 }
 
 function getYoutubeSearch($query){
-    $apiKey = get_apikey_youtube();
+    $cacheFile = FCPATH . 'application/cache/search_' . md5(strtolower($query)) . '.json';
+    $cacheTime = 3 * 24 * 60 * 60;
 
-    if (empty($apiKey)) {
-        return [];
+    if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheTime) {
+        $cache = json_decode(file_get_contents($cacheFile), true);
+        if (is_array($cache)) return $cache;
     }
+
+    $apiKey = get_apikey_youtube();
+    if (empty($apiKey)) return [];
 
     $params = [
         'part' => 'snippet',
@@ -572,44 +577,32 @@ function getYoutubeSearch($query){
     }
 
 	$url = 'https://youtube.googleapis.com/youtube/v3/search?' . http_build_query($params);
-
     $json = _httpGet($url, 15);
-
-    if (!$json) {
-        return [];
-    }
+    if (!$json) return [];
 
 	$data = json_decode($json,true);
-
     if (isset($data['error']) || empty($data['items'])) {
         siteLogMessage('error', 'YouTube search music error: ' . $json);
         return [];
     }
 
     $videoIds = [];
-
     foreach ($data['items'] as $item) {
-        if (!empty($item['id']['videoId'])) {
-            $videoIds[] = $item['id']['videoId'];
-        }
+        if (!empty($item['id']['videoId'])) $videoIds[] = $item['id']['videoId'];
     }
 
     $details = getYoutubeVideoDetails($videoIds);
 	$results = [];
 
 	foreach ($data['items'] as $item) {
-        if (empty($item['id']['videoId'])) {
-            continue;
-        }
+        if (empty($item['id']['videoId'])) continue;
 
         $videoId = $item['id']['videoId'];
         $title = $item['snippet']['title'] ?? '';
         $duration = $details[$videoId]['duration'] ?? 0;
         $categoryId = $details[$videoId]['categoryId'] ?? '';
 
-        if (!isSingleMusicVideo($title, $duration, $categoryId)) {
-            continue;
-        }
+        if (!isSingleMusicVideo($title, $duration, $categoryId)) continue;
 
         $results[] = [
             'id' => $videoId,
@@ -623,10 +616,12 @@ function getYoutubeSearch($query){
             'duration' => $duration,
         ];
 
-        if (count($results) >= 20) {
-            break;
-        }
+        if (count($results) >= 20) break;
 	}
+
+    if (!empty($results)) {
+        file_put_contents($cacheFile, json_encode($results));
+    }
 
 	return $results;
 }
