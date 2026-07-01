@@ -62,11 +62,11 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                     </div>
 
                     <div class="download-ready" hidden>
-                        <button type="button" id="download-clean" class="download-ad-button" style="background:var(--accent);margin-bottom:8px;">
-                            <i class="fas fa-download"></i> Download Langsung
+                        <button type="button" id="download-clean" class="download-ad-button" style="margin-bottom:8px;">
+                            <i class="fas fa-download"></i> Download MP3
                         </button>
                         <button type="button" id="download-ads" class="download-ad-button">
-                            <i class="fas fa-ad"></i> Download (Buka Iklan)
+                            <i class="fas fa-download"></i> Download MP3
                         </button>
                     </div>
 
