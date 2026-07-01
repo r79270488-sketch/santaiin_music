@@ -37,37 +37,45 @@ class Download extends CI_Controller {
 		}
 		if ($format !== 'mp4') $format = 'mp3';
 
-		$videoId = $this->input->get('id');
-		$format = $this->input->get('format');
-		if ($format !== 'mp4') $format = 'mp3';
-
-		redirect('download/file?id=' . urlencode($videoId) . '&format=' . $format);
-	}
-
-	public function file()
-	{
-		$videoId = $this->input->get('id');
-		$format = $this->input->get('format');
-		if (empty($videoId) || strlen($videoId) !== 11) show_404();
-		if ($format !== 'mp4') $format = 'mp3';
-
 		$authKey = $this->_getAuthKey();
-		if (!$authKey) show_error('Auth key failed');
+		if (!$authKey) {
+			$this->output->set_content_type('application/json')->set_output(json_encode([
+				'error' => 1, 'message' => 'Failed to get auth key'
+			]));
+			return;
+		}
 
 		$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time();
 		$initRaw = $this->_fetchUrl($initUrl);
-		if (!$initRaw) show_error('Init network error');
+		if (!$initRaw) {
+			$this->output->set_content_type('application/json')->set_output(json_encode([
+				'error' => 1, 'message' => 'Init network error'
+			]));
+			return;
+		}
 		$initData = json_decode($initRaw, true);
-		if (!$initData || !empty($initData['error']) || empty($initData['convertURL'])) show_error('Init failed');
+		if (!$initData || !empty($initData['error']) || empty($initData['convertURL'])) {
+			$this->output->set_content_type('application/json')->set_output(json_encode([
+				'error' => 1, 'message' => 'Init failed'
+			]));
+			return;
+		}
 
 		$result = $this->_doConvert($initData['convertURL'], $videoId, $format);
-		if (!empty($result['error'])) show_error($result['message']);
+		$this->output->set_content_type('application/json')->set_output(json_encode($result));
+	}
 
-		$downloadUrl = $result['downloadURL'];
-		$title = $result['title'] ?: "download_$videoId";
+	public function proxy()
+	{
+		$downloadUrl = $this->input->get('url');
+		$title = $this->input->get('title') ?: 'download';
+		if (empty($downloadUrl)) show_404();
+
+		$format = $this->input->get('format');
+		if ($format !== 'mp4') $format = 'mp3';
+		$ext = $format === 'mp4' ? 'mp4' : 'mp3';
 		$title = preg_replace('/[^a-zA-Z0-9\-\s]/', '', $title);
 		$title = substr($title, 0, 100);
-		$ext = $format === 'mp4' ? 'mp4' : 'mp3';
 
 		$ch = curl_init();
 		curl_setopt_array($ch, [
@@ -77,6 +85,7 @@ class Download extends CI_Controller {
 			CURLOPT_TIMEOUT => 0,
 			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
 			CURLOPT_SSL_VERIFYPEER => false,
+			CURLOPT_REFERER => 'https://api.ytmp3.biz/',
 		]);
 		header('Content-Type: audio/mpeg');
 		header('Content-Disposition: attachment; filename="' . $title . '.' . $ext . '"');

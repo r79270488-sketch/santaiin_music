@@ -58,7 +58,13 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
                     <div class="download-loading" aria-live="polite">
                         <span class="download-spinner"></span>
-                        <span>Mengkonversi, harap tunggu...</span>
+                        <span id="download-status">Mengkonversi, harap tunggu...</span>
+                    </div>
+
+                    <div class="download-ready" hidden>
+                        <button type="button" id="download-button" class="download-ad-button">
+                            <i class="fas fa-download"></i> Download Sekarang
+                        </button>
                     </div>
 
                     <div class="download-ad-after">
@@ -84,6 +90,12 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
     (function () {
         var buttons = document.querySelectorAll('.download-gate-button');
         var converter = document.getElementById('download-converter');
+        var loading = converter ? converter.querySelector('.download-loading') : null;
+        var ready = converter ? converter.querySelector('.download-ready') : null;
+        var status = document.getElementById('download-status');
+        var downloadBtn = document.getElementById('download-button');
+        var downloadUrl = '';
+        var downloadTitle = '';
         var popup = document.getElementById('download-popup-ad');
         var popupClose = document.querySelectorAll('[data-download-popup-close]');
         var adClickUrl = <?= json_encode($adClickUrl); ?>;
@@ -124,10 +136,36 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         }
 
         function startDownloadGate(format) {
-            if (!converter) return;
+            if (!converter || !loading || !ready) return;
             converter.hidden = false;
+            loading.hidden = false;
+            ready.hidden = true;
+            status.textContent = 'Mengkonversi, harap tunggu...';
             converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            window.location.href = '<?= base_url('download/file'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format;
+
+            fetch('<?= base_url('download/fetch'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format)
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    if (data.error || !data.downloadURL) {
+                        status.textContent = 'Gagal: ' + (data.message || 'error');
+                        return;
+                    }
+                    downloadUrl = data.downloadURL;
+                    downloadTitle = data.title || 'download';
+                    loading.hidden = true;
+                    ready.hidden = false;
+                })
+                .catch(function () {
+                    status.textContent = 'Terjadi kesalahan, coba lagi.';
+                });
+        }
+
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', function () {
+                if (!downloadUrl) return;
+                openDownloadAdTab();
+                window.location.href = '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(downloadUrl) + '&title=' + encodeURIComponent(downloadTitle) + '&format=' + (document.querySelector('.download-gate-button.is-ready')?.getAttribute('data-format') || 'mp3');
+            });
         }
 
         buttons.forEach(function (button) {
