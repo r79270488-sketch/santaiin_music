@@ -29,11 +29,11 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                     </h1>
 
                     <div class="download-choice">
-                        <button type="button" class="download-gate-button" data-type="proxy">
+                        <button type="button" class="download-gate-button" data-format="mp3">
                             <i class="fas fa-music"></i> Download MP3
                         </button>
-                        <button type="button" class="download-gate-button" data-type="apyt">
-                            <i class="fas fa-download"></i> Download MP3
+                        <button type="button" class="download-gate-button" data-format="mp4">
+                            <i class="fas fa-video"></i> Download Video
                         </button>
                     </div>
 
@@ -50,7 +50,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                 </section>
 
                 <section id="download-converter" class="download-converter" hidden>
-                    <h2 id="download-converter-title">Download MP3</h2>
+                    <h2 id="download-converter-title">Download</h2>
 
                     <div class="download-ad-before">
                         <?= siteAd('Ads1', 'ad-slot-inline'); ?>
@@ -62,8 +62,11 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                     </div>
 
                     <div class="download-ready" hidden>
-                        <button type="button" id="download-button" class="download-ad-button">
-                            <i class="fas fa-download"></i> Download
+                        <button type="button" id="btn-server-a" class="download-ad-button" style="margin-bottom:8px;background:var(--accent);">
+                            <i class="fas fa-download"></i> Server A
+                        </button>
+                        <button type="button" id="btn-server-b" class="download-ad-button">
+                            <i class="fas fa-download"></i> Server B
                         </button>
                     </div>
 
@@ -88,16 +91,17 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
 <script>
     (function () {
-        var buttons = document.querySelectorAll('.download-gate-button');
+        var choiceBtns = document.querySelectorAll('.download-gate-button');
         var converter = document.getElementById('download-converter');
         var loading = converter ? converter.querySelector('.download-loading') : null;
         var ready = converter ? converter.querySelector('.download-ready') : null;
         var status = document.getElementById('download-status');
-        var downloadBtn = document.getElementById('download-button');
+        var btnA = document.getElementById('btn-server-a');
+        var btnB = document.getElementById('btn-server-b');
         var popup = document.getElementById('download-popup-ad');
         var adClickUrl = <?= json_encode($adClickUrl); ?>;
         var videoId = <?= json_encode($videoId); ?>;
-        var downloadUrl = '';
+        var format = 'mp3';
 
         function openAd() {
             if (!adClickUrl) return;
@@ -113,46 +117,45 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function showButton(url) {
-            downloadUrl = url;
+        function showReady() {
             loading.hidden = true;
             ready.hidden = false;
         }
 
-        buttons.forEach(function (button) {
-            button.addEventListener('click', function () {
-                var type = button.getAttribute('data-type');
+        choiceBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                format = btn.getAttribute('data-format') || 'mp3';
+                document.querySelector('.download-converter-title').textContent = 'Download ' + format.toUpperCase();
 
-                if (type === 'proxy') {
-                    showLoading();
-                    fetch('<?= base_url('download/fetch'); ?>?id=' + encodeURIComponent(videoId) + '&format=mp3')
-                        .then(function (r) { return r.json(); })
-                        .then(function (data) {
-                            if (data.error || !data.downloadURL) {
-                                status.textContent = 'Gagal: ' + (data.message || 'error');
-                                return;
-                            }
-                            showButton('<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(data.downloadURL) + '&title=' + encodeURIComponent(data.title || 'download'));
-                        })
-                        .catch(function () { status.textContent = 'Gagal, coba lagi.'; });
-                } else {
-                    if (button.getAttribute('data-ad-opened') !== '1') {
-                        button.setAttribute('data-ad-opened', '1');
-                        openAd();
-                        button.innerHTML = '<i class="fas fa-download"></i> Klik Lagi';
-                        return;
-                    }
-                    showLoading();
-                    setTimeout(function () {
-                        showButton('https://ap-yt.com/mp3/' + videoId);
-                    }, 1500);
-                }
+                showLoading();
+
+                fetch('<?= base_url('download/fetch'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format)
+                    .then(function (r) { return r.json(); })
+                    .then(function (data) {
+                        if (data.error || !data.downloadURL) {
+                            status.textContent = 'Gagal: ' + (data.message || 'error');
+                            return;
+                        }
+                        btnA.setAttribute('data-url', '<?= base_url('download/proxy'); ?>?url=' + encodeURIComponent(data.downloadURL) + '&title=' + encodeURIComponent(data.title || 'download') + '&format=' + format);
+                        showReady();
+                    })
+                    .catch(function () { status.textContent = 'Gagal, coba lagi.'; });
             });
         });
 
-        downloadBtn.addEventListener('click', function () {
-            if (!downloadUrl) return;
-            window.location.href = downloadUrl;
+        btnA.addEventListener('click', function () {
+            var url = btnA.getAttribute('data-url');
+            if (url) window.location.href = url;
+        });
+
+        btnB.addEventListener('click', function () {
+            if (btnB.getAttribute('data-ad-opened') !== '1') {
+                btnB.setAttribute('data-ad-opened', '1');
+                openAd();
+                btnB.innerHTML = '<i class="fas fa-download"></i> Klik Lagi Server B';
+                return;
+            }
+            window.location.href = 'https://ap-yt.com/' + format + '/' + videoId;
         });
     })();
 </script>
