@@ -1,26 +1,6 @@
 <?php
 function _httpGet($url, $timeout = 15)
 {
-    if (function_exists('curl_init')) {
-        $ch = curl_init();
-        curl_setopt_array($ch, [
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_MAXREDIRS => 3,
-            CURLOPT_TIMEOUT => $timeout,
-            CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            CURLOPT_SSL_VERIFYPEER => false,
-            CURLOPT_HTTPHEADER => ['Accept: application/json'],
-        ]);
-        $result = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-        if ($result !== false && $result !== '' && $httpCode >= 200 && $httpCode < 300) {
-            return $result;
-        }
-    }
-
     $ctx = stream_context_create([
         'http' => [
             'ignore_errors' => true,
@@ -30,7 +10,27 @@ function _httpGet($url, $timeout = 15)
         'ssl' => ['verify_peer' => false, 'verify_peer_name' => false]
     ]);
     $result = @file_get_contents($url, false, $ctx);
-    return $result !== false ? $result : '';
+    if ($result !== false) return $result;
+
+    if (function_exists('curl_init')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Accept: application/json']);
+        @curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_MAXREDIRS, 3);
+        $result = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if ($result !== false && $result !== '' && $httpCode >= 200 && $httpCode < 300) {
+            return $result;
+        }
+    }
+
+    return '';
 }
 
 function getConfig(){
