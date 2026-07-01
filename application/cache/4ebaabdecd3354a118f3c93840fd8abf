@@ -1,0 +1,723 @@
+a:2:{s:6:"expire";i:1782852623;s:7:"headers";a:0:{}}ENDCI---><!DOCTYPE html>
+<html lang="id" prefix="og: http://ogp.me/ns#">
+    <head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="profile" href="https://gmpg.org/xfn/11" />
+        <title>Mk-Agc MP3 Pencarian MP3 | KANG DANIEL PARANOIA</title>
+		<!-- Meta -->
+        <meta name="description" content="Situs Streaming dan Download MP3 Gratis" />
+        <meta property="og:description" content="Situs Streaming dan Download MP3 Gratis" />
+        <meta property="og:site_name" content="Mk-Agc MP3" />
+		<meta name="keywords" content="ScriptAgc,AgcMp3,download lagu gratis, download lagu indonesia, download lagu alan walker, download lagu deny caknan, KANG DANIEL PARANOIA">
+		<meta name="author" content="Mang Kanya">
+        <meta property="og:title" content="Download Lagu Pencarian MP3 | KANG DANIEL PARANOIA" />
+        
+        <meta name="theme-color" content="#E91E63" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C600%2C700" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" media="screen" href="https://santaiin.xyz/assets/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <header id="header-container" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div id="header">
+                <div class="container">
+                    <div class="list-table clearfix">
+                        <div class="table-row">
+                            <div class="table-cell logo">
+                                <a href="https://santaiin.xyz/" title="Download Lagu Gratis" itemprop="url">
+                                    <img src="https://www.downloadlagu123.biz/themes/lagu123/assets/images/logo.png" alt="Download Lagu Gratis" title="Download Lagu Gratis" itemprop="image" />
+                                </a>
+                                <a id="mobile-menu" class="pull-right" href="#menu" rel="nofollow"><i class="fas fa-bars"></i><span class="screen-reader-text">Mobile Menu</span></a>
+                            </div>
+                            <div class="table-cell search">
+                                <form class="searchform searchform" method="get" action="https://santaiin.xyz/search">
+                                    <label class="screen-reader-text" for="search-form">Search Form:</label>
+                                    <input type="text" name="q" id="search-form" class="ui-autocomplete-input" autofocus="autofocus" value="" autocomplete="off" placeholder="Cari Lagu!! Artis - Judul lagu." minlength="3" />
+                                    <button type="submit" role="button" class="search-submit"><i class="fas fa-search"></i><span class="screen-reader-text">Cari</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="top-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                <div class="container">
+                    <ul class="top-menu">
+                        <li class="close-btn"><a id="close-menu-button" href="#" rel="nofollow">Close Menu x</a></li>
+                        <li class="home">
+                            <a href="https://santaiin.xyz/" title="Kembali ke Beranda" itemprop="url"><span itemprop="name">Home</span></a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://santaiin.xyz/music/lagu-k-pop-korean-pop" title="Download Lagu kpop korean pop" itemprop="url"><span itemprop="name">Lagu Kpop</span></a>
+                        </li>
+                        <li class="merah">
+                            <a href="https://santaiin.xyz/music/lagu-india-bollywood" title="Download Lagu India Bollywood" itemprop="url"><span itemprop="name">Lagu India Bollywood</span></a>
+                        </li>
+                        <li class="biru-tua">
+                            <a href="https://santaiin.xyz/music/lagu-dangdut" title="Download Lagu Dangdut" itemprop="url"><span itemprop="name">Lagu Dangdut</span></a>
+                        </li>
+                        <li class="ungu">
+                            <a href="https://santaiin.xyz/music/lagu-indonesia" title="Download Lagu Pop Indonesia" itemprop="url"><span itemprop="name">Lagu Pop Indonesia</span></a>
+                        </li>
+                        <li class="hijau menu-item-has-children">
+                            <a href="#" rel="nofollow">Lainnya</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-alternatif" title="Download Lagu Alternatif" itemprop="url"><span itemprop="name">Lagu Alternatif</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-blues" title="Download Lagu Blues" itemprop="url"><span itemprop="name">Lagu Blues</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" title="Download Lagu jpop japan pop" itemprop="url"><span itemprop="name">Lagu Jpop</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-malaysia" title="Download Lagu Malaysia" itemprop="url"><span itemprop="name">Lagu Malaysia</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/planetlagu" title="Planetlagu" itemprop="url"><span itemprop="name">Planetlagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/gudanglagu" title="Gudang Lagu" itemprop="url"><span itemprop="name">Gudang Lagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/stafaband" title="Stafaband MP3" itemprop="url"><span itemprop="name">Stafaband</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-dj" title="Download Lagu DJ" itemprop="url"><span itemprop="name">Lagu DJ</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header><!-- Header -->
+        <div id="site-container">
+            <div class="container">
+                <div class="row" itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                    <div class="col-md-main">
+                        <h1 class="main-title" itemprop="headline"><span class="highlight">Download Lagu MP3</span> KANG DANIEL PARANOIA</h1>
+                        <div class="success" itemprop="text">
+                            <p>Download lagu mp3 KANG DANIEL PARANOIA gratis. KANG DANIEL PARANOIA planetlagu, download mp3 KANG DANIEL PARANOIA, download KANG DANIEL PARANOIA lagu123.</p>
+                            <p>Terdapat sekitar 10 pencarian lagu yang dapat anda download dan dengarkan. Jika hasilnya tidak berisi lagu yang anda cari, cobalah mencari lagu dengan nama artis atau dengan nama lagu tersebut.</p>
+                        </div>
+
+                        <div itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                            <span itemprop="keywords" content="Lagu,Download,Album,Lirik,Artis,Video,Mp3,Song"></span>
+                            <span itemprop="publisher" content="Youtube"></span>
+                            <span itemprop="name" content="Memories Maroon 5"></span>
+                            <span itemprop="byArtist" content="Memories Maroon 5"></span>
+                            <div itemprop="track" itemscope="itemscope" itemtype="http://schema.org/ItemList">
+                                <span itemprop="numberOfItems" content="10"></span>
+                                    <!-- batas Music -->
+                                                                    <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/zLrWIgkvoB0/hqdefault.jpg" alt="강다니엘(KANGDANIEL) - PARANOIA M/V" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/zLrWIgkvoB0-강다니엘KANGDANIEL-PARANOIA-MV" title="강다니엘(KANGDANIEL) - PARANOIA M/V mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">강다니엘(KANGDANIEL) - PARANOIA M/V</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(1,'zLrWIgkvoB0');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="강다니엘(KANGDANIEL) - PARANOIA M/V" href="https://santaiin.xyz/download?id=zLrWIgkvoB0&title=강다니엘(KANGDANIEL) - PARANOIA M/V" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-1"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/yRsUmo3miyY/hqdefault.jpg" alt="강다니엘(KANGDANIEL) - PARANOIA M/V (Performance ver.)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/yRsUmo3miyY-강다니엘KANGDANIEL-PARANOIA-MV-Performance-ver" title="강다니엘(KANGDANIEL) - PARANOIA M/V (Performance ver.) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">강다니엘(KANGDANIEL) - PARANOIA M/V (Performance ver.)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(2,'yRsUmo3miyY');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="강다니엘(KANGDANIEL) - PARANOIA M/V (Performance ver.)" href="https://santaiin.xyz/download?id=yRsUmo3miyY&title=강다니엘(KANGDANIEL) - PARANOIA M/V (Performance ver.)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-2"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/S7WWoEu8aAs/hqdefault.jpg" alt="[Special Performance] 강다니엘(KANGDANIEL) - PARANOIA" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/S7WWoEu8aAs-Special-Performance-강다니엘KANGDANIEL-PARANOIA" title="[Special Performance] 강다니엘(KANGDANIEL) - PARANOIA mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">[Special Performance] 강다니엘(KANGDANIEL) - PARANOIA</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(3,'S7WWoEu8aAs');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="[Special Performance] 강다니엘(KANGDANIEL) - PARANOIA" href="https://santaiin.xyz/download?id=S7WWoEu8aAs&title=[Special Performance] 강다니엘(KANGDANIEL) - PARANOIA" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-3"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/C0SuHZddZgc/hqdefault.jpg" alt="[KANGDANIEL - PARANOIA] Comeback Stage |#엠카운트다운 | M COUNTDOWN EP.698 | Mnet 210218 방송" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/C0SuHZddZgc-KANGDANIEL-PARANOIA-Comeback-Stage-엠카운트다운-M-COUNTDOWN-EP698-Mnet-210218-방송" title="[KANGDANIEL - PARANOIA] Comeback Stage |#엠카운트다운 | M COUNTDOWN EP.698 | Mnet 210218 방송 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">[KANGDANIEL - PARANOIA] Comeback Stage |#엠카운트다운 | M COUNTDOWN EP.698 | Mnet 210218 방송</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(4,'C0SuHZddZgc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="[KANGDANIEL - PARANOIA] Comeback Stage |#엠카운트다운 | M COUNTDOWN EP.698 | Mnet 210218 방송" href="https://santaiin.xyz/download?id=C0SuHZddZgc&title=[KANGDANIEL - PARANOIA] Comeback Stage |#엠카운트다운 | M COUNTDOWN EP.698 | Mnet 210218 방송" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-4"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/vQ75-B5bzmE/hqdefault.jpg" alt="KANG DANIEL PARANOIA lyrics (강다니엘 PARANOIA 가사) (Color Coded Lyrics)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/vQ75-B5bzmE-KANG-DANIEL-PARANOIA-lyrics-강다니엘-PARANOIA-가사-Color-Coded-Lyrics" title="KANG DANIEL PARANOIA lyrics (강다니엘 PARANOIA 가사) (Color Coded Lyrics) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">KANG DANIEL PARANOIA lyrics (강다니엘 PARANOIA 가사) (Color Coded Lyrics)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(5,'vQ75-B5bzmE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="KANG DANIEL PARANOIA lyrics (강다니엘 PARANOIA 가사) (Color Coded Lyrics)" href="https://santaiin.xyz/download?id=vQ75-B5bzmE&title=KANG DANIEL PARANOIA lyrics (강다니엘 PARANOIA 가사) (Color Coded Lyrics)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-5"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/wjVEwsjPCqE/hqdefault.jpg" alt="KANG DANIEL(강다니엘) - PARANOIA @인기가요 inkigayo 20210221" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/wjVEwsjPCqE-KANG-DANIEL강다니엘-PARANOIA-인기가요-inkigayo-20210221" title="KANG DANIEL(강다니엘) - PARANOIA @인기가요 inkigayo 20210221 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">KANG DANIEL(강다니엘) - PARANOIA @인기가요 inkigayo 20210221</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(6,'wjVEwsjPCqE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="KANG DANIEL(강다니엘) - PARANOIA @인기가요 inkigayo 20210221" href="https://santaiin.xyz/download?id=wjVEwsjPCqE&title=KANG DANIEL(강다니엘) - PARANOIA @인기가요 inkigayo 20210221" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-6"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Z4SMWaIHFHU/hqdefault.jpg" alt="[Dance Practice] 강다니엘(KANGDANIEL) - PARANOIA" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Z4SMWaIHFHU-Dance-Practice-강다니엘KANGDANIEL-PARANOIA" title="[Dance Practice] 강다니엘(KANGDANIEL) - PARANOIA mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">[Dance Practice] 강다니엘(KANGDANIEL) - PARANOIA</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(7,'Z4SMWaIHFHU');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="[Dance Practice] 강다니엘(KANGDANIEL) - PARANOIA" href="https://santaiin.xyz/download?id=Z4SMWaIHFHU&title=[Dance Practice] 강다니엘(KANGDANIEL) - PARANOIA" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-7"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/xWOlAHQKYT0/hqdefault.jpg" alt="KANG DANIEL (강다니엘) - PARANOIA | 2021 THE FACT MUSIC AWARDS" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/xWOlAHQKYT0-KANG-DANIEL-강다니엘-PARANOIA-2021-THE-FACT-MUSIC-AWARDS" title="KANG DANIEL (강다니엘) - PARANOIA | 2021 THE FACT MUSIC AWARDS mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">KANG DANIEL (강다니엘) - PARANOIA | 2021 THE FACT MUSIC AWARDS</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(8,'xWOlAHQKYT0');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="KANG DANIEL (강다니엘) - PARANOIA | 2021 THE FACT MUSIC AWARDS" href="https://santaiin.xyz/download?id=xWOlAHQKYT0&title=KANG DANIEL (강다니엘) - PARANOIA | 2021 THE FACT MUSIC AWARDS" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-8"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/hT-q6YFnJEA/hqdefault.jpg" alt="KANGDANIEL(강다니엘) - PARANOIA (Music Bank) | KBS WORLD TV 210219" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/hT-q6YFnJEA-KANGDANIEL강다니엘-PARANOIA-Music-Bank-KBS-WORLD-TV-210219" title="KANGDANIEL(강다니엘) - PARANOIA (Music Bank) | KBS WORLD TV 210219 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">KANGDANIEL(강다니엘) - PARANOIA (Music Bank) | KBS WORLD TV 210219</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(9,'hT-q6YFnJEA');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="KANGDANIEL(강다니엘) - PARANOIA (Music Bank) | KBS WORLD TV 210219" href="https://santaiin.xyz/download?id=hT-q6YFnJEA&title=KANGDANIEL(강다니엘) - PARANOIA (Music Bank) | KBS WORLD TV 210219" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-9"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/dIr0Iz-IRMU/hqdefault.jpg" alt="[PLAY COLOR] 강다니엘(KANGDANIEL) - PARANOIA" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/dIr0Iz-IRMU-PLAY-COLOR-강다니엘KANGDANIEL-PARANOIA" title="[PLAY COLOR] 강다니엘(KANGDANIEL) - PARANOIA mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">[PLAY COLOR] 강다니엘(KANGDANIEL) - PARANOIA</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(10,'dIr0Iz-IRMU');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="[PLAY COLOR] 강다니엘(KANGDANIEL) - PARANOIA" href="https://santaiin.xyz/download?id=dIr0Iz-IRMU&title=[PLAY COLOR] 강다니엘(KANGDANIEL) - PARANOIA" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-10"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/embv5K3qld8/hqdefault.jpg" alt="[KANGDANIEL - PARANOIA] KPOP TV Show | #엠카운트다운 | M COUNTDOWN EP.699 | Mnet 210225 방송" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/embv5K3qld8-KANGDANIEL-PARANOIA-KPOP-TV-Show-엠카운트다운-M-COUNTDOWN-EP699-Mnet-210225-방송" title="[KANGDANIEL - PARANOIA] KPOP TV Show | #엠카운트다운 | M COUNTDOWN EP.699 | Mnet 210225 방송 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">[KANGDANIEL - PARANOIA] KPOP TV Show | #엠카운트다운 | M COUNTDOWN EP.699 | Mnet 210225 방송</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(11,'embv5K3qld8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="[KANGDANIEL - PARANOIA] KPOP TV Show | #엠카운트다운 | M COUNTDOWN EP.699 | Mnet 210225 방송" href="https://santaiin.xyz/download?id=embv5K3qld8&title=[KANGDANIEL - PARANOIA] KPOP TV Show | #엠카운트다운 | M COUNTDOWN EP.699 | Mnet 210225 방송" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-11"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/qVW9pMTQ8B8/hqdefault.jpg" alt="KANGDANIEL, PARANOIA (강다니엘, PARANOIA) [THE SHOW 210223]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/qVW9pMTQ8B8-KANGDANIEL-PARANOIA-강다니엘-PARANOIA-THE-SHOW-210223" title="KANGDANIEL, PARANOIA (강다니엘, PARANOIA) [THE SHOW 210223] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">KANGDANIEL, PARANOIA (강다니엘, PARANOIA) [THE SHOW 210223]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(12,'qVW9pMTQ8B8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="KANGDANIEL, PARANOIA (강다니엘, PARANOIA) [THE SHOW 210223]" href="https://santaiin.xyz/download?id=qVW9pMTQ8B8&title=KANGDANIEL, PARANOIA (강다니엘, PARANOIA) [THE SHOW 210223]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-12"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/pB8Ta3jciNA/hqdefault.jpg" alt="강다니엘(KANG DANIEL)- PARANOIA (Audio)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/pB8Ta3jciNA-강다니엘KANG-DANIEL-PARANOIA-Audio" title="강다니엘(KANG DANIEL)- PARANOIA (Audio) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">강다니엘(KANG DANIEL)- PARANOIA (Audio)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(13,'pB8Ta3jciNA');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="강다니엘(KANG DANIEL)- PARANOIA (Audio)" href="https://santaiin.xyz/download?id=pB8Ta3jciNA&title=강다니엘(KANG DANIEL)- PARANOIA (Audio)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-13"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/yYeGid_8Zg4/hqdefault.jpg" alt="[ENG SUB] 210221 Stray Kids  Chan listening to KANG DANIEL&#39;s PARANOIA" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/yYeGid_8Zg4-ENG-SUB-210221-Stray-Kids-Chan-listening-to-KANG-DANIELs-PARANOIA" title="[ENG SUB] 210221 Stray Kids  Chan listening to KANG DANIEL&#39;s PARANOIA mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">[ENG SUB] 210221 Stray Kids  Chan listening to KANG DANIEL&#39;s PARANOIA</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(14,'yYeGid_8Zg4');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="[ENG SUB] 210221 Stray Kids  Chan listening to KANG DANIEL&#39;s PARANOIA" href="https://santaiin.xyz/download?id=yYeGid_8Zg4&title=[ENG SUB] 210221 Stray Kids  Chan listening to KANG DANIEL&#39;s PARANOIA" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-14"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/IH1lTqcw224/hqdefault.jpg" alt="강다니엘(KANGDANIEL) - &quot;PARANOIA&quot; Dance Performance | 월간뮤플리" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/IH1lTqcw224-강다니엘KANGDANIEL-PARANOIA-Dance-Performance-월간뮤플리" title="강다니엘(KANGDANIEL) - &quot;PARANOIA&quot; Dance Performance | 월간뮤플리 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">강다니엘(KANGDANIEL) - &quot;PARANOIA&quot; Dance Performance | 월간뮤플리</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(15,'IH1lTqcw224');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="강다니엘(KANGDANIEL) - &quot;PARANOIA&quot; Dance Performance | 월간뮤플리" href="https://santaiin.xyz/download?id=IH1lTqcw224&title=강다니엘(KANGDANIEL) - &quot;PARANOIA&quot; Dance Performance | 월간뮤플리" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-15"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/_rnCY4wqPT8/hqdefault.jpg" alt="KANGDANIEL PARANOIA Mirrored Dance Practice" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/_rnCY4wqPT8-KANGDANIEL-PARANOIA-Mirrored-Dance-Practice" title="KANGDANIEL PARANOIA Mirrored Dance Practice mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">KANGDANIEL PARANOIA Mirrored Dance Practice</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(16,'_rnCY4wqPT8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="KANGDANIEL PARANOIA Mirrored Dance Practice" href="https://santaiin.xyz/download?id=_rnCY4wqPT8&title=KANGDANIEL PARANOIA Mirrored Dance Practice" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-16"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Mxqh2zQDAnc/hqdefault.jpg" alt="강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210227 방송" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Mxqh2zQDAnc-강다니엘-파라노이아-KANGDANIEL-PARANOIA-MBC-210227-방송" title="강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210227 방송 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210227 방송</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(17,'Mxqh2zQDAnc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210227 방송" href="https://santaiin.xyz/download?id=Mxqh2zQDAnc&title=강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210227 방송" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-17"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/53gkrU-Vjxo/hqdefault.jpg" alt="강다니엘(KANGDANIEL) - ‘PARANOIA’ Comeback Trailer" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/53gkrU-Vjxo-강다니엘KANGDANIEL-PARANOIA-Comeback-Trailer" title="강다니엘(KANGDANIEL) - ‘PARANOIA’ Comeback Trailer mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">강다니엘(KANGDANIEL) - ‘PARANOIA’ Comeback Trailer</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(18,'53gkrU-Vjxo');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="강다니엘(KANGDANIEL) - ‘PARANOIA’ Comeback Trailer" href="https://santaiin.xyz/download?id=53gkrU-Vjxo&title=강다니엘(KANGDANIEL) - ‘PARANOIA’ Comeback Trailer" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-18"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/QB96U_GYAUQ/hqdefault.jpg" alt="‘최초 공개’ 궁극의 퍼포먼스 ‘강다니엘’의 ‘PARANOIA’ 무대" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/QB96U_GYAUQ-최초-공개-궁극의-퍼포먼스-강다니엘의-PARANOIA-무대" title="‘최초 공개’ 궁극의 퍼포먼스 ‘강다니엘’의 ‘PARANOIA’ 무대 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">‘최초 공개’ 궁극의 퍼포먼스 ‘강다니엘’의 ‘PARANOIA’ 무대</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(19,'QB96U_GYAUQ');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="‘최초 공개’ 궁극의 퍼포먼스 ‘강다니엘’의 ‘PARANOIA’ 무대" href="https://santaiin.xyz/download?id=QB96U_GYAUQ&title=‘최초 공개’ 궁극의 퍼포먼스 ‘강다니엘’의 ‘PARANOIA’ 무대" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-19"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/phfMEx2P7DY/hqdefault.jpg" alt="강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210220 방송" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/phfMEx2P7DY-강다니엘-파라노이아-KANGDANIEL-PARANOIA-MBC-210220-방송" title="강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210220 방송 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210220 방송</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(20,'phfMEx2P7DY');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210220 방송" href="https://santaiin.xyz/download?id=phfMEx2P7DY&title=강다니엘 - 파라노이아 (KANGDANIEL - PARANOIA), MBC 210220 방송" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-20"></div>
+                                    </div>
+                                </div>
+                                                                <!-- End -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-sidebar">
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Lagu</span> Pilihan</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/mungkin-hari-ini-esok-atau-nanti" itemprop="url">Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berbeza-kasta" itemprop="url">Berbeza Kasta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berhenti-kasihan" itemprop="url">Berhenti Kasihan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bts-life-goes-on" itemprop="url">Bts Life Goes On</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro-ttm-akustik" itemprop="url">Cerito Loro Ttm Akustik</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cukup-dikenang-saja" itemprop="url">Cukup Dikenang Saja</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/denny-caknan" itemprop="url">Denny Caknan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bahagialah-bersamanya" itemprop="url">Bahagialah Bersamanya</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/girl-in-the-mirror" itemprop="url">Girl In The Mirror</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bertaut" itemprop="url">Bertaut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cidro-2" itemprop="url">Cidro 2</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-budi-doremi" itemprop="url">Friendzone Budi Doremi</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro" itemprop="url">Cerito Loro</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-cover-feby-putri" itemprop="url">Friendzone Cover Feby Putri</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aduh-mamae" itemprop="url">Aduh Mamae</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aku-ikhlas" itemprop="url">Aku Ikhlas</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/at-my-worst" itemprop="url">At My Worst</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-tanpa-tapi" itemprop="url">Cinta Tanpa Tapi</a></li>
+                                                           </ul>
+                        </div>
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Pencarian</span> Terakhir</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bertaut" itemprop="url">Bertaut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/kang-daniel-paranoia" itemprop="url">Kang Daniel Paranoia</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-dangdut" itemprop="url">Lagu Dangdut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/angin-dalu" itemprop="url">Angin Dalu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aku-ikhlas" itemprop="url">Aku Ikhlas</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/dj-bila-dia-menyukaiku" itemprop="url">Dj Bila Dia Menyukaiku</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-blues" itemprop="url">Lagu Blues</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-indonesia" itemprop="url">Lagu Indonesia</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/pink-sweat-at-my-worst" itemprop="url">Pink Sweat At My Worst</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/arsy-widianto-padamu-luka" itemprop="url">Arsy Widianto Padamu Luka</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-dj" itemprop="url">Lagu Dj</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/eyes-blue-or-brown-cant-remember" itemprop="url">Eyes Blue Or Brown Cant Remember</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gellen-martadinata-selamat-ulang-tahun" itemprop="url">Gellen Martadinata Selamat Ulang Tahun</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/mungkin-hari-ini-esok-atau-nanti" itemprop="url">Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/via-vallen" itemprop="url">Via Vallen</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bts-life-goes-on" itemprop="url">Bts Life Goes On</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gone-rose-blackpink" itemprop="url">Gone Rose Blackpink</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/nella-kharisma" itemprop="url">Nella Kharisma</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" itemprop="url">Lagu J Pop Japan Pop</a></li>
+                                                    </div>
+                    </div>                </div>
+            </div>
+        </div>
+      <!-- Footer -->
+<div id="footer-container">
+            <div class="container">
+                <p class="copy">
+                    &copy; 2026 Mk-Agc MP3. All rights reserved.
+                </p>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="https://santaiin.xyz/page/disclaimer" title="Disclaimer">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/copyright" title="Copyright">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/term-of-services" title="Term Of Services">TOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function playAudio(id, ytid) {
+                remPlayer();
+                var html = '<audio src="https://www.youtube.com/watch?v=' + ytid + '" type="video/youtube" controls autoplay style="width:100%">Browser tidak support bro, coba update browser nya!</audio>';
+                $("#player-" + id).html(html);
+                renderPlayer();
+            }
+            function renderPlayer() {
+                $("audio,video").mediaelementplayer();
+            }
+            function remPlayer() {
+                $(".divPlayer").html("");
+            }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                        .then(function (registration) {
+                            console.log("PWA service worker ready");
+                            registration.update();
+                        })
+                        .catch(function (error) {
+                            console.log("Registration failed with " + error);
+                        });
+                });
+            }
+            var $ = jQuery.noConflict();
+            (function ($) {
+                "use strict";
+                jQuery(function ($) {
+                    $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+                    $(window).resize(function () {
+                        $.sidr("close", "menu");
+                    });
+                    $("#sidr-id-close-menu-button").click(function (e) {
+                        e.preventDefault();
+                        $.sidr("close", "menu");
+                    });
+                    $(".sidr-class-menu-item-has-children").click(function () {
+                        $(this)
+                            .find("ul.sidr-class-sub-menu")
+                            .slideToggle(function (e) {
+                                e.preventDefault();
+                            });
+                    });
+                    $(document.body).click(function (e) {
+                        if ($.sidr("status").opened) {
+                            var isBlur = true;
+                            if ($(e.target).closest(".sidr").length !== 0) {
+                                isBlur = false;
+                            }
+                            if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                                isBlur = false;
+                            }
+                            if (isBlur) {
+                                $.sidr("close", $.sidr("status").opened);
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#youtube-audio, #youtube-video").mediaelementplayer();
+        });
+        jQuery(function ($) {
+            var collapsedSize = "40px";
+            $(".more-content").each(function () {
+                var h = this.scrollHeight;
+                console.log(h);
+                var div = $(this);
+                if (h > 30) {
+                    div.css("height", collapsedSize);
+                    div.after('<button class="more-button">Lihat Selengkapnya</button>');
+                    var link = div.next();
+                    link.click(function (e) {
+                        e.stopPropagation();
+                        if (link.text() != "Lihat lebih sedikit") {
+                            link.text("Lihat lebih sedikit");
+                            div.animate({ height: h });
+                        } else {
+                            div.animate({ height: collapsedSize });
+                            link.text("Lihat Selengkapnya");
+                        }
+                    });
+                }
+            });
+        });
+    })(jQuery);
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                .then(function (registration) {
+                    console.log("PWA service worker ready");
+                    registration.update();
+                })
+                .catch(function (error) {
+                    console.log("Registration failed with " + error);
+                });
+        });
+    }
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+            $(window).resize(function () {
+                $.sidr("close", "menu");
+            });
+            $("#sidr-id-close-menu-button").click(function (e) {
+                e.preventDefault();
+                $.sidr("close", "menu");
+            });
+            $(".sidr-class-menu-item-has-children").click(function () {
+                $(this)
+                    .find("ul.sidr-class-sub-menu")
+                    .slideToggle(function (e) {
+                        e.preventDefault();
+                    });
+            });
+            $(document.body).click(function (e) {
+                if ($.sidr("status").opened) {
+                    var isBlur = true;
+                    if ($(e.target).closest(".sidr").length !== 0) {
+                        isBlur = false;
+                    }
+                    if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                        isBlur = false;
+                    }
+                    if (isBlur) {
+                        $.sidr("close", $.sidr("status").opened);
+                    }
+                }
+            });
+        });
+    })(jQuery);
+</script>
+    </body>
+</html>

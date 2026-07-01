@@ -1,0 +1,723 @@
+a:2:{s:6:"expire";i:1782891653;s:7:"headers";a:0:{}}ENDCI---><!DOCTYPE html>
+<html lang="id" prefix="og: http://ogp.me/ns#">
+    <head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="profile" href="https://gmpg.org/xfn/11" />
+        <title>Santaiin MP3 Pencarian MP3 | Cuek</title>
+		<!-- Meta -->
+        <meta name="description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:site_name" content="Santaiin MP3" />
+		<meta name="keywords" content="download mp3, lagu mp3, lagu terbaru, lagu viral tiktok, lagu indonesia terbaru, lagu barat terbaru, chart musik, top lagu, musik trending, rekomendasi lagu, cuek">
+		<meta name="author" content="Mang Santai">
+        <meta property="og:title" content="Download Lagu Pencarian MP3 | Cuek" />
+        
+        <meta name="theme-color" content="#E91E63" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C600%2C700" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" media="screen" href="https://santaiin.xyz/assets/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <header id="header-container" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div id="header">
+                <div class="container">
+                    <div class="list-table clearfix">
+                        <div class="table-row">
+                            <div class="table-cell logo">
+                                <a href="https://santaiin.xyz/" title="Download Lagu Gratis" itemprop="url">
+                                    <img src="https://www.downloadlagu123.biz/themes/lagu123/assets/images/logo.png" alt="Download Lagu Gratis" title="Download Lagu Gratis" itemprop="image" />
+                                </a>
+                                <a id="mobile-menu" class="pull-right" href="#menu" rel="nofollow"><i class="fas fa-bars"></i><span class="screen-reader-text">Mobile Menu</span></a>
+                            </div>
+                            <div class="table-cell search">
+                                <form class="searchform searchform" method="get" action="https://santaiin.xyz/search">
+                                    <label class="screen-reader-text" for="search-form">Search Form:</label>
+                                    <input type="text" name="q" id="search-form" class="ui-autocomplete-input" autofocus="autofocus" value="" autocomplete="off" placeholder="Cari Lagu!! Artis - Judul lagu." minlength="3" />
+                                    <button type="submit" role="button" class="search-submit"><i class="fas fa-search"></i><span class="screen-reader-text">Cari</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="top-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                <div class="container">
+                    <ul class="top-menu">
+                        <li class="close-btn"><a id="close-menu-button" href="#" rel="nofollow">Close Menu x</a></li>
+                        <li class="home">
+                            <a href="https://santaiin.xyz/" title="Kembali ke Beranda" itemprop="url"><span itemprop="name">Home</span></a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://santaiin.xyz/music/lagu-k-pop-korean-pop" title="Download Lagu kpop korean pop" itemprop="url"><span itemprop="name">Lagu Kpop</span></a>
+                        </li>
+                        <li class="merah">
+                            <a href="https://santaiin.xyz/music/lagu-india-bollywood" title="Download Lagu India Bollywood" itemprop="url"><span itemprop="name">Lagu India Bollywood</span></a>
+                        </li>
+                        <li class="biru-tua">
+                            <a href="https://santaiin.xyz/music/lagu-dangdut" title="Download Lagu Dangdut" itemprop="url"><span itemprop="name">Lagu Dangdut</span></a>
+                        </li>
+                        <li class="ungu">
+                            <a href="https://santaiin.xyz/music/lagu-indonesia" title="Download Lagu Pop Indonesia" itemprop="url"><span itemprop="name">Lagu Pop Indonesia</span></a>
+                        </li>
+                        <li class="hijau menu-item-has-children">
+                            <a href="#" rel="nofollow">Lainnya</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-alternatif" title="Download Lagu Alternatif" itemprop="url"><span itemprop="name">Lagu Alternatif</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-blues" title="Download Lagu Blues" itemprop="url"><span itemprop="name">Lagu Blues</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" title="Download Lagu jpop japan pop" itemprop="url"><span itemprop="name">Lagu Jpop</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-malaysia" title="Download Lagu Malaysia" itemprop="url"><span itemprop="name">Lagu Malaysia</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/planetlagu" title="Planetlagu" itemprop="url"><span itemprop="name">Planetlagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/gudanglagu" title="Gudang Lagu" itemprop="url"><span itemprop="name">Gudang Lagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/stafaband" title="Stafaband MP3" itemprop="url"><span itemprop="name">Stafaband</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-dj" title="Download Lagu DJ" itemprop="url"><span itemprop="name">Lagu DJ</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header><!-- Header -->
+        <div id="site-container">
+            <div class="container">
+                <div class="row" itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                    <div class="col-md-main">
+                        <h1 class="main-title" itemprop="headline"><span class="highlight">Download Lagu MP3</span> Cuek</h1>
+                        <div class="success" itemprop="text">
+                            <p>Download lagu mp3 Cuek gratis. Cuek planetlagu, download mp3 Cuek, download Cuek lagu123.</p>
+                            <p>Terdapat sekitar 10 pencarian lagu yang dapat anda download dan dengarkan. Jika hasilnya tidak berisi lagu yang anda cari, cobalah mencari lagu dengan nama artis atau dengan nama lagu tersebut.</p>
+                        </div>
+
+                        <div itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                            <span itemprop="keywords" content="Lagu,Download,Album,Lirik,Artis,Video,Mp3,Song"></span>
+                            <span itemprop="publisher" content="Youtube"></span>
+                            <span itemprop="name" content="Memories Maroon 5"></span>
+                            <span itemprop="byArtist" content="Memories Maroon 5"></span>
+                            <div itemprop="track" itemscope="itemscope" itemtype="http://schema.org/ItemList">
+                                <span itemprop="numberOfItems" content="10"></span>
+                                    <!-- batas Music -->
+                                                                    <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/bKCD7WDnfJA/hqdefault.jpg" alt="Rizky Febian - Cuek #GarisCinta [Official Lyric Video]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/bKCD7WDnfJA-Rizky-Febian-Cuek-GarisCinta-Official-Lyric-Video" title="Rizky Febian - Cuek #GarisCinta [Official Lyric Video] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Rizky Febian - Cuek #GarisCinta [Official Lyric Video]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(1,'bKCD7WDnfJA');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Rizky Febian - Cuek #GarisCinta [Official Lyric Video]" href="https://santaiin.xyz/download?id=bKCD7WDnfJA&title=Rizky Febian - Cuek #GarisCinta [Official Lyric Video]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-1"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/IAuMgL_XCsM/hqdefault.jpg" alt="Rizky Febian - Cuek (Lirik) Lyric" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/IAuMgL_XCsM-Rizky-Febian-Cuek-Lirik-Lyric" title="Rizky Febian - Cuek (Lirik) Lyric mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Rizky Febian - Cuek (Lirik) Lyric</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(2,'IAuMgL_XCsM');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Rizky Febian - Cuek (Lirik) Lyric" href="https://santaiin.xyz/download?id=IAuMgL_XCsM&title=Rizky Febian - Cuek (Lirik) Lyric" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-2"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/AU0z8eiEAu8/hqdefault.jpg" alt="Cuek (Rizky Febian) KERONCONG - IDGITAF (Brigita Meliala) ft. Fivein #LetsJamWithJames" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/AU0z8eiEAu8-Cuek-Rizky-Febian-KERONCONG-IDGITAF-Brigita-Meliala-ft-Fivein-LetsJamWithJames" title="Cuek (Rizky Febian) KERONCONG - IDGITAF (Brigita Meliala) ft. Fivein #LetsJamWithJames mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek (Rizky Febian) KERONCONG - IDGITAF (Brigita Meliala) ft. Fivein #LetsJamWithJames</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(3,'AU0z8eiEAu8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek (Rizky Febian) KERONCONG - IDGITAF (Brigita Meliala) ft. Fivein #LetsJamWithJames" href="https://santaiin.xyz/download?id=AU0z8eiEAu8&title=Cuek (Rizky Febian) KERONCONG - IDGITAF (Brigita Meliala) ft. Fivein #LetsJamWithJames" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-3"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/tOTSrDI5Iug/hqdefault.jpg" alt="Rizky Febian - Cuek #GarisCinta Part 2 [Official Music Video]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/tOTSrDI5Iug-Rizky-Febian-Cuek-GarisCinta-Part-2-Official-Music-Video" title="Rizky Febian - Cuek #GarisCinta Part 2 [Official Music Video] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Rizky Febian - Cuek #GarisCinta Part 2 [Official Music Video]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(4,'tOTSrDI5Iug');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Rizky Febian - Cuek #GarisCinta Part 2 [Official Music Video]" href="https://santaiin.xyz/download?id=tOTSrDI5Iug&title=Rizky Febian - Cuek #GarisCinta Part 2 [Official Music Video]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-4"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/6QHCgxY-uDI/hqdefault.jpg" alt="Cuek X Mantra Cinta (KERONCONG) - Rizky Febian &amp; Idgitaf ft. Fivein #LetsJamWithJames" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/6QHCgxY-uDI-Cuek-X-Mantra-Cinta-KERONCONG-Rizky-Febian-Idgitaf-ft-Fivein-LetsJamWithJames" title="Cuek X Mantra Cinta (KERONCONG) - Rizky Febian &amp; Idgitaf ft. Fivein #LetsJamWithJames mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek X Mantra Cinta (KERONCONG) - Rizky Febian &amp; Idgitaf ft. Fivein #LetsJamWithJames</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(5,'6QHCgxY-uDI');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek X Mantra Cinta (KERONCONG) - Rizky Febian &amp; Idgitaf ft. Fivein #LetsJamWithJames" href="https://santaiin.xyz/download?id=6QHCgxY-uDI&title=Cuek X Mantra Cinta (KERONCONG) - Rizky Febian &amp; Idgitaf ft. Fivein #LetsJamWithJames" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-5"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/9LPEBbXki4A/hqdefault.jpg" alt="Cuek - Rizky Febian (Lirik)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/9LPEBbXki4A-Cuek-Rizky-Febian-Lirik" title="Cuek - Rizky Febian (Lirik) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek - Rizky Febian (Lirik)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(6,'9LPEBbXki4A');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek - Rizky Febian (Lirik)" href="https://santaiin.xyz/download?id=9LPEBbXki4A&title=Cuek - Rizky Febian (Lirik)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-6"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/OigN_VbHShQ/hqdefault.jpg" alt="Ardya Putri Gita Asmara - Cuek | Blind Auditions | The Voice Kids Indonesia Season 4 GTV 2021" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/OigN_VbHShQ-Ardya-Putri-Gita-Asmara-Cuek-Blind-Auditions-The-Voice-Kids-Indonesia-Season-4-GTV-2021" title="Ardya Putri Gita Asmara - Cuek | Blind Auditions | The Voice Kids Indonesia Season 4 GTV 2021 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Ardya Putri Gita Asmara - Cuek | Blind Auditions | The Voice Kids Indonesia Season 4 GTV 2021</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(7,'OigN_VbHShQ');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Ardya Putri Gita Asmara - Cuek | Blind Auditions | The Voice Kids Indonesia Season 4 GTV 2021" href="https://santaiin.xyz/download?id=OigN_VbHShQ&title=Ardya Putri Gita Asmara - Cuek | Blind Auditions | The Voice Kids Indonesia Season 4 GTV 2021" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-7"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/-xLIdRbqQ80/hqdefault.jpg" alt="Cuek - Rizky Febian (Lirik)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/xLIdRbqQ80-Cuek-Rizky-Febian-Lirik" title="Cuek - Rizky Febian (Lirik) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek - Rizky Febian (Lirik)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(8,'-xLIdRbqQ80');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek - Rizky Febian (Lirik)" href="https://santaiin.xyz/download?id=-xLIdRbqQ80&title=Cuek - Rizky Febian (Lirik)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-8"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/YR3pPNaby2I/hqdefault.jpg" alt="Cuek - Rizky Febian #gariscinta (Cover By Dwilaksmi)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/YR3pPNaby2I-Cuek-Rizky-Febian-gariscinta-Cover-By-Dwilaksmi" title="Cuek - Rizky Febian #gariscinta (Cover By Dwilaksmi) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek - Rizky Febian #gariscinta (Cover By Dwilaksmi)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(9,'YR3pPNaby2I');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek - Rizky Febian #gariscinta (Cover By Dwilaksmi)" href="https://santaiin.xyz/download?id=YR3pPNaby2I&title=Cuek - Rizky Febian #gariscinta (Cover By Dwilaksmi)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-9"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/I-XG0SJS4CU/hqdefault.jpg" alt="#NLESHOW - RIZKY FEBIAN with TRIO LESTARI &amp; RIO FEBRIAN - CUEK" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/I-XG0SJS4CU-NLESHOW-RIZKY-FEBIAN-with-TRIO-LESTARI-RIO-FEBRIAN-CUEK" title="#NLESHOW - RIZKY FEBIAN with TRIO LESTARI &amp; RIO FEBRIAN - CUEK mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">#NLESHOW - RIZKY FEBIAN with TRIO LESTARI &amp; RIO FEBRIAN - CUEK</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(10,'I-XG0SJS4CU');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="#NLESHOW - RIZKY FEBIAN with TRIO LESTARI &amp; RIO FEBRIAN - CUEK" href="https://santaiin.xyz/download?id=I-XG0SJS4CU&title=#NLESHOW - RIZKY FEBIAN with TRIO LESTARI &amp; RIO FEBRIAN - CUEK" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-10"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/3tpouP9j13g/hqdefault.jpg" alt="Cuek - Rizky Febian Ft. IndomusikTeam #PETIK" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/3tpouP9j13g-Cuek-Rizky-Febian-Ft-IndomusikTeam-PETIK" title="Cuek - Rizky Febian Ft. IndomusikTeam #PETIK mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek - Rizky Febian Ft. IndomusikTeam #PETIK</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(11,'3tpouP9j13g');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek - Rizky Febian Ft. IndomusikTeam #PETIK" href="https://santaiin.xyz/download?id=3tpouP9j13g&title=Cuek - Rizky Febian Ft. IndomusikTeam #PETIK" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-11"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Em22eQPgsk8/hqdefault.jpg" alt="CUEK CUEK_ONE SCOOT [ MV]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Em22eQPgsk8-CUEK-CUEK_ONE-SCOOT-MV" title="CUEK CUEK_ONE SCOOT [ MV] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">CUEK CUEK_ONE SCOOT [ MV]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(12,'Em22eQPgsk8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="CUEK CUEK_ONE SCOOT [ MV]" href="https://santaiin.xyz/download?id=Em22eQPgsk8&title=CUEK CUEK_ONE SCOOT [ MV]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-12"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/s1FnGBPbeas/hqdefault.jpg" alt="KEZI STEPHANIE - CUEK (Rizky Febian) | FINAL SHOWCASE– Indonesian Idol 2026" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/s1FnGBPbeas-KEZI-STEPHANIE-CUEK-Rizky-Febian-FINAL-SHOWCASE-Indonesian-Idol-2026" title="KEZI STEPHANIE - CUEK (Rizky Febian) | FINAL SHOWCASE– Indonesian Idol 2026 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">KEZI STEPHANIE - CUEK (Rizky Febian) | FINAL SHOWCASE– Indonesian Idol 2026</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(13,'s1FnGBPbeas');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="KEZI STEPHANIE - CUEK (Rizky Febian) | FINAL SHOWCASE– Indonesian Idol 2026" href="https://santaiin.xyz/download?id=s1FnGBPbeas&title=KEZI STEPHANIE - CUEK (Rizky Febian) | FINAL SHOWCASE– Indonesian Idol 2026" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-13"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/3hT-a15V7J0/hqdefault.jpg" alt="Cuek Rizky Febian - IDGITAF Brigita Meliala ft  Fivein Lirik" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/3hT-a15V7J0-Cuek-Rizky-Febian-IDGITAF-Brigita-Meliala-ft-Fivein-Lirik" title="Cuek Rizky Febian - IDGITAF Brigita Meliala ft  Fivein Lirik mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek Rizky Febian - IDGITAF Brigita Meliala ft  Fivein Lirik</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(14,'3hT-a15V7J0');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek Rizky Febian - IDGITAF Brigita Meliala ft  Fivein Lirik" href="https://santaiin.xyz/download?id=3hT-a15V7J0&title=Cuek Rizky Febian - IDGITAF Brigita Meliala ft  Fivein Lirik" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-14"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/AEZsvTQKdPs/hqdefault.jpg" alt="Rizky Febian - Cuek (Karaoke) | GMusic" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/AEZsvTQKdPs-Rizky-Febian-Cuek-Karaoke-GMusic" title="Rizky Febian - Cuek (Karaoke) | GMusic mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Rizky Febian - Cuek (Karaoke) | GMusic</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(15,'AEZsvTQKdPs');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Rizky Febian - Cuek (Karaoke) | GMusic" href="https://santaiin.xyz/download?id=AEZsvTQKdPs&title=Rizky Febian - Cuek (Karaoke) | GMusic" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-15"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/-V8Fo4PPBgM/hqdefault.jpg" alt="Rizky Febian - Cuek | Campfire Session" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/V8Fo4PPBgM-Rizky-Febian-Cuek-Campfire-Session" title="Rizky Febian - Cuek | Campfire Session mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Rizky Febian - Cuek | Campfire Session</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(16,'-V8Fo4PPBgM');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Rizky Febian - Cuek | Campfire Session" href="https://santaiin.xyz/download?id=-V8Fo4PPBgM&title=Rizky Febian - Cuek | Campfire Session" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-16"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/8uP22Kac7Wg/hqdefault.jpg" alt="Cuek Cuek" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/8uP22Kac7Wg-Cuek-Cuek" title="Cuek Cuek mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Cuek Cuek</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(17,'8uP22Kac7Wg');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Cuek Cuek" href="https://santaiin.xyz/download?id=8uP22Kac7Wg&title=Cuek Cuek" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-17"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/fplO6WPvApE/hqdefault.jpg" alt="Adegan manis LiuXin , cuek tapi penuh cinta #guoyuxin #liuxiaoxu #love #dracin #cdrama" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/fplO6WPvApE-Adegan-manis-LiuXin-cuek-tapi-penuh-cinta-guoyuxin-liuxiaoxu-love-dracin-cdrama" title="Adegan manis LiuXin , cuek tapi penuh cinta #guoyuxin #liuxiaoxu #love #dracin #cdrama mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Adegan manis LiuXin , cuek tapi penuh cinta #guoyuxin #liuxiaoxu #love #dracin #cdrama</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(18,'fplO6WPvApE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Adegan manis LiuXin , cuek tapi penuh cinta #guoyuxin #liuxiaoxu #love #dracin #cdrama" href="https://santaiin.xyz/download?id=fplO6WPvApE&title=Adegan manis LiuXin , cuek tapi penuh cinta #guoyuxin #liuxiaoxu #love #dracin #cdrama" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-18"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Fb9_ELM85v4/hqdefault.jpg" alt="JANG CUEK   Shine of Black x Black Diamond" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Fb9_ELM85v4-JANG-CUEK-Shine-of-Black-x-Black-Diamond" title="JANG CUEK   Shine of Black x Black Diamond mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">JANG CUEK   Shine of Black x Black Diamond</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(19,'Fb9_ELM85v4');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="JANG CUEK   Shine of Black x Black Diamond" href="https://santaiin.xyz/download?id=Fb9_ELM85v4&title=JANG CUEK   Shine of Black x Black Diamond" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-19"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/xOR-Wk0iWVE/hqdefault.jpg" alt="【Parody Cover】Cuek - Rizky Febian | by Juliana Shafira" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/xOR-Wk0iWVE-Parody-CoverCuek-Rizky-Febian-by-Juliana-Shafira" title="【Parody Cover】Cuek - Rizky Febian | by Juliana Shafira mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">【Parody Cover】Cuek - Rizky Febian | by Juliana Shafira</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(20,'xOR-Wk0iWVE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="【Parody Cover】Cuek - Rizky Febian | by Juliana Shafira" href="https://santaiin.xyz/download?id=xOR-Wk0iWVE&title=【Parody Cover】Cuek - Rizky Febian | by Juliana Shafira" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-20"></div>
+                                    </div>
+                                </div>
+                                                                <!-- End -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-sidebar">
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Lagu</span> Pilihan</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro-ttm-akustik" itemprop="url">Cerito Loro Ttm Akustik</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aku-ikhlas" itemprop="url">Aku Ikhlas</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gellen-martadinata-selamat-ulang-tahun" itemprop="url">Gellen Martadinata Selamat Ulang Tahun</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bts-life-goes-on" itemprop="url">Bts Life Goes On</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/girl-in-the-mirror" itemprop="url">Girl In The Mirror</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tanpa-batas-waktu" itemprop="url">Tanpa Batas Waktu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-budi-doremi" itemprop="url">Friendzone Budi Doremi</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/dj-bila-dia-menyukaiku" itemprop="url">Dj Bila Dia Menyukaiku</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/belum-siap-kehilangan" itemprop="url">Belum Siap Kehilangan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berhenti-kasihan" itemprop="url">Berhenti Kasihan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-cover-feby-putri" itemprop="url">Friendzone Cover Feby Putri</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/salam-tresno" itemprop="url">Salam Tresno</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/ati-iki-dudu-dolanan" itemprop="url">Ati Iki Dudu Dolanan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/antara-nyaman-dan-cinta" itemprop="url">Antara Nyaman Dan Cinta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-tanpa-tapi" itemprop="url">Cinta Tanpa Tapi</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/mungkin-hari-ini-esok-atau-nanti" itemprop="url">Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/eyes-blue-or-brown-cant-remember" itemprop="url">Eyes Blue Or Brown Can't Remember</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tepung-kanji" itemprop="url">Tepung Kanji</a></li>
+                                                           </ul>
+                        </div>
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Pencarian</span> Terakhir</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-dj" itemprop="url">Lagu Dj</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/rodwave" itemprop="url">Rodwave</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-alternatif" itemprop="url">Lagu Alternatif</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aku-ikhlas" itemprop="url">Aku Ikhlas</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bts-life-goes-on" itemprop="url">Bts Life Goes On</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/belum-siap-kehilangan" itemprop="url">Belum Siap Kehilangan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-blues" itemprop="url">Lagu Blues</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cuek" itemprop="url">Cuek</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/sombr" itemprop="url">Sombr</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/antara-nyaman-dan-cinta" itemprop="url">Antara Nyaman Dan Cinta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-malaysia" itemprop="url">Lagu Malaysia</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/dj-bila-dia-menyukaiku" itemprop="url">Dj Bila Dia Menyukaiku</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro-ttm-akustik" itemprop="url">Cerito Loro Ttm Akustik</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/planetlagu" itemprop="url">Planetlagu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/stafaband" itemprop="url">Stafaband</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-indonesia" itemprop="url">Lagu Indonesia</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/futurevevo" itemprop="url">Futurevevo</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gudanglagu" itemprop="url">Gudanglagu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/theofficialglorilla" itemprop="url">Theofficialglorilla</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" itemprop="url">Lagu J Pop Japan Pop</a></li>
+                                                    </div>
+                    </div>                </div>
+            </div>
+        </div>
+      <!-- Footer -->
+<div id="footer-container">
+            <div class="container">
+                <p class="copy">
+                    &copy; 2026 Santaiin MP3. All rights reserved.
+                </p>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="https://santaiin.xyz/page/disclaimer" title="Disclaimer">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/copyright" title="Copyright">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/term-of-services" title="Term Of Services">TOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function playAudio(id, ytid) {
+                remPlayer();
+                var html = '<audio src="https://www.youtube.com/watch?v=' + ytid + '" type="video/youtube" controls autoplay style="width:100%">Browser tidak support bro, coba update browser nya!</audio>';
+                $("#player-" + id).html(html);
+                renderPlayer();
+            }
+            function renderPlayer() {
+                $("audio,video").mediaelementplayer();
+            }
+            function remPlayer() {
+                $(".divPlayer").html("");
+            }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                        .then(function (registration) {
+                            console.log("PWA service worker ready");
+                            registration.update();
+                        })
+                        .catch(function (error) {
+                            console.log("Registration failed with " + error);
+                        });
+                });
+            }
+            var $ = jQuery.noConflict();
+            (function ($) {
+                "use strict";
+                jQuery(function ($) {
+                    $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+                    $(window).resize(function () {
+                        $.sidr("close", "menu");
+                    });
+                    $("#sidr-id-close-menu-button").click(function (e) {
+                        e.preventDefault();
+                        $.sidr("close", "menu");
+                    });
+                    $(".sidr-class-menu-item-has-children").click(function () {
+                        $(this)
+                            .find("ul.sidr-class-sub-menu")
+                            .slideToggle(function (e) {
+                                e.preventDefault();
+                            });
+                    });
+                    $(document.body).click(function (e) {
+                        if ($.sidr("status").opened) {
+                            var isBlur = true;
+                            if ($(e.target).closest(".sidr").length !== 0) {
+                                isBlur = false;
+                            }
+                            if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                                isBlur = false;
+                            }
+                            if (isBlur) {
+                                $.sidr("close", $.sidr("status").opened);
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#youtube-audio, #youtube-video").mediaelementplayer();
+        });
+        jQuery(function ($) {
+            var collapsedSize = "40px";
+            $(".more-content").each(function () {
+                var h = this.scrollHeight;
+                console.log(h);
+                var div = $(this);
+                if (h > 30) {
+                    div.css("height", collapsedSize);
+                    div.after('<button class="more-button">Lihat Selengkapnya</button>');
+                    var link = div.next();
+                    link.click(function (e) {
+                        e.stopPropagation();
+                        if (link.text() != "Lihat lebih sedikit") {
+                            link.text("Lihat lebih sedikit");
+                            div.animate({ height: h });
+                        } else {
+                            div.animate({ height: collapsedSize });
+                            link.text("Lihat Selengkapnya");
+                        }
+                    });
+                }
+            });
+        });
+    })(jQuery);
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                .then(function (registration) {
+                    console.log("PWA service worker ready");
+                    registration.update();
+                })
+                .catch(function (error) {
+                    console.log("Registration failed with " + error);
+                });
+        });
+    }
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+            $(window).resize(function () {
+                $.sidr("close", "menu");
+            });
+            $("#sidr-id-close-menu-button").click(function (e) {
+                e.preventDefault();
+                $.sidr("close", "menu");
+            });
+            $(".sidr-class-menu-item-has-children").click(function () {
+                $(this)
+                    .find("ul.sidr-class-sub-menu")
+                    .slideToggle(function (e) {
+                        e.preventDefault();
+                    });
+            });
+            $(document.body).click(function (e) {
+                if ($.sidr("status").opened) {
+                    var isBlur = true;
+                    if ($(e.target).closest(".sidr").length !== 0) {
+                        isBlur = false;
+                    }
+                    if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                        isBlur = false;
+                    }
+                    if (isBlur) {
+                        $.sidr("close", $.sidr("status").opened);
+                    }
+                }
+            });
+        });
+    })(jQuery);
+</script>
+    </body>
+</html>

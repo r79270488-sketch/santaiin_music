@@ -1,0 +1,14 @@
+{
+	"siteName" : "Santaiin MP3",
+	"siteDesc": "Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional.",
+    "siteKeywords": "download mp3, lagu mp3, lagu terbaru, lagu viral tiktok, lagu indonesia terbaru, lagu barat terbaru, chart musik, top lagu, musik trending, rekomendasi lagu",
+    "textDesc": "Cari dan temukan lagu terbaru hanya di %site_name%. Nikmati daftar musik populer, lagu viral, chart Indonesia, lagu barat terbaru, serta rekomendasi lagu dari berbagai genre yang sedang trending saat ini.",
+	"siteAuthor" : "Mang Santai",
+	"siteLogo" : "https://www.downloadlagu123.biz/themes/lagu123/assets/images/logo.png",
+	"ApiYoutube" : "AIzaSyCGKeIARtP6xfrxv0JITmIZ5Zg8HNHhd5E",
+	"keywordRefreshDays" : 3,
+	"Ads1" : "Ini Adalah Iklan UntuK Tombol Fast Download", 
+	"Ads2" : "<script type=\"text\/javascript\" src=\"\/\/ylx-1.com\/bnr.php?section=General&pub=733388&format=728x90&ga=g&bg=1\"><\/script>\n<noscript><a href=\"https:\/\/yllix.com\/publishers\/733388\" target=\"_blank\"><img src=\"\/\/ylx-aff.advertica-cdn.com\/pub\/728x90.png\" style=\"border:none;margin:0;padding:0;vertical-align:baseline;\" \/><\/a><\/noscript>",
+	"Ads3" : "<script type=\"text\/javascript\" src=\"\/\/ylx-1.com\/bnr.php?section=General&pub=733388&format=468x60&ga=g&bg=1\"><\/script>\n<noscript><a href=\"https:\/\/yllix.com\/publishers\/733388\" target=\"_blank\"><img src=\"\/\/ylx-aff.advertica-cdn.com\/pub\/468x60.png\" style=\"border:none;margin:0;padding:0;vertical-align:baseline;\" \/><\/a><\/noscript>",
+	"AdsPopup" : "" 
+}

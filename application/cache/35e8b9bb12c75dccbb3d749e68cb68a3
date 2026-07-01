@@ -1,0 +1,723 @@
+a:2:{s:6:"expire";i:1782893191;s:7:"headers";a:0:{}}ENDCI---><!DOCTYPE html>
+<html lang="id" prefix="og: http://ogp.me/ns#">
+    <head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="profile" href="https://gmpg.org/xfn/11" />
+        <title>Santaiin MP3 Pencarian MP3 | Trimofficial</title>
+		<!-- Meta -->
+        <meta name="description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:site_name" content="Santaiin MP3" />
+		<meta name="keywords" content="download mp3, lagu mp3, lagu terbaru, lagu viral tiktok, lagu indonesia terbaru, lagu barat terbaru, chart musik, top lagu, musik trending, rekomendasi lagu, trimofficial">
+		<meta name="author" content="Mang Santai">
+        <meta property="og:title" content="Download Lagu Pencarian MP3 | Trimofficial" />
+        
+        <meta name="theme-color" content="#E91E63" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C600%2C700" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" media="screen" href="https://santaiin.xyz/assets/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <header id="header-container" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div id="header">
+                <div class="container">
+                    <div class="list-table clearfix">
+                        <div class="table-row">
+                            <div class="table-cell logo">
+                                <a href="https://santaiin.xyz/" title="Download Lagu Gratis" itemprop="url">
+                                    <img src="https://www.downloadlagu123.biz/themes/lagu123/assets/images/logo.png" alt="Download Lagu Gratis" title="Download Lagu Gratis" itemprop="image" />
+                                </a>
+                                <a id="mobile-menu" class="pull-right" href="#menu" rel="nofollow"><i class="fas fa-bars"></i><span class="screen-reader-text">Mobile Menu</span></a>
+                            </div>
+                            <div class="table-cell search">
+                                <form class="searchform searchform" method="get" action="https://santaiin.xyz/search">
+                                    <label class="screen-reader-text" for="search-form">Search Form:</label>
+                                    <input type="text" name="q" id="search-form" class="ui-autocomplete-input" autofocus="autofocus" value="" autocomplete="off" placeholder="Cari Lagu!! Artis - Judul lagu." minlength="3" />
+                                    <button type="submit" role="button" class="search-submit"><i class="fas fa-search"></i><span class="screen-reader-text">Cari</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="top-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                <div class="container">
+                    <ul class="top-menu">
+                        <li class="close-btn"><a id="close-menu-button" href="#" rel="nofollow">Close Menu x</a></li>
+                        <li class="home">
+                            <a href="https://santaiin.xyz/" title="Kembali ke Beranda" itemprop="url"><span itemprop="name">Home</span></a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://santaiin.xyz/music/lagu-k-pop-korean-pop" title="Download Lagu kpop korean pop" itemprop="url"><span itemprop="name">Lagu Kpop</span></a>
+                        </li>
+                        <li class="merah">
+                            <a href="https://santaiin.xyz/music/lagu-india-bollywood" title="Download Lagu India Bollywood" itemprop="url"><span itemprop="name">Lagu India Bollywood</span></a>
+                        </li>
+                        <li class="biru-tua">
+                            <a href="https://santaiin.xyz/music/lagu-dangdut" title="Download Lagu Dangdut" itemprop="url"><span itemprop="name">Lagu Dangdut</span></a>
+                        </li>
+                        <li class="ungu">
+                            <a href="https://santaiin.xyz/music/lagu-indonesia" title="Download Lagu Pop Indonesia" itemprop="url"><span itemprop="name">Lagu Pop Indonesia</span></a>
+                        </li>
+                        <li class="hijau menu-item-has-children">
+                            <a href="#" rel="nofollow">Lainnya</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-alternatif" title="Download Lagu Alternatif" itemprop="url"><span itemprop="name">Lagu Alternatif</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-blues" title="Download Lagu Blues" itemprop="url"><span itemprop="name">Lagu Blues</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" title="Download Lagu jpop japan pop" itemprop="url"><span itemprop="name">Lagu Jpop</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-malaysia" title="Download Lagu Malaysia" itemprop="url"><span itemprop="name">Lagu Malaysia</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/planetlagu" title="Planetlagu" itemprop="url"><span itemprop="name">Planetlagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/gudanglagu" title="Gudang Lagu" itemprop="url"><span itemprop="name">Gudang Lagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/stafaband" title="Stafaband MP3" itemprop="url"><span itemprop="name">Stafaband</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-dj" title="Download Lagu DJ" itemprop="url"><span itemprop="name">Lagu DJ</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header><!-- Header -->
+        <div id="site-container">
+            <div class="container">
+                <div class="row" itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                    <div class="col-md-main">
+                        <h1 class="main-title" itemprop="headline"><span class="highlight">Download Lagu MP3</span> Trimofficial</h1>
+                        <div class="success" itemprop="text">
+                            <p>Download lagu mp3 Trimofficial gratis. Trimofficial planetlagu, download mp3 Trimofficial, download Trimofficial lagu123.</p>
+                            <p>Terdapat sekitar 10 pencarian lagu yang dapat anda download dan dengarkan. Jika hasilnya tidak berisi lagu yang anda cari, cobalah mencari lagu dengan nama artis atau dengan nama lagu tersebut.</p>
+                        </div>
+
+                        <div itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                            <span itemprop="keywords" content="Lagu,Download,Album,Lirik,Artis,Video,Mp3,Song"></span>
+                            <span itemprop="publisher" content="Youtube"></span>
+                            <span itemprop="name" content="Memories Maroon 5"></span>
+                            <span itemprop="byArtist" content="Memories Maroon 5"></span>
+                            <div itemprop="track" itemscope="itemscope" itemtype="http://schema.org/ItemList">
+                                <span itemprop="numberOfItems" content="10"></span>
+                                    <!-- batas Music -->
+                                                                    <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/S7olZC6QLVA/hqdefault.jpg" alt="Trim - Nobody (Remix) (feat. Monaleo) (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/S7olZC6QLVA-Trim-Nobody-Remix-feat-Monaleo-Official-Music-Video" title="Trim - Nobody (Remix) (feat. Monaleo) (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Nobody (Remix) (feat. Monaleo) (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(1,'S7olZC6QLVA');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Nobody (Remix) (feat. Monaleo) (Official Music Video)" href="https://santaiin.xyz/download?id=S7olZC6QLVA&title=Trim - Nobody (Remix) (feat. Monaleo) (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-1"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/s5VG3K05pn8/hqdefault.jpg" alt="Trim - Coconut Water (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/s5VG3K05pn8-Trim-Coconut-Water-Official-Music-Video" title="Trim - Coconut Water (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Coconut Water (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(2,'s5VG3K05pn8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Coconut Water (Official Music Video)" href="https://santaiin.xyz/download?id=s5VG3K05pn8&title=Trim - Coconut Water (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-2"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Q88Uyv48E1E/hqdefault.jpg" alt="Trim - Boat Remix (Feat. YKNiece, BunnaB) [Official Music Video]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Q88Uyv48E1E-Trim-Boat-Remix-Feat-YKNiece-BunnaB-Official-Music-Video" title="Trim - Boat Remix (Feat. YKNiece, BunnaB) [Official Music Video] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Boat Remix (Feat. YKNiece, BunnaB) [Official Music Video]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(3,'Q88Uyv48E1E');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Boat Remix (Feat. YKNiece, BunnaB) [Official Music Video]" href="https://santaiin.xyz/download?id=Q88Uyv48E1E&title=Trim - Boat Remix (Feat. YKNiece, BunnaB) [Official Music Video]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-3"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/u64NgDuis6g/hqdefault.jpg" alt="Trim - Boat Remix (Feat. Pooh Shiesty) [Official Music Video]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/u64NgDuis6g-Trim-Boat-Remix-Feat-Pooh-Shiesty-Official-Music-Video" title="Trim - Boat Remix (Feat. Pooh Shiesty) [Official Music Video] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Boat Remix (Feat. Pooh Shiesty) [Official Music Video]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(4,'u64NgDuis6g');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Boat Remix (Feat. Pooh Shiesty) [Official Music Video]" href="https://santaiin.xyz/download?id=u64NgDuis6g&title=Trim - Boat Remix (Feat. Pooh Shiesty) [Official Music Video]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-4"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/fy_wuVtxuOM/hqdefault.jpg" alt="Trim - GUAPO Feat. Bankroll Ni, Bri3, Thickney (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/fy_wuVtxuOM-Trim-GUAPO-Feat-Bankroll-Ni-Bri3-Thickney-Official-Music-Video" title="Trim - GUAPO Feat. Bankroll Ni, Bri3, Thickney (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - GUAPO Feat. Bankroll Ni, Bri3, Thickney (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(5,'fy_wuVtxuOM');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - GUAPO Feat. Bankroll Ni, Bri3, Thickney (Official Music Video)" href="https://santaiin.xyz/download?id=fy_wuVtxuOM&title=Trim - GUAPO Feat. Bankroll Ni, Bri3, Thickney (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-5"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/0mI63eY9gwI/hqdefault.jpg" alt="Trim - CHRÖME (ft. slayr) [Official Music Video]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/0mI63eY9gwI-Trim-CHRÖME-ft-slayr-Official-Music-Video" title="Trim - CHRÖME (ft. slayr) [Official Music Video] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - CHRÖME (ft. slayr) [Official Music Video]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(6,'0mI63eY9gwI');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - CHRÖME (ft. slayr) [Official Music Video]" href="https://santaiin.xyz/download?id=0mI63eY9gwI&title=Trim - CHRÖME (ft. slayr) [Official Music Video]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-6"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Oj7bDSYvWog/hqdefault.jpg" alt="✌🏿COCONUT WATA 👱🏿‍♀️ MAY . #fyp #fypシ #viral #trim" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Oj7bDSYvWog-COCONUT-WATA-MAY-fyp-fypシ-viral-trim" title="✌🏿COCONUT WATA 👱🏿‍♀️ MAY . #fyp #fypシ #viral #trim mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">✌🏿COCONUT WATA 👱🏿‍♀️ MAY . #fyp #fypシ #viral #trim</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(7,'Oj7bDSYvWog');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="✌🏿COCONUT WATA 👱🏿‍♀️ MAY . #fyp #fypシ #viral #trim" href="https://santaiin.xyz/download?id=Oj7bDSYvWog&title=✌🏿COCONUT WATA 👱🏿‍♀️ MAY . #fyp #fypシ #viral #trim" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-7"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/-Bdb_noihrs/hqdefault.jpg" alt="Trim - Taxi (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Bdb_noihrs-Trim-Taxi-Official-Music-Video" title="Trim - Taxi (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Taxi (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(8,'-Bdb_noihrs');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Taxi (Official Music Video)" href="https://santaiin.xyz/download?id=-Bdb_noihrs&title=Trim - Taxi (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-8"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/6Dx4w3fgqxo/hqdefault.jpg" alt="Trim - Nobody (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/6Dx4w3fgqxo-Trim-Nobody-Official-Music-Video" title="Trim - Nobody (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Nobody (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(9,'6Dx4w3fgqxo');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Nobody (Official Music Video)" href="https://santaiin.xyz/download?id=6Dx4w3fgqxo&title=Trim - Nobody (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-9"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/YpogyAuykjk/hqdefault.jpg" alt="Floor" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/YpogyAuykjk-Floor" title="Floor mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Floor</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(10,'YpogyAuykjk');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Floor" href="https://santaiin.xyz/download?id=YpogyAuykjk&title=Floor" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-10"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/RHbyH_AlEqo/hqdefault.jpg" alt="Trim - Bugatti (Official Music Video) prod. @Goxan" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/RHbyH_AlEqo-Trim-Bugatti-Official-Music-Video-prod-Goxan" title="Trim - Bugatti (Official Music Video) prod. @Goxan mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Bugatti (Official Music Video) prod. @Goxan</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(11,'RHbyH_AlEqo');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Bugatti (Official Music Video) prod. @Goxan" href="https://santaiin.xyz/download?id=RHbyH_AlEqo&title=Trim - Bugatti (Official Music Video) prod. @Goxan" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-11"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/9ukkc-Ppykw/hqdefault.jpg" alt="Luh Tyler - No Trick (feat. Trim) [Official Music Video]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/9ukkc-Ppykw-Luh-Tyler-No-Trick-feat-Trim-Official-Music-Video" title="Luh Tyler - No Trick (feat. Trim) [Official Music Video] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Luh Tyler - No Trick (feat. Trim) [Official Music Video]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(12,'9ukkc-Ppykw');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Luh Tyler - No Trick (feat. Trim) [Official Music Video]" href="https://santaiin.xyz/download?id=9ukkc-Ppykw&title=Luh Tyler - No Trick (feat. Trim) [Official Music Video]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-12"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/FGKBZjksYgE/hqdefault.jpg" alt="Trim - On Another Level (Official Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/FGKBZjksYgE-Trim-On-Another-Level-Official-Video" title="Trim - On Another Level (Official Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - On Another Level (Official Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(13,'FGKBZjksYgE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - On Another Level (Official Video)" href="https://santaiin.xyz/download?id=FGKBZjksYgE&title=Trim - On Another Level (Official Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-13"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/UFbSrYMlz3c/hqdefault.jpg" alt="NOBODY OUT NOW FT @TheMonaleo 👱🏿‍♀️x🎀" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/UFbSrYMlz3c-NOBODY-OUT-NOW-FT-TheMonaleo-x" title="NOBODY OUT NOW FT @TheMonaleo 👱🏿‍♀️x🎀 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">NOBODY OUT NOW FT @TheMonaleo 👱🏿‍♀️x🎀</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(14,'UFbSrYMlz3c');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="NOBODY OUT NOW FT @TheMonaleo 👱🏿‍♀️x🎀" href="https://santaiin.xyz/download?id=UFbSrYMlz3c&title=NOBODY OUT NOW FT @TheMonaleo 👱🏿‍♀️x🎀" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-14"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/uw6e0R86Lzs/hqdefault.jpg" alt="Trim - Coconut Water (Live Version)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/uw6e0R86Lzs-Trim-Coconut-Water-Live-Version" title="Trim - Coconut Water (Live Version) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Trim - Coconut Water (Live Version)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(15,'uw6e0R86Lzs');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Trim - Coconut Water (Live Version)" href="https://santaiin.xyz/download?id=uw6e0R86Lzs&title=Trim - Coconut Water (Live Version)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-15"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Rxjpl19RLMc/hqdefault.jpg" alt="BOAT VERSE 1 #OUTNOW" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Rxjpl19RLMc-BOAT-VERSE-1-OUTNOW" title="BOAT VERSE 1 #OUTNOW mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">BOAT VERSE 1 #OUTNOW</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(16,'Rxjpl19RLMc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="BOAT VERSE 1 #OUTNOW" href="https://santaiin.xyz/download?id=Rxjpl19RLMc&title=BOAT VERSE 1 #OUTNOW" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-16"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/oUTtn9lqRoY/hqdefault.jpg" alt="GUAPO" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/oUTtn9lqRoY-GUAPO" title="GUAPO mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">GUAPO</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(17,'oUTtn9lqRoY');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="GUAPO" href="https://santaiin.xyz/download?id=oUTtn9lqRoY&title=GUAPO" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-17"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/W66Maxo2ypI/hqdefault.jpg" alt="THANK YOUUU GGGG 🥹 !!! THANK U SO MUCH HERBO THIS MEANT ALOT !" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/W66Maxo2ypI-THANK-YOUUU-GGGG-THANK-U-SO-MUCH-HERBO-THIS-MEANT-ALOT" title="THANK YOUUU GGGG 🥹 !!! THANK U SO MUCH HERBO THIS MEANT ALOT ! mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">THANK YOUUU GGGG 🥹 !!! THANK U SO MUCH HERBO THIS MEANT ALOT !</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(18,'W66Maxo2ypI');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="THANK YOUUU GGGG 🥹 !!! THANK U SO MUCH HERBO THIS MEANT ALOT !" href="https://santaiin.xyz/download?id=W66Maxo2ypI&title=THANK YOUUU GGGG 🥹 !!! THANK U SO MUCH HERBO THIS MEANT ALOT !" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-18"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/oveei5sAYDo/hqdefault.jpg" alt="BOAT" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/oveei5sAYDo-BOAT" title="BOAT mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">BOAT</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(19,'oveei5sAYDo');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="BOAT" href="https://santaiin.xyz/download?id=oveei5sAYDo&title=BOAT" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-19"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/8WjpyPkFvS0/hqdefault.jpg" alt="BigWestt - Trim (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/8WjpyPkFvS0-BigWestt-Trim-Official-Music-Video" title="BigWestt - Trim (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">BigWestt - Trim (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(20,'8WjpyPkFvS0');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="BigWestt - Trim (Official Music Video)" href="https://santaiin.xyz/download?id=8WjpyPkFvS0&title=BigWestt - Trim (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-20"></div>
+                                    </div>
+                                </div>
+                                                                <!-- End -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-sidebar">
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Lagu</span> Pilihan</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/angin-dalu-woro-widowati" itemprop="url">Angin Dalu Woro Widowati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/buruh-cod" itemprop="url">Buruh Cod</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berbeza-kasta" itemprop="url">Berbeza Kasta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aduh-mamae" itemprop="url">Aduh Mamae</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tepung-kanji" itemprop="url">Tepung Kanji</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/at-my-worst" itemprop="url">At My Worst</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bahagialah-bersamanya" itemprop="url">Bahagialah Bersamanya</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro" itemprop="url">Cerito Loro</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/anneth-mungkin-hari-ini-esok-atau-nanti" itemprop="url">Anneth Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/dj-bila-dia-menyukaiku" itemprop="url">Dj Bila Dia Menyukaiku</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aku-ikhlas" itemprop="url">Aku Ikhlas</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bertaut" itemprop="url">Bertaut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tanpa-batas-waktu" itemprop="url">Tanpa Batas Waktu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/coba-kau-ingat-ingat-kembali" itemprop="url">Coba Kau Ingat Ingat Kembali</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/antara-nyaman-dan-cinta" itemprop="url">Antara Nyaman Dan Cinta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-budi-doremi" itemprop="url">Friendzone Budi Doremi</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cuek" itemprop="url">Cuek</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berhenti-kasihan" itemprop="url">Berhenti Kasihan</a></li>
+                                                           </ul>
+                        </div>
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Pencarian</span> Terakhir</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/belum-siap-kehilangan" itemprop="url">Belum Siap Kehilangan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tepung-kanji" itemprop="url">Tepung Kanji</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/at-my-worst" itemprop="url">At My Worst</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/futurevevo" itemprop="url">Futurevevo</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/denny-caknan" itemprop="url">Denny Caknan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/emas-hantaran-safira-inema" itemprop="url">Emas Hantaran Safira Inema</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/dj-bila-dia-menyukaiku" itemprop="url">Dj Bila Dia Menyukaiku</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/rodwave" itemprop="url">Rodwave</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cuek" itemprop="url">Cuek</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aku-ikhlas" itemprop="url">Aku Ikhlas</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/sombr" itemprop="url">Sombr</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/stafaband" itemprop="url">Stafaband</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/trimofficial" itemprop="url">Trimofficial</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro-ttm-akustik" itemprop="url">Cerito Loro Ttm Akustik</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/jyp-entertainment" itemprop="url">Jyp Entertainment</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/antara-nyaman-dan-cinta" itemprop="url">Antara Nyaman Dan Cinta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tanpa-batas-waktu" itemprop="url">Tanpa Batas Waktu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/anneth-mungkin-hari-ini-esok-atau-nanti" itemprop="url">Anneth Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                    </div>
+                    </div>                </div>
+            </div>
+        </div>
+      <!-- Footer -->
+<div id="footer-container">
+            <div class="container">
+                <p class="copy">
+                    &copy; 2026 Santaiin MP3. All rights reserved.
+                </p>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="https://santaiin.xyz/page/disclaimer" title="Disclaimer">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/copyright" title="Copyright">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/term-of-services" title="Term Of Services">TOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function playAudio(id, ytid) {
+                remPlayer();
+                var html = '<audio src="https://www.youtube.com/watch?v=' + ytid + '" type="video/youtube" controls autoplay style="width:100%">Browser tidak support bro, coba update browser nya!</audio>';
+                $("#player-" + id).html(html);
+                renderPlayer();
+            }
+            function renderPlayer() {
+                $("audio,video").mediaelementplayer();
+            }
+            function remPlayer() {
+                $(".divPlayer").html("");
+            }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                        .then(function (registration) {
+                            console.log("PWA service worker ready");
+                            registration.update();
+                        })
+                        .catch(function (error) {
+                            console.log("Registration failed with " + error);
+                        });
+                });
+            }
+            var $ = jQuery.noConflict();
+            (function ($) {
+                "use strict";
+                jQuery(function ($) {
+                    $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+                    $(window).resize(function () {
+                        $.sidr("close", "menu");
+                    });
+                    $("#sidr-id-close-menu-button").click(function (e) {
+                        e.preventDefault();
+                        $.sidr("close", "menu");
+                    });
+                    $(".sidr-class-menu-item-has-children").click(function () {
+                        $(this)
+                            .find("ul.sidr-class-sub-menu")
+                            .slideToggle(function (e) {
+                                e.preventDefault();
+                            });
+                    });
+                    $(document.body).click(function (e) {
+                        if ($.sidr("status").opened) {
+                            var isBlur = true;
+                            if ($(e.target).closest(".sidr").length !== 0) {
+                                isBlur = false;
+                            }
+                            if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                                isBlur = false;
+                            }
+                            if (isBlur) {
+                                $.sidr("close", $.sidr("status").opened);
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#youtube-audio, #youtube-video").mediaelementplayer();
+        });
+        jQuery(function ($) {
+            var collapsedSize = "40px";
+            $(".more-content").each(function () {
+                var h = this.scrollHeight;
+                console.log(h);
+                var div = $(this);
+                if (h > 30) {
+                    div.css("height", collapsedSize);
+                    div.after('<button class="more-button">Lihat Selengkapnya</button>');
+                    var link = div.next();
+                    link.click(function (e) {
+                        e.stopPropagation();
+                        if (link.text() != "Lihat lebih sedikit") {
+                            link.text("Lihat lebih sedikit");
+                            div.animate({ height: h });
+                        } else {
+                            div.animate({ height: collapsedSize });
+                            link.text("Lihat Selengkapnya");
+                        }
+                    });
+                }
+            });
+        });
+    })(jQuery);
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                .then(function (registration) {
+                    console.log("PWA service worker ready");
+                    registration.update();
+                })
+                .catch(function (error) {
+                    console.log("Registration failed with " + error);
+                });
+        });
+    }
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+            $(window).resize(function () {
+                $.sidr("close", "menu");
+            });
+            $("#sidr-id-close-menu-button").click(function (e) {
+                e.preventDefault();
+                $.sidr("close", "menu");
+            });
+            $(".sidr-class-menu-item-has-children").click(function () {
+                $(this)
+                    .find("ul.sidr-class-sub-menu")
+                    .slideToggle(function (e) {
+                        e.preventDefault();
+                    });
+            });
+            $(document.body).click(function (e) {
+                if ($.sidr("status").opened) {
+                    var isBlur = true;
+                    if ($(e.target).closest(".sidr").length !== 0) {
+                        isBlur = false;
+                    }
+                    if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                        isBlur = false;
+                    }
+                    if (isBlur) {
+                        $.sidr("close", $.sidr("status").opened);
+                    }
+                }
+            });
+        });
+    })(jQuery);
+</script>
+    </body>
+</html>

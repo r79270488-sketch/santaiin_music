@@ -1,0 +1,723 @@
+a:2:{s:6:"expire";i:1782891156;s:7:"headers";a:0:{}}ENDCI---><!DOCTYPE html>
+<html lang="id" prefix="og: http://ogp.me/ns#">
+    <head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="profile" href="https://gmpg.org/xfn/11" />
+        <title>Santaiin MP3 Pencarian MP3 | Planetlagu</title>
+		<!-- Meta -->
+        <meta name="description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:site_name" content="Santaiin MP3" />
+		<meta name="keywords" content="download mp3, lagu mp3, lagu terbaru, lagu viral tiktok, lagu indonesia terbaru, lagu barat terbaru, chart musik, top lagu, musik trending, rekomendasi lagu, planetlagu">
+		<meta name="author" content="Mang Santai">
+        <meta property="og:title" content="Download Lagu Pencarian MP3 | Planetlagu" />
+        
+        <meta name="theme-color" content="#E91E63" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C600%2C700" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" media="screen" href="https://santaiin.xyz/assets/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <header id="header-container" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div id="header">
+                <div class="container">
+                    <div class="list-table clearfix">
+                        <div class="table-row">
+                            <div class="table-cell logo">
+                                <a href="https://santaiin.xyz/" title="Download Lagu Gratis" itemprop="url">
+                                    <img src="https://www.downloadlagu123.biz/themes/lagu123/assets/images/logo.png" alt="Download Lagu Gratis" title="Download Lagu Gratis" itemprop="image" />
+                                </a>
+                                <a id="mobile-menu" class="pull-right" href="#menu" rel="nofollow"><i class="fas fa-bars"></i><span class="screen-reader-text">Mobile Menu</span></a>
+                            </div>
+                            <div class="table-cell search">
+                                <form class="searchform searchform" method="get" action="https://santaiin.xyz/search">
+                                    <label class="screen-reader-text" for="search-form">Search Form:</label>
+                                    <input type="text" name="q" id="search-form" class="ui-autocomplete-input" autofocus="autofocus" value="" autocomplete="off" placeholder="Cari Lagu!! Artis - Judul lagu." minlength="3" />
+                                    <button type="submit" role="button" class="search-submit"><i class="fas fa-search"></i><span class="screen-reader-text">Cari</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="top-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                <div class="container">
+                    <ul class="top-menu">
+                        <li class="close-btn"><a id="close-menu-button" href="#" rel="nofollow">Close Menu x</a></li>
+                        <li class="home">
+                            <a href="https://santaiin.xyz/" title="Kembali ke Beranda" itemprop="url"><span itemprop="name">Home</span></a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://santaiin.xyz/music/lagu-k-pop-korean-pop" title="Download Lagu kpop korean pop" itemprop="url"><span itemprop="name">Lagu Kpop</span></a>
+                        </li>
+                        <li class="merah">
+                            <a href="https://santaiin.xyz/music/lagu-india-bollywood" title="Download Lagu India Bollywood" itemprop="url"><span itemprop="name">Lagu India Bollywood</span></a>
+                        </li>
+                        <li class="biru-tua">
+                            <a href="https://santaiin.xyz/music/lagu-dangdut" title="Download Lagu Dangdut" itemprop="url"><span itemprop="name">Lagu Dangdut</span></a>
+                        </li>
+                        <li class="ungu">
+                            <a href="https://santaiin.xyz/music/lagu-indonesia" title="Download Lagu Pop Indonesia" itemprop="url"><span itemprop="name">Lagu Pop Indonesia</span></a>
+                        </li>
+                        <li class="hijau menu-item-has-children">
+                            <a href="#" rel="nofollow">Lainnya</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-alternatif" title="Download Lagu Alternatif" itemprop="url"><span itemprop="name">Lagu Alternatif</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-blues" title="Download Lagu Blues" itemprop="url"><span itemprop="name">Lagu Blues</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" title="Download Lagu jpop japan pop" itemprop="url"><span itemprop="name">Lagu Jpop</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-malaysia" title="Download Lagu Malaysia" itemprop="url"><span itemprop="name">Lagu Malaysia</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/planetlagu" title="Planetlagu" itemprop="url"><span itemprop="name">Planetlagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/gudanglagu" title="Gudang Lagu" itemprop="url"><span itemprop="name">Gudang Lagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/stafaband" title="Stafaband MP3" itemprop="url"><span itemprop="name">Stafaband</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-dj" title="Download Lagu DJ" itemprop="url"><span itemprop="name">Lagu DJ</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header><!-- Header -->
+        <div id="site-container">
+            <div class="container">
+                <div class="row" itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                    <div class="col-md-main">
+                        <h1 class="main-title" itemprop="headline"><span class="highlight">Download Lagu MP3</span> Planetlagu</h1>
+                        <div class="success" itemprop="text">
+                            <p>Download lagu mp3 Planetlagu gratis. Planetlagu planetlagu, download mp3 Planetlagu, download Planetlagu lagu123.</p>
+                            <p>Terdapat sekitar 10 pencarian lagu yang dapat anda download dan dengarkan. Jika hasilnya tidak berisi lagu yang anda cari, cobalah mencari lagu dengan nama artis atau dengan nama lagu tersebut.</p>
+                        </div>
+
+                        <div itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                            <span itemprop="keywords" content="Lagu,Download,Album,Lirik,Artis,Video,Mp3,Song"></span>
+                            <span itemprop="publisher" content="Youtube"></span>
+                            <span itemprop="name" content="Memories Maroon 5"></span>
+                            <span itemprop="byArtist" content="Memories Maroon 5"></span>
+                            <div itemprop="track" itemscope="itemscope" itemtype="http://schema.org/ItemList">
+                                <span itemprop="numberOfItems" content="10"></span>
+                                    <!-- batas Music -->
+                                                                    <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/uQ0DsBvAGe4/hqdefault.jpg" alt="&quot;Nama-nama Planet&quot; lagu anak Indonesia #animasianak #ceritaanak #laguanak #kidsvideo" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/uQ0DsBvAGe4-Nama-nama-Planet-lagu-anak-Indonesia-animasianak-ceritaanak-laguanak-kidsvideo" title="&quot;Nama-nama Planet&quot; lagu anak Indonesia #animasianak #ceritaanak #laguanak #kidsvideo mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">&quot;Nama-nama Planet&quot; lagu anak Indonesia #animasianak #ceritaanak #laguanak #kidsvideo</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(1,'uQ0DsBvAGe4');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="&quot;Nama-nama Planet&quot; lagu anak Indonesia #animasianak #ceritaanak #laguanak #kidsvideo" href="https://santaiin.xyz/download?id=uQ0DsBvAGe4&title=&quot;Nama-nama Planet&quot; lagu anak Indonesia #animasianak #ceritaanak #laguanak #kidsvideo" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-1"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/AbEULN-pp98/hqdefault.jpg" alt="Mengenal nama-nama planet sambil bernyanyi | music riko the series song" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/AbEULN-pp98-Mengenal-nama-nama-planet-sambil-bernyanyi-music-riko-the-series-song" title="Mengenal nama-nama planet sambil bernyanyi | music riko the series song mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Mengenal nama-nama planet sambil bernyanyi | music riko the series song</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(2,'AbEULN-pp98');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Mengenal nama-nama planet sambil bernyanyi | music riko the series song" href="https://santaiin.xyz/download?id=AbEULN-pp98&title=Mengenal nama-nama planet sambil bernyanyi | music riko the series song" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-2"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/nHjqkCCbky4/hqdefault.jpg" alt="lagu planet tata surya untuk anak-anak belajar planet galaksi planet song Kids Educational Rhymes" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/nHjqkCCbky4-lagu-planet-tata-surya-untuk-anak-anak-belajar-planet-galaksi-planet-song-Kids-Educational-Rhymes" title="lagu planet tata surya untuk anak-anak belajar planet galaksi planet song Kids Educational Rhymes mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">lagu planet tata surya untuk anak-anak belajar planet galaksi planet song Kids Educational Rhymes</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(3,'nHjqkCCbky4');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="lagu planet tata surya untuk anak-anak belajar planet galaksi planet song Kids Educational Rhymes" href="https://santaiin.xyz/download?id=nHjqkCCbky4&title=lagu planet tata surya untuk anak-anak belajar planet galaksi planet song Kids Educational Rhymes" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-3"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/2EfqAt5Aeq0/hqdefault.jpg" alt="planet lagu belajar planet sajak pendidikan musik anak-anak Preschool Rhymes Kids Planet Song" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/2EfqAt5Aeq0-planet-lagu-belajar-planet-sajak-pendidikan-musik-anak-anak-Preschool-Rhymes-Kids-Planet-Song" title="planet lagu belajar planet sajak pendidikan musik anak-anak Preschool Rhymes Kids Planet Song mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">planet lagu belajar planet sajak pendidikan musik anak-anak Preschool Rhymes Kids Planet Song</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(4,'2EfqAt5Aeq0');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="planet lagu belajar planet sajak pendidikan musik anak-anak Preschool Rhymes Kids Planet Song" href="https://santaiin.xyz/download?id=2EfqAt5Aeq0&title=planet lagu belajar planet sajak pendidikan musik anak-anak Preschool Rhymes Kids Planet Song" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-4"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/BcyX7l-NJ9M/hqdefault.jpg" alt="Lagu Anak Terbaru: KELUAR ANGKASA  - Riko The Series Season 02 - Episode 03" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/BcyX7l-NJ9M-Lagu-Anak-Terbaru-KELUAR-ANGKASA-Riko-The-Series-Season-02-Episode-03" title="Lagu Anak Terbaru: KELUAR ANGKASA  - Riko The Series Season 02 - Episode 03 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Lagu Anak Terbaru: KELUAR ANGKASA  - Riko The Series Season 02 - Episode 03</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(5,'BcyX7l-NJ9M');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Lagu Anak Terbaru: KELUAR ANGKASA  - Riko The Series Season 02 - Episode 03" href="https://santaiin.xyz/download?id=BcyX7l-NJ9M&title=Lagu Anak Terbaru: KELUAR ANGKASA  - Riko The Series Season 02 - Episode 03" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-5"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/LUnp8KXaiIc/hqdefault.jpg" alt="NELLA KHARISMA   BIRUNYA CINTA  Official Music Video  HD PlanetLagu com" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/LUnp8KXaiIc-NELLA-KHARISMA-BIRUNYA-CINTA-Official-Music-Video-HD-PlanetLagu-com" title="NELLA KHARISMA   BIRUNYA CINTA  Official Music Video  HD PlanetLagu com mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">NELLA KHARISMA   BIRUNYA CINTA  Official Music Video  HD PlanetLagu com</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(6,'LUnp8KXaiIc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="NELLA KHARISMA   BIRUNYA CINTA  Official Music Video  HD PlanetLagu com" href="https://santaiin.xyz/download?id=LUnp8KXaiIc&title=NELLA KHARISMA   BIRUNYA CINTA  Official Music Video  HD PlanetLagu com" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-6"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/U6ugLfA1VMM/hqdefault.jpg" alt="Nama-nama Planet - Lagu Anak dan Balita Indonesia | Kinderflix Music" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/U6ugLfA1VMM-Nama-nama-Planet-Lagu-Anak-dan-Balita-Indonesia-Kinderflix-Music" title="Nama-nama Planet - Lagu Anak dan Balita Indonesia | Kinderflix Music mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Nama-nama Planet - Lagu Anak dan Balita Indonesia | Kinderflix Music</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(7,'U6ugLfA1VMM');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Nama-nama Planet - Lagu Anak dan Balita Indonesia | Kinderflix Music" href="https://santaiin.xyz/download?id=U6ugLfA1VMM&title=Nama-nama Planet - Lagu Anak dan Balita Indonesia | Kinderflix Music" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-7"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/5RdGsyB2G8o/hqdefault.jpg" alt="Parody Baby Shark Dance Versi Upin Ipin PlanetLagu com" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/5RdGsyB2G8o-Parody-Baby-Shark-Dance-Versi-Upin-Ipin-PlanetLagu-com" title="Parody Baby Shark Dance Versi Upin Ipin PlanetLagu com mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Parody Baby Shark Dance Versi Upin Ipin PlanetLagu com</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(8,'5RdGsyB2G8o');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Parody Baby Shark Dance Versi Upin Ipin PlanetLagu com" href="https://santaiin.xyz/download?id=5RdGsyB2G8o&title=Parody Baby Shark Dance Versi Upin Ipin PlanetLagu com" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-8"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/PiP3XMm6I-A/hqdefault.jpg" alt="Nama - Nama Planet (song version)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/PiP3XMm6I-A-Nama-Nama-Planet-song-version" title="Nama - Nama Planet (song version) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Nama - Nama Planet (song version)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(9,'PiP3XMm6I-A');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Nama - Nama Planet (song version)" href="https://santaiin.xyz/download?id=PiP3XMm6I-A&title=Nama - Nama Planet (song version)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-9"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/GoihjllDMMg/hqdefault.jpg" alt="Tasya Rosmala   Ayah Official Music Video  PlanetLagu com" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/GoihjllDMMg-Tasya-Rosmala-Ayah-Official-Music-Video-PlanetLagu-com" title="Tasya Rosmala   Ayah Official Music Video  PlanetLagu com mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Tasya Rosmala   Ayah Official Music Video  PlanetLagu com</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(10,'GoihjllDMMg');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Tasya Rosmala   Ayah Official Music Video  PlanetLagu com" href="https://santaiin.xyz/download?id=GoihjllDMMg&title=Tasya Rosmala   Ayah Official Music Video  PlanetLagu com" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-10"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/hP3uswxLdOs/hqdefault.jpg" alt="anak-anak planet lagu |  Belajar tata surya | Lagu pembibitan | Rhymes For Kids | Planet Song" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/hP3uswxLdOs-anak-anak-planet-lagu-Belajar-tata-surya-Lagu-pembibitan-Rhymes-For-Kids-Planet-Song" title="anak-anak planet lagu |  Belajar tata surya | Lagu pembibitan | Rhymes For Kids | Planet Song mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">anak-anak planet lagu |  Belajar tata surya | Lagu pembibitan | Rhymes For Kids | Planet Song</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(11,'hP3uswxLdOs');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="anak-anak planet lagu |  Belajar tata surya | Lagu pembibitan | Rhymes For Kids | Planet Song" href="https://santaiin.xyz/download?id=hP3uswxLdOs&title=anak-anak planet lagu |  Belajar tata surya | Lagu pembibitan | Rhymes For Kids | Planet Song" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-11"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/3ce-MeEYho8/hqdefault.jpg" alt="Hijau Daun   Ilusi Tak Bertepi Official Video Clip  PlanetLagu com" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/3ce-MeEYho8-Hijau-Daun-Ilusi-Tak-Bertepi-Official-Video-Clip-PlanetLagu-com" title="Hijau Daun   Ilusi Tak Bertepi Official Video Clip  PlanetLagu com mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Hijau Daun   Ilusi Tak Bertepi Official Video Clip  PlanetLagu com</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(12,'3ce-MeEYho8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Hijau Daun   Ilusi Tak Bertepi Official Video Clip  PlanetLagu com" href="https://santaiin.xyz/download?id=3ce-MeEYho8&title=Hijau Daun   Ilusi Tak Bertepi Official Video Clip  PlanetLagu com" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-12"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/OgHp2xQxz8A/hqdefault.jpg" alt="planet lagu | sajak prasekolah | belajar tata surya | Learn Planets | Nursery Rhymes | Planets Song" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/OgHp2xQxz8A-planet-lagu-sajak-prasekolah-belajar-tata-surya-Learn-Planets-Nursery-Rhymes-Planets-Song" title="planet lagu | sajak prasekolah | belajar tata surya | Learn Planets | Nursery Rhymes | Planets Song mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">planet lagu | sajak prasekolah | belajar tata surya | Learn Planets | Nursery Rhymes | Planets Song</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(13,'OgHp2xQxz8A');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="planet lagu | sajak prasekolah | belajar tata surya | Learn Planets | Nursery Rhymes | Planets Song" href="https://santaiin.xyz/download?id=OgHp2xQxz8A&title=planet lagu | sajak prasekolah | belajar tata surya | Learn Planets | Nursery Rhymes | Planets Song" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-13"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/5LTvYExWO3A/hqdefault.jpg" alt="Planet lagu | Lagu sistem tata surya | pendidikan lagu | Planets Song For Kids | Learn Planets Names" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/5LTvYExWO3A-Planet-lagu-Lagu-sistem-tata-surya-pendidikan-lagu-Planets-Song-For-Kids-Learn-Planets-Names" title="Planet lagu | Lagu sistem tata surya | pendidikan lagu | Planets Song For Kids | Learn Planets Names mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Planet lagu | Lagu sistem tata surya | pendidikan lagu | Planets Song For Kids | Learn Planets Names</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(14,'5LTvYExWO3A');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Planet lagu | Lagu sistem tata surya | pendidikan lagu | Planets Song For Kids | Learn Planets Names" href="https://santaiin.xyz/download?id=5LTvYExWO3A&title=Planet lagu | Lagu sistem tata surya | pendidikan lagu | Planets Song For Kids | Learn Planets Names" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-14"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/cqNmQZTLe3c/hqdefault.jpg" alt="Lagu Nama Planet - Lagu Video Edukasi Anak" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/cqNmQZTLe3c-Lagu-Nama-Planet-Lagu-Video-Edukasi-Anak" title="Lagu Nama Planet - Lagu Video Edukasi Anak mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Lagu Nama Planet - Lagu Video Edukasi Anak</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(15,'cqNmQZTLe3c');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Lagu Nama Planet - Lagu Video Edukasi Anak" href="https://santaiin.xyz/download?id=cqNmQZTLe3c&title=Lagu Nama Planet - Lagu Video Edukasi Anak" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-15"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/5u14MpwFKIY/hqdefault.jpg" alt="Lagu Planet di Tata Surya 🌏 | CoComelon Bahasa Indonesia - Lagu Anak Anak | Nursery Rhymes⭐" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/5u14MpwFKIY-Lagu-Planet-di-Tata-Surya-CoComelon-Bahasa-Indonesia-Lagu-Anak-Anak-Nursery-Rhymes" title="Lagu Planet di Tata Surya 🌏 | CoComelon Bahasa Indonesia - Lagu Anak Anak | Nursery Rhymes⭐ mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Lagu Planet di Tata Surya 🌏 | CoComelon Bahasa Indonesia - Lagu Anak Anak | Nursery Rhymes⭐</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(16,'5u14MpwFKIY');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Lagu Planet di Tata Surya 🌏 | CoComelon Bahasa Indonesia - Lagu Anak Anak | Nursery Rhymes⭐" href="https://santaiin.xyz/download?id=5u14MpwFKIY&title=Lagu Planet di Tata Surya 🌏 | CoComelon Bahasa Indonesia - Lagu Anak Anak | Nursery Rhymes⭐" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-16"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/7jvxWO0kJLg/hqdefault.jpg" alt="Rihanna  Diamonds Lyrics Video PlanetLagu com" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/7jvxWO0kJLg-Rihanna-Diamonds-Lyrics-Video-PlanetLagu-com" title="Rihanna  Diamonds Lyrics Video PlanetLagu com mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Rihanna  Diamonds Lyrics Video PlanetLagu com</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(17,'7jvxWO0kJLg');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Rihanna  Diamonds Lyrics Video PlanetLagu com" href="https://santaiin.xyz/download?id=7jvxWO0kJLg&title=Rihanna  Diamonds Lyrics Video PlanetLagu com" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-17"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Vq_HyM1iWZQ/hqdefault.jpg" alt="&#39;Dragonhearted&#39;   A Minecraft Original Music Video PlanetLagu com" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Vq_HyM1iWZQ-Dragonhearted-A-Minecraft-Original-Music-Video-PlanetLagu-com" title="&#39;Dragonhearted&#39;   A Minecraft Original Music Video PlanetLagu com mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">&#39;Dragonhearted&#39;   A Minecraft Original Music Video PlanetLagu com</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(18,'Vq_HyM1iWZQ');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="&#39;Dragonhearted&#39;   A Minecraft Original Music Video PlanetLagu com" href="https://santaiin.xyz/download?id=Vq_HyM1iWZQ&title=&#39;Dragonhearted&#39;   A Minecraft Original Music Video PlanetLagu com" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-18"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/uf_2SVPfX_A/hqdefault.jpg" alt="lirik lagu planet #edukasianak #laguanak #serunyabelajar #laguplanet#belajarplanet" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/uf_2SVPfX_A-lirik-lagu-planet-edukasianak-laguanak-serunyabelajar-laguplanetbelajarplanet" title="lirik lagu planet #edukasianak #laguanak #serunyabelajar #laguplanet#belajarplanet mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">lirik lagu planet #edukasianak #laguanak #serunyabelajar #laguplanet#belajarplanet</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(19,'uf_2SVPfX_A');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="lirik lagu planet #edukasianak #laguanak #serunyabelajar #laguplanet#belajarplanet" href="https://santaiin.xyz/download?id=uf_2SVPfX_A&title=lirik lagu planet #edukasianak #laguanak #serunyabelajar #laguplanet#belajarplanet" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-19"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/PJIjtA2_EQ8/hqdefault.jpg" alt="Lagu Anak Anak | 🌏🪐 Planet di Tata Surya | BaLiTa" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/PJIjtA2_EQ8-Lagu-Anak-Anak-Planet-di-Tata-Surya-BaLiTa" title="Lagu Anak Anak | 🌏🪐 Planet di Tata Surya | BaLiTa mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Lagu Anak Anak | 🌏🪐 Planet di Tata Surya | BaLiTa</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(20,'PJIjtA2_EQ8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Lagu Anak Anak | 🌏🪐 Planet di Tata Surya | BaLiTa" href="https://santaiin.xyz/download?id=PJIjtA2_EQ8&title=Lagu Anak Anak | 🌏🪐 Planet di Tata Surya | BaLiTa" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-20"></div>
+                                    </div>
+                                </div>
+                                                                <!-- End -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-sidebar">
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Lagu</span> Pilihan</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/ati-iki-dudu-dolanan" itemprop="url">Ati Iki Dudu Dolanan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gagal-merangkai-hati" itemprop="url">Gagal Merangkai Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/buruh-cod" itemprop="url">Buruh Cod</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/emas-hantaran-safira-inema" itemprop="url">Emas Hantaran Safira Inema</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/denny-caknan" itemprop="url">Denny Caknan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aku-ikhlas" itemprop="url">Aku Ikhlas</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/dj-bila-dia-menyukaiku" itemprop="url">Dj Bila Dia Menyukaiku</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-cover-feby-putri" itemprop="url">Friendzone Cover Feby Putri</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cidro-2" itemprop="url">Cidro 2</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/anneth-mungkin-hari-ini-esok-atau-nanti" itemprop="url">Anneth Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bts-life-goes-on" itemprop="url">Bts Life Goes On</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/salam-tresno" itemprop="url">Salam Tresno</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/angin-dalu-woro-widowati" itemprop="url">Angin Dalu Woro Widowati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bertaut" itemprop="url">Bertaut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tanpa-batas-waktu" itemprop="url">Tanpa Batas Waktu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bukan-pho" itemprop="url">Bukan Pho</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cuek" itemprop="url">Cuek</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro-ttm-akustik" itemprop="url">Cerito Loro Ttm Akustik</a></li>
+                                                           </ul>
+                        </div>
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Pencarian</span> Terakhir</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-alternatif" itemprop="url">Lagu Alternatif</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/theofficialglorilla" itemprop="url">Theofficialglorilla</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" itemprop="url">Lagu J Pop Japan Pop</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/ati-iki-dudu-dolanan" itemprop="url">Ati Iki Dudu Dolanan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/belly-gang-kushington" itemprop="url">Belly Gang Kushington</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-dangdut" itemprop="url">Lagu Dangdut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/rodwave" itemprop="url">Rodwave</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/youngboy-never-broke-again-topic" itemprop="url">Youngboy Never Broke Again Topic</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-malaysia" itemprop="url">Lagu Malaysia</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cidro-2" itemprop="url">Cidro 2</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/planetlagu" itemprop="url">Planetlagu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/buruh-cod" itemprop="url">Buruh Cod</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/hybe-labels" itemprop="url">Hybe Labels</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/salam-tresno" itemprop="url">Salam Tresno</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/melukis-senja" itemprop="url">Melukis Senja</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-india-bollywood" itemprop="url">Lagu India Bollywood</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/toby-fox" itemprop="url">Toby Fox</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/girl-in-the-mirror" itemprop="url">Girl In The Mirror</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-k-pop-korean-pop" itemprop="url">Lagu K Pop Korean Pop</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/eyes-blue-or-brown-cant-remember" itemprop="url">Eyes Blue Or Brown Cant Remember</a></li>
+                                                    </div>
+                    </div>                </div>
+            </div>
+        </div>
+      <!-- Footer -->
+<div id="footer-container">
+            <div class="container">
+                <p class="copy">
+                    &copy; 2026 Santaiin MP3. All rights reserved.
+                </p>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="https://santaiin.xyz/page/disclaimer" title="Disclaimer">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/copyright" title="Copyright">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/term-of-services" title="Term Of Services">TOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function playAudio(id, ytid) {
+                remPlayer();
+                var html = '<audio src="https://www.youtube.com/watch?v=' + ytid + '" type="video/youtube" controls autoplay style="width:100%">Browser tidak support bro, coba update browser nya!</audio>';
+                $("#player-" + id).html(html);
+                renderPlayer();
+            }
+            function renderPlayer() {
+                $("audio,video").mediaelementplayer();
+            }
+            function remPlayer() {
+                $(".divPlayer").html("");
+            }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                        .then(function (registration) {
+                            console.log("PWA service worker ready");
+                            registration.update();
+                        })
+                        .catch(function (error) {
+                            console.log("Registration failed with " + error);
+                        });
+                });
+            }
+            var $ = jQuery.noConflict();
+            (function ($) {
+                "use strict";
+                jQuery(function ($) {
+                    $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+                    $(window).resize(function () {
+                        $.sidr("close", "menu");
+                    });
+                    $("#sidr-id-close-menu-button").click(function (e) {
+                        e.preventDefault();
+                        $.sidr("close", "menu");
+                    });
+                    $(".sidr-class-menu-item-has-children").click(function () {
+                        $(this)
+                            .find("ul.sidr-class-sub-menu")
+                            .slideToggle(function (e) {
+                                e.preventDefault();
+                            });
+                    });
+                    $(document.body).click(function (e) {
+                        if ($.sidr("status").opened) {
+                            var isBlur = true;
+                            if ($(e.target).closest(".sidr").length !== 0) {
+                                isBlur = false;
+                            }
+                            if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                                isBlur = false;
+                            }
+                            if (isBlur) {
+                                $.sidr("close", $.sidr("status").opened);
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#youtube-audio, #youtube-video").mediaelementplayer();
+        });
+        jQuery(function ($) {
+            var collapsedSize = "40px";
+            $(".more-content").each(function () {
+                var h = this.scrollHeight;
+                console.log(h);
+                var div = $(this);
+                if (h > 30) {
+                    div.css("height", collapsedSize);
+                    div.after('<button class="more-button">Lihat Selengkapnya</button>');
+                    var link = div.next();
+                    link.click(function (e) {
+                        e.stopPropagation();
+                        if (link.text() != "Lihat lebih sedikit") {
+                            link.text("Lihat lebih sedikit");
+                            div.animate({ height: h });
+                        } else {
+                            div.animate({ height: collapsedSize });
+                            link.text("Lihat Selengkapnya");
+                        }
+                    });
+                }
+            });
+        });
+    })(jQuery);
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                .then(function (registration) {
+                    console.log("PWA service worker ready");
+                    registration.update();
+                })
+                .catch(function (error) {
+                    console.log("Registration failed with " + error);
+                });
+        });
+    }
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+            $(window).resize(function () {
+                $.sidr("close", "menu");
+            });
+            $("#sidr-id-close-menu-button").click(function (e) {
+                e.preventDefault();
+                $.sidr("close", "menu");
+            });
+            $(".sidr-class-menu-item-has-children").click(function () {
+                $(this)
+                    .find("ul.sidr-class-sub-menu")
+                    .slideToggle(function (e) {
+                        e.preventDefault();
+                    });
+            });
+            $(document.body).click(function (e) {
+                if ($.sidr("status").opened) {
+                    var isBlur = true;
+                    if ($(e.target).closest(".sidr").length !== 0) {
+                        isBlur = false;
+                    }
+                    if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                        isBlur = false;
+                    }
+                    if (isBlur) {
+                        $.sidr("close", $.sidr("status").opened);
+                    }
+                }
+            });
+        });
+    })(jQuery);
+</script>
+    </body>
+</html>

@@ -1,0 +1,723 @@
+a:2:{s:6:"expire";i:1782892509;s:7:"headers";a:0:{}}ENDCI---><!DOCTYPE html>
+<html lang="id" prefix="og: http://ogp.me/ns#">
+    <head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="profile" href="https://gmpg.org/xfn/11" />
+        <title>Santaiin MP3 Pencarian MP3 | Emas Hantaran Safira Inema</title>
+		<!-- Meta -->
+        <meta name="description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:site_name" content="Santaiin MP3" />
+		<meta name="keywords" content="download mp3, lagu mp3, lagu terbaru, lagu viral tiktok, lagu indonesia terbaru, lagu barat terbaru, chart musik, top lagu, musik trending, rekomendasi lagu, emas hantaran safira inema">
+		<meta name="author" content="Mang Santai">
+        <meta property="og:title" content="Download Lagu Pencarian MP3 | Emas Hantaran Safira Inema" />
+        
+        <meta name="theme-color" content="#E91E63" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C600%2C700" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" media="screen" href="https://santaiin.xyz/assets/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <header id="header-container" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div id="header">
+                <div class="container">
+                    <div class="list-table clearfix">
+                        <div class="table-row">
+                            <div class="table-cell logo">
+                                <a href="https://santaiin.xyz/" title="Download Lagu Gratis" itemprop="url">
+                                    <img src="https://www.downloadlagu123.biz/themes/lagu123/assets/images/logo.png" alt="Download Lagu Gratis" title="Download Lagu Gratis" itemprop="image" />
+                                </a>
+                                <a id="mobile-menu" class="pull-right" href="#menu" rel="nofollow"><i class="fas fa-bars"></i><span class="screen-reader-text">Mobile Menu</span></a>
+                            </div>
+                            <div class="table-cell search">
+                                <form class="searchform searchform" method="get" action="https://santaiin.xyz/search">
+                                    <label class="screen-reader-text" for="search-form">Search Form:</label>
+                                    <input type="text" name="q" id="search-form" class="ui-autocomplete-input" autofocus="autofocus" value="" autocomplete="off" placeholder="Cari Lagu!! Artis - Judul lagu." minlength="3" />
+                                    <button type="submit" role="button" class="search-submit"><i class="fas fa-search"></i><span class="screen-reader-text">Cari</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="top-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                <div class="container">
+                    <ul class="top-menu">
+                        <li class="close-btn"><a id="close-menu-button" href="#" rel="nofollow">Close Menu x</a></li>
+                        <li class="home">
+                            <a href="https://santaiin.xyz/" title="Kembali ke Beranda" itemprop="url"><span itemprop="name">Home</span></a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://santaiin.xyz/music/lagu-k-pop-korean-pop" title="Download Lagu kpop korean pop" itemprop="url"><span itemprop="name">Lagu Kpop</span></a>
+                        </li>
+                        <li class="merah">
+                            <a href="https://santaiin.xyz/music/lagu-india-bollywood" title="Download Lagu India Bollywood" itemprop="url"><span itemprop="name">Lagu India Bollywood</span></a>
+                        </li>
+                        <li class="biru-tua">
+                            <a href="https://santaiin.xyz/music/lagu-dangdut" title="Download Lagu Dangdut" itemprop="url"><span itemprop="name">Lagu Dangdut</span></a>
+                        </li>
+                        <li class="ungu">
+                            <a href="https://santaiin.xyz/music/lagu-indonesia" title="Download Lagu Pop Indonesia" itemprop="url"><span itemprop="name">Lagu Pop Indonesia</span></a>
+                        </li>
+                        <li class="hijau menu-item-has-children">
+                            <a href="#" rel="nofollow">Lainnya</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-alternatif" title="Download Lagu Alternatif" itemprop="url"><span itemprop="name">Lagu Alternatif</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-blues" title="Download Lagu Blues" itemprop="url"><span itemprop="name">Lagu Blues</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" title="Download Lagu jpop japan pop" itemprop="url"><span itemprop="name">Lagu Jpop</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-malaysia" title="Download Lagu Malaysia" itemprop="url"><span itemprop="name">Lagu Malaysia</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/planetlagu" title="Planetlagu" itemprop="url"><span itemprop="name">Planetlagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/gudanglagu" title="Gudang Lagu" itemprop="url"><span itemprop="name">Gudang Lagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/stafaband" title="Stafaband MP3" itemprop="url"><span itemprop="name">Stafaband</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-dj" title="Download Lagu DJ" itemprop="url"><span itemprop="name">Lagu DJ</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header><!-- Header -->
+        <div id="site-container">
+            <div class="container">
+                <div class="row" itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                    <div class="col-md-main">
+                        <h1 class="main-title" itemprop="headline"><span class="highlight">Download Lagu MP3</span> Emas Hantaran Safira Inema</h1>
+                        <div class="success" itemprop="text">
+                            <p>Download lagu mp3 Emas Hantaran Safira Inema gratis. Emas Hantaran Safira Inema planetlagu, download mp3 Emas Hantaran Safira Inema, download Emas Hantaran Safira Inema lagu123.</p>
+                            <p>Terdapat sekitar 10 pencarian lagu yang dapat anda download dan dengarkan. Jika hasilnya tidak berisi lagu yang anda cari, cobalah mencari lagu dengan nama artis atau dengan nama lagu tersebut.</p>
+                        </div>
+
+                        <div itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                            <span itemprop="keywords" content="Lagu,Download,Album,Lirik,Artis,Video,Mp3,Song"></span>
+                            <span itemprop="publisher" content="Youtube"></span>
+                            <span itemprop="name" content="Memories Maroon 5"></span>
+                            <span itemprop="byArtist" content="Memories Maroon 5"></span>
+                            <div itemprop="track" itemscope="itemscope" itemtype="http://schema.org/ItemList">
+                                <span itemprop="numberOfItems" content="10"></span>
+                                    <!-- batas Music -->
+                                                                    <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/OVAr7mU5hbU/hqdefault.jpg" alt="Safira Inema - Emas Hantaran | Dangdut [OFFICIAL]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/OVAr7mU5hbU-Safira-Inema-Emas-Hantaran-Dangdut-OFFICIAL" title="Safira Inema - Emas Hantaran | Dangdut [OFFICIAL] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Safira Inema - Emas Hantaran | Dangdut [OFFICIAL]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(1,'OVAr7mU5hbU');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Safira Inema - Emas Hantaran | Dangdut [OFFICIAL]" href="https://santaiin.xyz/download?id=OVAr7mU5hbU&title=Safira Inema - Emas Hantaran | Dangdut [OFFICIAL]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-1"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/bDtUJZKHhT4/hqdefault.jpg" alt="Safira Inema - Emas Hantaran - Berakhir Sudah Impian Cinta (Official Music Video ANEKA SAFARI)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/bDtUJZKHhT4-Safira-Inema-Emas-Hantaran-Berakhir-Sudah-Impian-Cinta-Official-Music-Video-ANEKA-SAFARI" title="Safira Inema - Emas Hantaran - Berakhir Sudah Impian Cinta (Official Music Video ANEKA SAFARI) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Safira Inema - Emas Hantaran - Berakhir Sudah Impian Cinta (Official Music Video ANEKA SAFARI)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(2,'bDtUJZKHhT4');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Safira Inema - Emas Hantaran - Berakhir Sudah Impian Cinta (Official Music Video ANEKA SAFARI)" href="https://santaiin.xyz/download?id=bDtUJZKHhT4&title=Safira Inema - Emas Hantaran - Berakhir Sudah Impian Cinta (Official Music Video ANEKA SAFARI)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-2"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/yjq_7F4zm18/hqdefault.jpg" alt="Yollanda &amp; Arief - Emas Hantaran (Official Music Video) | Lagu Pop Melayu" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/yjq_7F4zm18-Yollanda-Arief-Emas-Hantaran-Official-Music-Video-Lagu-Pop-Melayu" title="Yollanda &amp; Arief - Emas Hantaran (Official Music Video) | Lagu Pop Melayu mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Yollanda &amp; Arief - Emas Hantaran (Official Music Video) | Lagu Pop Melayu</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(3,'yjq_7F4zm18');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Yollanda &amp; Arief - Emas Hantaran (Official Music Video) | Lagu Pop Melayu" href="https://santaiin.xyz/download?id=yjq_7F4zm18&title=Yollanda &amp; Arief - Emas Hantaran (Official Music Video) | Lagu Pop Melayu" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-3"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/nA2jfe53mWk/hqdefault.jpg" alt="Emas hantaran -Safira Inema- lirik" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/nA2jfe53mWk-Emas-hantaran-Safira-Inema-lirik" title="Emas hantaran -Safira Inema- lirik mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Emas hantaran -Safira Inema- lirik</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(4,'nA2jfe53mWk');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Emas hantaran -Safira Inema- lirik" href="https://santaiin.xyz/download?id=nA2jfe53mWk&title=Emas hantaran -Safira Inema- lirik" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-4"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/d0VhD__eNQw/hqdefault.jpg" alt="CIDRO2 EMAS HANTARAN FULL ALBUM TERBARU SAFIRA INEMA 2021 (tanpa iklan)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/d0VhD__eNQw-CIDRO2-EMAS-HANTARAN-FULL-ALBUM-TERBARU-SAFIRA-INEMA-2021-tanpa-iklan" title="CIDRO2 EMAS HANTARAN FULL ALBUM TERBARU SAFIRA INEMA 2021 (tanpa iklan) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">CIDRO2 EMAS HANTARAN FULL ALBUM TERBARU SAFIRA INEMA 2021 (tanpa iklan)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(5,'d0VhD__eNQw');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="CIDRO2 EMAS HANTARAN FULL ALBUM TERBARU SAFIRA INEMA 2021 (tanpa iklan)" href="https://santaiin.xyz/download?id=d0VhD__eNQw&title=CIDRO2 EMAS HANTARAN FULL ALBUM TERBARU SAFIRA INEMA 2021 (tanpa iklan)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-5"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/K4ZLGrrAbZA/hqdefault.jpg" alt="SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/K4ZLGrrAbZA-SAFIRA-INEMA-ft-DJ-SANTUY-SEHARUSNYA-AKU-COBA-KAU-INGAT-INGAT-KEMBALI-The-Best-Wahana-Musik" title="SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(6,'K4ZLGrrAbZA');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik" href="https://santaiin.xyz/download?id=K4ZLGrrAbZA&title=SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-6"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/6DKjNzLLF3o/hqdefault.jpg" alt="EMAS HANTARAN  (dj remix) - Era Syaqira  //  Salah pada nasipku sendiri karna tak punya emas permata" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/6DKjNzLLF3o-EMAS-HANTARAN-dj-remix-Era-Syaqira-Salah-pada-nasipku-sendiri-karna-tak-punya-emas-permata" title="EMAS HANTARAN  (dj remix) - Era Syaqira  //  Salah pada nasipku sendiri karna tak punya emas permata mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">EMAS HANTARAN  (dj remix) - Era Syaqira  //  Salah pada nasipku sendiri karna tak punya emas permata</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(7,'6DKjNzLLF3o');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="EMAS HANTARAN  (dj remix) - Era Syaqira  //  Salah pada nasipku sendiri karna tak punya emas permata" href="https://santaiin.xyz/download?id=6DKjNzLLF3o&title=EMAS HANTARAN  (dj remix) - Era Syaqira  //  Salah pada nasipku sendiri karna tak punya emas permata" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-7"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/gndJ3G4Injw/hqdefault.jpg" alt="Emas Hantaran -  Safira Inema (Lirik)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/gndJ3G4Injw-Emas-Hantaran-Safira-Inema-Lirik" title="Emas Hantaran -  Safira Inema (Lirik) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Emas Hantaran -  Safira Inema (Lirik)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(8,'gndJ3G4Injw');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Emas Hantaran -  Safira Inema (Lirik)" href="https://santaiin.xyz/download?id=gndJ3G4Injw&title=Emas Hantaran -  Safira Inema (Lirik)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-8"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/rz6rvDAoFyg/hqdefault.jpg" alt="Emas Hantaran/Berakhir Sudah Impian Cinta -Safira Inema" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/rz6rvDAoFyg-Emas-HantaranBerakhir-Sudah-Impian-Cinta-Safira-Inema" title="Emas Hantaran/Berakhir Sudah Impian Cinta -Safira Inema mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Emas Hantaran/Berakhir Sudah Impian Cinta -Safira Inema</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(9,'rz6rvDAoFyg');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Emas Hantaran/Berakhir Sudah Impian Cinta -Safira Inema" href="https://santaiin.xyz/download?id=rz6rvDAoFyg&title=Emas Hantaran/Berakhir Sudah Impian Cinta -Safira Inema" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-9"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/xo_1CnEn45U/hqdefault.jpg" alt="Emas Hantaran.... By Safira inema" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/xo_1CnEn45U-Emas-Hantaran-By-Safira-inema" title="Emas Hantaran.... By Safira inema mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Emas Hantaran.... By Safira inema</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(10,'xo_1CnEn45U');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Emas Hantaran.... By Safira inema" href="https://santaiin.xyz/download?id=xo_1CnEn45U&title=Emas Hantaran.... By Safira inema" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-10"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/UklKUy2mfPE/hqdefault.jpg" alt="Lagu terbaru Hantaran Emas Safira inema!!" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/UklKUy2mfPE-Lagu-terbaru-Hantaran-Emas-Safira-inema" title="Lagu terbaru Hantaran Emas Safira inema!! mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Lagu terbaru Hantaran Emas Safira inema!!</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(11,'UklKUy2mfPE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Lagu terbaru Hantaran Emas Safira inema!!" href="https://santaiin.xyz/download?id=UklKUy2mfPE&title=Lagu terbaru Hantaran Emas Safira inema!!" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-11"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/2m-vWJW8JMI/hqdefault.jpg" alt="Safira Inema || Emas Hantaran" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/2m-vWJW8JMI-Safira-Inema-Emas-Hantaran" title="Safira Inema || Emas Hantaran mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Safira Inema || Emas Hantaran</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(12,'2m-vWJW8JMI');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Safira Inema || Emas Hantaran" href="https://santaiin.xyz/download?id=2m-vWJW8JMI&title=Safira Inema || Emas Hantaran" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-12"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/DbJpWaKsrJ8/hqdefault.jpg" alt="Safira Inema - Ditinggal Pas Sayang Sayange (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/DbJpWaKsrJ8-Safira-Inema-Ditinggal-Pas-Sayang-Sayange-Official-Music-Video" title="Safira Inema - Ditinggal Pas Sayang Sayange (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Safira Inema - Ditinggal Pas Sayang Sayange (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(13,'DbJpWaKsrJ8');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Safira Inema - Ditinggal Pas Sayang Sayange (Official Music Video)" href="https://santaiin.xyz/download?id=DbJpWaKsrJ8&title=Safira Inema - Ditinggal Pas Sayang Sayange (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-13"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/LPP0QrW2XDU/hqdefault.jpg" alt="Emas Hantaran | Berakhir sudah impian cinta (LIRIK) || Safira Inema" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/LPP0QrW2XDU-Emas-Hantaran-Berakhir-sudah-impian-cinta-LIRIK-Safira-Inema" title="Emas Hantaran | Berakhir sudah impian cinta (LIRIK) || Safira Inema mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Emas Hantaran | Berakhir sudah impian cinta (LIRIK) || Safira Inema</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(14,'LPP0QrW2XDU');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Emas Hantaran | Berakhir sudah impian cinta (LIRIK) || Safira Inema" href="https://santaiin.xyz/download?id=LPP0QrW2XDU&title=Emas Hantaran | Berakhir sudah impian cinta (LIRIK) || Safira Inema" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-14"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/HEAOYNhhnig/hqdefault.jpg" alt="Safira Inema - Setia Untuk Selamanya (Official Music Video) DJ FULL BASS Thailand" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/HEAOYNhhnig-Safira-Inema-Setia-Untuk-Selamanya-Official-Music-Video-DJ-FULL-BASS-Thailand" title="Safira Inema - Setia Untuk Selamanya (Official Music Video) DJ FULL BASS Thailand mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Safira Inema - Setia Untuk Selamanya (Official Music Video) DJ FULL BASS Thailand</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(15,'HEAOYNhhnig');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Safira Inema - Setia Untuk Selamanya (Official Music Video) DJ FULL BASS Thailand" href="https://santaiin.xyz/download?id=HEAOYNhhnig&title=Safira Inema - Setia Untuk Selamanya (Official Music Video) DJ FULL BASS Thailand" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-15"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/9WmtAn_vzvk/hqdefault.jpg" alt="HANTARAN EMAS - SAFIRA INEMA Full Album 2021" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/9WmtAn_vzvk-HANTARAN-EMAS-SAFIRA-INEMA-Full-Album-2021" title="HANTARAN EMAS - SAFIRA INEMA Full Album 2021 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">HANTARAN EMAS - SAFIRA INEMA Full Album 2021</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(16,'9WmtAn_vzvk');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="HANTARAN EMAS - SAFIRA INEMA Full Album 2021" href="https://santaiin.xyz/download?id=9WmtAn_vzvk&title=HANTARAN EMAS - SAFIRA INEMA Full Album 2021" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-16"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/OVVi4GzYiiQ/hqdefault.jpg" alt="Safira Inema - Emas Hantaran || Story&#39;Wa Terbaru 30 Detik" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/OVVi4GzYiiQ-Safira-Inema-Emas-Hantaran-StoryWa-Terbaru-30-Detik" title="Safira Inema - Emas Hantaran || Story&#39;Wa Terbaru 30 Detik mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Safira Inema - Emas Hantaran || Story&#39;Wa Terbaru 30 Detik</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(17,'OVVi4GzYiiQ');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Safira Inema - Emas Hantaran || Story&#39;Wa Terbaru 30 Detik" href="https://santaiin.xyz/download?id=OVVi4GzYiiQ&title=Safira Inema - Emas Hantaran || Story&#39;Wa Terbaru 30 Detik" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-17"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/aSyi5bxfnzU/hqdefault.jpg" alt="Emas Hantaran - Safira Inema #viral #safirainema" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/aSyi5bxfnzU-Emas-Hantaran-Safira-Inema-viral-safirainema" title="Emas Hantaran - Safira Inema #viral #safirainema mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Emas Hantaran - Safira Inema #viral #safirainema</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(18,'aSyi5bxfnzU');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Emas Hantaran - Safira Inema #viral #safirainema" href="https://santaiin.xyz/download?id=aSyi5bxfnzU&title=Emas Hantaran - Safira Inema #viral #safirainema" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-18"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/r57iBpRWAOE/hqdefault.jpg" alt="EMAS HANTARAN (BERAKHIR SUDAH IMPIAN CINTA) SAFIRA INEMA (LIRIK)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/r57iBpRWAOE-EMAS-HANTARAN-BERAKHIR-SUDAH-IMPIAN-CINTA-SAFIRA-INEMA-LIRIK" title="EMAS HANTARAN (BERAKHIR SUDAH IMPIAN CINTA) SAFIRA INEMA (LIRIK) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">EMAS HANTARAN (BERAKHIR SUDAH IMPIAN CINTA) SAFIRA INEMA (LIRIK)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(19,'r57iBpRWAOE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="EMAS HANTARAN (BERAKHIR SUDAH IMPIAN CINTA) SAFIRA INEMA (LIRIK)" href="https://santaiin.xyz/download?id=r57iBpRWAOE&title=EMAS HANTARAN (BERAKHIR SUDAH IMPIAN CINTA) SAFIRA INEMA (LIRIK)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-19"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/zBr2UFHKmBw/hqdefault.jpg" alt="Safira Inema- Emas Hantaran /Berakhir sudah impian cinta tinggallah puing puingnya" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/zBr2UFHKmBw-Safira-Inema-Emas-Hantaran-Berakhir-sudah-impian-cinta-tinggallah-puing-puingnya" title="Safira Inema- Emas Hantaran /Berakhir sudah impian cinta tinggallah puing puingnya mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Safira Inema- Emas Hantaran /Berakhir sudah impian cinta tinggallah puing puingnya</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(20,'zBr2UFHKmBw');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Safira Inema- Emas Hantaran /Berakhir sudah impian cinta tinggallah puing puingnya" href="https://santaiin.xyz/download?id=zBr2UFHKmBw&title=Safira Inema- Emas Hantaran /Berakhir sudah impian cinta tinggallah puing puingnya" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-20"></div>
+                                    </div>
+                                </div>
+                                                                <!-- End -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-sidebar">
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Lagu</span> Pilihan</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/girl-in-the-mirror" itemprop="url">Girl In The Mirror</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cidro-2" itemprop="url">Cidro 2</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bertaut" itemprop="url">Bertaut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berhenti-kasihan" itemprop="url">Berhenti Kasihan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tepung-kanji" itemprop="url">Tepung Kanji</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-budi-doremi" itemprop="url">Friendzone Budi Doremi</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/melukis-senja" itemprop="url">Melukis Senja</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aduh-mamae" itemprop="url">Aduh Mamae</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/at-my-worst" itemprop="url">At My Worst</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cukup-dikenang-saja" itemprop="url">Cukup Dikenang Saja</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/anneth-mungkin-hari-ini-esok-atau-nanti" itemprop="url">Anneth Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/coba-kau-ingat-ingat-kembali" itemprop="url">Coba Kau Ingat Ingat Kembali</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/angin-dalu" itemprop="url">Angin Dalu</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/antara-nyaman-dan-cinta" itemprop="url">Antara Nyaman Dan Cinta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/mungkin-hari-ini-esok-atau-nanti" itemprop="url">Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro" itemprop="url">Cerito Loro</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/denny-caknan" itemprop="url">Denny Caknan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-cover-feby-putri" itemprop="url">Friendzone Cover Feby Putri</a></li>
+                                                           </ul>
+                        </div>
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Pencarian</span> Terakhir</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/antara-nyaman-dan-cinta" itemprop="url">Antara Nyaman Dan Cinta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tepung-kanji" itemprop="url">Tepung Kanji</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/dj-bila-dia-menyukaiku" itemprop="url">Dj Bila Dia Menyukaiku</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gagal-merangkai-hati" itemprop="url">Gagal Merangkai Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/rodwave" itemprop="url">Rodwave</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/jyp-entertainment" itemprop="url">Jyp Entertainment</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/anneth-mungkin-hari-ini-esok-atau-nanti" itemprop="url">Anneth Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cuek" itemprop="url">Cuek</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/buruh-cod" itemprop="url">Buruh Cod</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/futurevevo" itemprop="url">Futurevevo</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/emas-hantaran-safira-inema" itemprop="url">Emas Hantaran Safira Inema</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-dj" itemprop="url">Lagu Dj</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro-ttm-akustik" itemprop="url">Cerito Loro Ttm Akustik</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/sombr" itemprop="url">Sombr</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bahagialah-bersamanya" itemprop="url">Bahagialah Bersamanya</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/stafaband" itemprop="url">Stafaband</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/at-my-worst" itemprop="url">At My Worst</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/trimofficial" itemprop="url">Trimofficial</a></li>
+                                                    </div>
+                    </div>                </div>
+            </div>
+        </div>
+      <!-- Footer -->
+<div id="footer-container">
+            <div class="container">
+                <p class="copy">
+                    &copy; 2026 Santaiin MP3. All rights reserved.
+                </p>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="https://santaiin.xyz/page/disclaimer" title="Disclaimer">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/copyright" title="Copyright">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/term-of-services" title="Term Of Services">TOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function playAudio(id, ytid) {
+                remPlayer();
+                var html = '<audio src="https://www.youtube.com/watch?v=' + ytid + '" type="video/youtube" controls autoplay style="width:100%">Browser tidak support bro, coba update browser nya!</audio>';
+                $("#player-" + id).html(html);
+                renderPlayer();
+            }
+            function renderPlayer() {
+                $("audio,video").mediaelementplayer();
+            }
+            function remPlayer() {
+                $(".divPlayer").html("");
+            }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                        .then(function (registration) {
+                            console.log("PWA service worker ready");
+                            registration.update();
+                        })
+                        .catch(function (error) {
+                            console.log("Registration failed with " + error);
+                        });
+                });
+            }
+            var $ = jQuery.noConflict();
+            (function ($) {
+                "use strict";
+                jQuery(function ($) {
+                    $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+                    $(window).resize(function () {
+                        $.sidr("close", "menu");
+                    });
+                    $("#sidr-id-close-menu-button").click(function (e) {
+                        e.preventDefault();
+                        $.sidr("close", "menu");
+                    });
+                    $(".sidr-class-menu-item-has-children").click(function () {
+                        $(this)
+                            .find("ul.sidr-class-sub-menu")
+                            .slideToggle(function (e) {
+                                e.preventDefault();
+                            });
+                    });
+                    $(document.body).click(function (e) {
+                        if ($.sidr("status").opened) {
+                            var isBlur = true;
+                            if ($(e.target).closest(".sidr").length !== 0) {
+                                isBlur = false;
+                            }
+                            if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                                isBlur = false;
+                            }
+                            if (isBlur) {
+                                $.sidr("close", $.sidr("status").opened);
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#youtube-audio, #youtube-video").mediaelementplayer();
+        });
+        jQuery(function ($) {
+            var collapsedSize = "40px";
+            $(".more-content").each(function () {
+                var h = this.scrollHeight;
+                console.log(h);
+                var div = $(this);
+                if (h > 30) {
+                    div.css("height", collapsedSize);
+                    div.after('<button class="more-button">Lihat Selengkapnya</button>');
+                    var link = div.next();
+                    link.click(function (e) {
+                        e.stopPropagation();
+                        if (link.text() != "Lihat lebih sedikit") {
+                            link.text("Lihat lebih sedikit");
+                            div.animate({ height: h });
+                        } else {
+                            div.animate({ height: collapsedSize });
+                            link.text("Lihat Selengkapnya");
+                        }
+                    });
+                }
+            });
+        });
+    })(jQuery);
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                .then(function (registration) {
+                    console.log("PWA service worker ready");
+                    registration.update();
+                })
+                .catch(function (error) {
+                    console.log("Registration failed with " + error);
+                });
+        });
+    }
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+            $(window).resize(function () {
+                $.sidr("close", "menu");
+            });
+            $("#sidr-id-close-menu-button").click(function (e) {
+                e.preventDefault();
+                $.sidr("close", "menu");
+            });
+            $(".sidr-class-menu-item-has-children").click(function () {
+                $(this)
+                    .find("ul.sidr-class-sub-menu")
+                    .slideToggle(function (e) {
+                        e.preventDefault();
+                    });
+            });
+            $(document.body).click(function (e) {
+                if ($.sidr("status").opened) {
+                    var isBlur = true;
+                    if ($(e.target).closest(".sidr").length !== 0) {
+                        isBlur = false;
+                    }
+                    if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                        isBlur = false;
+                    }
+                    if (isBlur) {
+                        $.sidr("close", $.sidr("status").opened);
+                    }
+                }
+            });
+        });
+    })(jQuery);
+</script>
+    </body>
+</html>

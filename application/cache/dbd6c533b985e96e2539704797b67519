@@ -1,0 +1,723 @@
+a:2:{s:6:"expire";i:1782890297;s:7:"headers";a:0:{}}ENDCI---><!DOCTYPE html>
+<html lang="id" prefix="og: http://ogp.me/ns#">
+    <head itemscope="itemscope" itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="profile" href="https://gmpg.org/xfn/11" />
+        <title>Santaiin MP3 Pencarian MP3 | Coba Kau Ingat Ingat Kembali</title>
+		<!-- Meta -->
+        <meta name="description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:description" content="Situs musik untuk menemukan lagu terbaru, lagu viral, dan chart musik populer Indonesia maupun internasional." />
+        <meta property="og:site_name" content="Santaiin MP3" />
+		<meta name="keywords" content="download mp3, lagu mp3, lagu terbaru, lagu viral tiktok, lagu indonesia terbaru, lagu barat terbaru, chart musik, top lagu, musik trending, rekomendasi lagu, coba kau ingat ingat kembali">
+		<meta name="author" content="Mang Santai">
+        <meta property="og:title" content="Download Lagu Pencarian MP3 | Coba Kau Ingat Ingat Kembali" />
+        
+        <meta name="theme-color" content="#E91E63" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito%3A300%2C400%2C600%2C700" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" media="screen" href="https://santaiin.xyz/assets/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+        <header id="header-container" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div id="header">
+                <div class="container">
+                    <div class="list-table clearfix">
+                        <div class="table-row">
+                            <div class="table-cell logo">
+                                <a href="https://santaiin.xyz/" title="Download Lagu Gratis" itemprop="url">
+                                    <img src="https://www.downloadlagu123.biz/themes/lagu123/assets/images/logo.png" alt="Download Lagu Gratis" title="Download Lagu Gratis" itemprop="image" />
+                                </a>
+                                <a id="mobile-menu" class="pull-right" href="#menu" rel="nofollow"><i class="fas fa-bars"></i><span class="screen-reader-text">Mobile Menu</span></a>
+                            </div>
+                            <div class="table-cell search">
+                                <form class="searchform searchform" method="get" action="https://santaiin.xyz/search">
+                                    <label class="screen-reader-text" for="search-form">Search Form:</label>
+                                    <input type="text" name="q" id="search-form" class="ui-autocomplete-input" autofocus="autofocus" value="" autocomplete="off" placeholder="Cari Lagu!! Artis - Judul lagu." minlength="3" />
+                                    <button type="submit" role="button" class="search-submit"><i class="fas fa-search"></i><span class="screen-reader-text">Cari</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="top-nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                <div class="container">
+                    <ul class="top-menu">
+                        <li class="close-btn"><a id="close-menu-button" href="#" rel="nofollow">Close Menu x</a></li>
+                        <li class="home">
+                            <a href="https://santaiin.xyz/" title="Kembali ke Beranda" itemprop="url"><span itemprop="name">Home</span></a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://santaiin.xyz/music/lagu-k-pop-korean-pop" title="Download Lagu kpop korean pop" itemprop="url"><span itemprop="name">Lagu Kpop</span></a>
+                        </li>
+                        <li class="merah">
+                            <a href="https://santaiin.xyz/music/lagu-india-bollywood" title="Download Lagu India Bollywood" itemprop="url"><span itemprop="name">Lagu India Bollywood</span></a>
+                        </li>
+                        <li class="biru-tua">
+                            <a href="https://santaiin.xyz/music/lagu-dangdut" title="Download Lagu Dangdut" itemprop="url"><span itemprop="name">Lagu Dangdut</span></a>
+                        </li>
+                        <li class="ungu">
+                            <a href="https://santaiin.xyz/music/lagu-indonesia" title="Download Lagu Pop Indonesia" itemprop="url"><span itemprop="name">Lagu Pop Indonesia</span></a>
+                        </li>
+                        <li class="hijau menu-item-has-children">
+                            <a href="#" rel="nofollow">Lainnya</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-alternatif" title="Download Lagu Alternatif" itemprop="url"><span itemprop="name">Lagu Alternatif</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-blues" title="Download Lagu Blues" itemprop="url"><span itemprop="name">Lagu Blues</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-j-pop-japan-pop" title="Download Lagu jpop japan pop" itemprop="url"><span itemprop="name">Lagu Jpop</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-malaysia" title="Download Lagu Malaysia" itemprop="url"><span itemprop="name">Lagu Malaysia</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/planetlagu" title="Planetlagu" itemprop="url"><span itemprop="name">Planetlagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/gudanglagu" title="Gudang Lagu" itemprop="url"><span itemprop="name">Gudang Lagu</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/stafaband" title="Stafaband MP3" itemprop="url"><span itemprop="name">Stafaband</span></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="https://santaiin.xyz/music/lagu-dj" title="Download Lagu DJ" itemprop="url"><span itemprop="name">Lagu DJ</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header><!-- Header -->
+        <div id="site-container">
+            <div class="container">
+                <div class="row" itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                    <div class="col-md-main">
+                        <h1 class="main-title" itemprop="headline"><span class="highlight">Download Lagu MP3</span> Coba Kau Ingat Ingat Kembali</h1>
+                        <div class="success" itemprop="text">
+                            <p>Download lagu mp3 Coba Kau Ingat Ingat Kembali gratis. Coba Kau Ingat Ingat Kembali planetlagu, download mp3 Coba Kau Ingat Ingat Kembali, download Coba Kau Ingat Ingat Kembali lagu123.</p>
+                            <p>Terdapat sekitar 10 pencarian lagu yang dapat anda download dan dengarkan. Jika hasilnya tidak berisi lagu yang anda cari, cobalah mencari lagu dengan nama artis atau dengan nama lagu tersebut.</p>
+                        </div>
+
+                        <div itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
+                            <span itemprop="keywords" content="Lagu,Download,Album,Lirik,Artis,Video,Mp3,Song"></span>
+                            <span itemprop="publisher" content="Youtube"></span>
+                            <span itemprop="name" content="Memories Maroon 5"></span>
+                            <span itemprop="byArtist" content="Memories Maroon 5"></span>
+                            <div itemprop="track" itemscope="itemscope" itemtype="http://schema.org/ItemList">
+                                <span itemprop="numberOfItems" content="10"></span>
+                                    <!-- batas Music -->
+                                                                    <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/qxvALeOiSdU/hqdefault.jpg" alt="SEHARUSNYA AKU - MAULANA WIJAYA [Official Music Video]" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/qxvALeOiSdU-SEHARUSNYA-AKU-MAULANA-WIJAYA-Official-Music-Video" title="SEHARUSNYA AKU - MAULANA WIJAYA [Official Music Video] mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">SEHARUSNYA AKU - MAULANA WIJAYA [Official Music Video]</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(1,'qxvALeOiSdU');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="SEHARUSNYA AKU - MAULANA WIJAYA [Official Music Video]" href="https://santaiin.xyz/download?id=qxvALeOiSdU&title=SEHARUSNYA AKU - MAULANA WIJAYA [Official Music Video]" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-1"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/s5stGs1ktQc/hqdefault.jpg" alt="Spring - Romantis (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/s5stGs1ktQc-Spring-Romantis-Official-Music-Video" title="Spring - Romantis (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Spring - Romantis (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(2,'s5stGs1ktQc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Spring - Romantis (Official Music Video)" href="https://santaiin.xyz/download?id=s5stGs1ktQc&title=Spring - Romantis (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-2"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/iIcLDekWcj0/hqdefault.jpg" alt="Spring - Romantis" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/iIcLDekWcj0-Spring-Romantis" title="Spring - Romantis mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Spring - Romantis</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(3,'iIcLDekWcj0');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Spring - Romantis" href="https://santaiin.xyz/download?id=iIcLDekWcj0&title=Spring - Romantis" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-3"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/a9_ID88euhc/hqdefault.jpg" alt="Elsa Pitaloka - Seharusnya Aku (Official Music Video)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/a9_ID88euhc-Elsa-Pitaloka-Seharusnya-Aku-Official-Music-Video" title="Elsa Pitaloka - Seharusnya Aku (Official Music Video) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Elsa Pitaloka - Seharusnya Aku (Official Music Video)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(4,'a9_ID88euhc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Elsa Pitaloka - Seharusnya Aku (Official Music Video)" href="https://santaiin.xyz/download?id=a9_ID88euhc&title=Elsa Pitaloka - Seharusnya Aku (Official Music Video)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-4"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Bmkr0tSCumc/hqdefault.jpg" alt="DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIK TOK TERBARU 2025" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Bmkr0tSCumc-DJ-COBA-KAU-INGAT-INGAT-KEMBALI-DJ-SEHARUSNYA-AKU-MAULANA-WIJAYA-DJ-TIK-TOK-TERBARU-2025" title="DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIK TOK TERBARU 2025 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIK TOK TERBARU 2025</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(5,'Bmkr0tSCumc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIK TOK TERBARU 2025" href="https://santaiin.xyz/download?id=Bmkr0tSCumc&title=DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIK TOK TERBARU 2025" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-5"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/8d3g6Hw-_qc/hqdefault.jpg" alt="SEHARUSNYA AKU - Maulana Wijaya | KARAOKE Nada Wanita" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/8d3g6Hw-_qc-SEHARUSNYA-AKU-Maulana-Wijaya-KARAOKE-Nada-Wanita" title="SEHARUSNYA AKU - Maulana Wijaya | KARAOKE Nada Wanita mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">SEHARUSNYA AKU - Maulana Wijaya | KARAOKE Nada Wanita</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(6,'8d3g6Hw-_qc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="SEHARUSNYA AKU - Maulana Wijaya | KARAOKE Nada Wanita" href="https://santaiin.xyz/download?id=8d3g6Hw-_qc&title=SEHARUSNYA AKU - Maulana Wijaya | KARAOKE Nada Wanita" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-6"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/kCrn9--FDkA/hqdefault.jpg" alt="COBA KAU INGAT KEMBALI - SEHARUSNYA AKU [ MAULANA WIJAYA_ IPANK_ THOMAS ARYA ] _ VIRAL TIKTOK 2020" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/kCrn9-FDkA-COBA-KAU-INGAT-KEMBALI-SEHARUSNYA-AKU-MAULANA-WIJAYA_-IPANK_-THOMAS-ARYA-_-VIRAL-TIKTOK-2020" title="COBA KAU INGAT KEMBALI - SEHARUSNYA AKU [ MAULANA WIJAYA_ IPANK_ THOMAS ARYA ] _ VIRAL TIKTOK 2020 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">COBA KAU INGAT KEMBALI - SEHARUSNYA AKU [ MAULANA WIJAYA_ IPANK_ THOMAS ARYA ] _ VIRAL TIKTOK 2020</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(7,'kCrn9--FDkA');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="COBA KAU INGAT KEMBALI - SEHARUSNYA AKU [ MAULANA WIJAYA_ IPANK_ THOMAS ARYA ] _ VIRAL TIKTOK 2020" href="https://santaiin.xyz/download?id=kCrn9--FDkA&title=COBA KAU INGAT KEMBALI - SEHARUSNYA AKU [ MAULANA WIJAYA_ IPANK_ THOMAS ARYA ] _ VIRAL TIKTOK 2020" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-7"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/oPfki4gJyxs/hqdefault.jpg" alt="Maulana Wijaya - Seharusnya Aku (Karaoke) | LMusical" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/oPfki4gJyxs-Maulana-Wijaya-Seharusnya-Aku-Karaoke-LMusical" title="Maulana Wijaya - Seharusnya Aku (Karaoke) | LMusical mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Maulana Wijaya - Seharusnya Aku (Karaoke) | LMusical</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(8,'oPfki4gJyxs');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Maulana Wijaya - Seharusnya Aku (Karaoke) | LMusical" href="https://santaiin.xyz/download?id=oPfki4gJyxs&title=Maulana Wijaya - Seharusnya Aku (Karaoke) | LMusical" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-8"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/7NhrlMcowCQ/hqdefault.jpg" alt="DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/7NhrlMcowCQ-DJ-COBA-KAU-INGAT-INGAT-KEMBALI-SEHARUSNYA-AKU-JUNGLE-DUTCH-TERBARU-2021-FULL-BASS-VIRAL-TIK-TOK" title="DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(9,'7NhrlMcowCQ');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK" href="https://santaiin.xyz/download?id=7NhrlMcowCQ&title=DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-9"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/_AdqDGsYL5A/hqdefault.jpg" alt="JIHAN AUDY ft NEW PALLAPA | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] WAHANA MUSIK 2020" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/_AdqDGsYL5A-JIHAN-AUDY-ft-NEW-PALLAPA-SEHARUSNYA-AKU-COBA-KAU-INGAT-INGAT-KEMBALI-WAHANA-MUSIK-2020" title="JIHAN AUDY ft NEW PALLAPA | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] WAHANA MUSIK 2020 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">JIHAN AUDY ft NEW PALLAPA | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] WAHANA MUSIK 2020</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(10,'_AdqDGsYL5A');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="JIHAN AUDY ft NEW PALLAPA | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] WAHANA MUSIK 2020" href="https://santaiin.xyz/download?id=_AdqDGsYL5A&title=JIHAN AUDY ft NEW PALLAPA | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] WAHANA MUSIK 2020" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-10"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/K4ZLGrrAbZA/hqdefault.jpg" alt="SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/K4ZLGrrAbZA-SAFIRA-INEMA-ft-DJ-SANTUY-SEHARUSNYA-AKU-COBA-KAU-INGAT-INGAT-KEMBALI-The-Best-Wahana-Musik" title="SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(11,'K4ZLGrrAbZA');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik" href="https://santaiin.xyz/download?id=K4ZLGrrAbZA&title=SAFIRA INEMA ft DJ SANTUY | SEHARUSNYA AKU [COBA KAU INGAT INGAT KEMBALI] The Best Wahana Musik" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-11"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/0xxUnBlJjqg/hqdefault.jpg" alt="Seharusnya Aku (Maulana Wijaya) - ( Lirik ) Musik Coba Kau Ingat Ingat Kembali" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/0xxUnBlJjqg-Seharusnya-Aku-Maulana-Wijaya-Lirik-Musik-Coba-Kau-Ingat-Ingat-Kembali" title="Seharusnya Aku (Maulana Wijaya) - ( Lirik ) Musik Coba Kau Ingat Ingat Kembali mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Seharusnya Aku (Maulana Wijaya) - ( Lirik ) Musik Coba Kau Ingat Ingat Kembali</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(12,'0xxUnBlJjqg');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Seharusnya Aku (Maulana Wijaya) - ( Lirik ) Musik Coba Kau Ingat Ingat Kembali" href="https://santaiin.xyz/download?id=0xxUnBlJjqg&title=Seharusnya Aku (Maulana Wijaya) - ( Lirik ) Musik Coba Kau Ingat Ingat Kembali" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-12"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/Z6K8Ukf0_zE/hqdefault.jpg" alt="Elsa Pitaloka - Seharusnya Aku [Karaoke] | LMusical" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/Z6K8Ukf0_zE-Elsa-Pitaloka-Seharusnya-Aku-Karaoke-LMusical" title="Elsa Pitaloka - Seharusnya Aku [Karaoke] | LMusical mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Elsa Pitaloka - Seharusnya Aku [Karaoke] | LMusical</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(13,'Z6K8Ukf0_zE');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Elsa Pitaloka - Seharusnya Aku [Karaoke] | LMusical" href="https://santaiin.xyz/download?id=Z6K8Ukf0_zE&title=Elsa Pitaloka - Seharusnya Aku [Karaoke] | LMusical" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-13"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/alYU5i-_t8k/hqdefault.jpg" alt="DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/alYU5i-_t8k-DJ-COBA-KAU-INGAT-INGAT-KEMBALI-SEHARUSNYA-AKU-JUNGLE-DUTCH-TERBARU-2021-FULL-BASS-VIRAL-TIK-TOK" title="DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(14,'alYU5i-_t8k');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK" href="https://santaiin.xyz/download?id=alYU5i-_t8k&title=DJ COBA KAU INGAT INGAT KEMBALI [ SEHARUSNYA AKU ] JUNGLE DUTCH TERBARU 2021 FULL BASS VIRAL TIK TOK" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-14"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/qH8Rk5qk6UI/hqdefault.jpg" alt="dj coba kau ingat&quot;kembali full album" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/qH8Rk5qk6UI-dj-coba-kau-ingatkembali-full-album" title="dj coba kau ingat&quot;kembali full album mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">dj coba kau ingat&quot;kembali full album</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(15,'qH8Rk5qk6UI');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="dj coba kau ingat&quot;kembali full album" href="https://santaiin.xyz/download?id=qH8Rk5qk6UI&title=dj coba kau ingat&quot;kembali full album" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-15"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/WAlDtf8Aj14/hqdefault.jpg" alt="Full Jaranan ( Coba kau ingat ingat kembali ) yayan jandut" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/WAlDtf8Aj14-Full-Jaranan-Coba-kau-ingat-ingat-kembali-yayan-jandut" title="Full Jaranan ( Coba kau ingat ingat kembali ) yayan jandut mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">Full Jaranan ( Coba kau ingat ingat kembali ) yayan jandut</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(16,'WAlDtf8Aj14');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="Full Jaranan ( Coba kau ingat ingat kembali ) yayan jandut" href="https://santaiin.xyz/download?id=WAlDtf8Aj14&title=Full Jaranan ( Coba kau ingat ingat kembali ) yayan jandut" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-16"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/L36XwQu5Akc/hqdefault.jpg" alt="SEHARUSNYA AKU - MAULANA WIJAYA // KARAOKE AKUSTIK ( NADA RENDAH COWOK " width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/L36XwQu5Akc-SEHARUSNYA-AKU-MAULANA-WIJAYA-KARAOKE-AKUSTIK-NADA-RENDAH-COWOK" title="SEHARUSNYA AKU - MAULANA WIJAYA // KARAOKE AKUSTIK ( NADA RENDAH COWOK  mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">SEHARUSNYA AKU - MAULANA WIJAYA // KARAOKE AKUSTIK ( NADA RENDAH COWOK </span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(17,'L36XwQu5Akc');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="SEHARUSNYA AKU - MAULANA WIJAYA // KARAOKE AKUSTIK ( NADA RENDAH COWOK " href="https://santaiin.xyz/download?id=L36XwQu5Akc&title=SEHARUSNYA AKU - MAULANA WIJAYA // KARAOKE AKUSTIK ( NADA RENDAH COWOK " rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-17"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/QrGkca1B94g/hqdefault.jpg" alt="DJ TIKTOK TERBARU 2025 || DJ COBA COBA KAU INGAT INGAT KEMBALI🎵 DJ LUMPUR DAN BERLIAN 🎵 FULL ALBUM 🔥" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/QrGkca1B94g-DJ-TIKTOK-TERBARU-2025-DJ-COBA-COBA-KAU-INGAT-INGAT-KEMBALI-DJ-LUMPUR-DAN-BERLIAN-FULL-ALBUM" title="DJ TIKTOK TERBARU 2025 || DJ COBA COBA KAU INGAT INGAT KEMBALI🎵 DJ LUMPUR DAN BERLIAN 🎵 FULL ALBUM 🔥 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">DJ TIKTOK TERBARU 2025 || DJ COBA COBA KAU INGAT INGAT KEMBALI🎵 DJ LUMPUR DAN BERLIAN 🎵 FULL ALBUM 🔥</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(18,'QrGkca1B94g');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="DJ TIKTOK TERBARU 2025 || DJ COBA COBA KAU INGAT INGAT KEMBALI🎵 DJ LUMPUR DAN BERLIAN 🎵 FULL ALBUM 🔥" href="https://santaiin.xyz/download?id=QrGkca1B94g&title=DJ TIKTOK TERBARU 2025 || DJ COBA COBA KAU INGAT INGAT KEMBALI🎵 DJ LUMPUR DAN BERLIAN 🎵 FULL ALBUM 🔥" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-18"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/0KaK00nP6d0/hqdefault.jpg" alt="DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIKTOK VIRAL 2021" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/0KaK00nP6d0-DJ-COBA-KAU-INGAT-INGAT-KEMBALI-DJ-SEHARUSNYA-AKU-MAULANA-WIJAYA-DJ-TIKTOK-VIRAL-2021" title="DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIKTOK VIRAL 2021 mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIKTOK VIRAL 2021</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(19,'0KaK00nP6d0');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIKTOK VIRAL 2021" href="https://santaiin.xyz/download?id=0KaK00nP6d0&title=DJ COBA KAU INGAT INGAT KEMBALI | DJ SEHARUSNYA AKU - MAULANA WIJAYA - DJ TIKTOK VIRAL 2021" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-19"></div>
+                                    </div>
+                                </div>
+                                                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="position" content="1"></span>
+                                    <div class="content-left pull-left">
+                                        <img src="https://i.ytimg.com/vi/23NZK5KlHPQ/hqdefault.jpg" alt="DJ SEHARUSNYA AKU - Coba kau ingat ingat kembali (DJ ACAN Rimex)" width="120" height="90" itemprop="image" />
+                                    </div>
+                                    <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
+                                        <h2 class="content-title">
+                                            <a href="https://santaiin.xyz/detail/23NZK5KlHPQ-DJ-SEHARUSNYA-AKU-Coba-kau-ingat-ingat-kembali-DJ-ACAN-Rimex" title="DJ SEHARUSNYA AKU - Coba kau ingat ingat kembali (DJ ACAN Rimex) mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name">DJ SEHARUSNYA AKU - Coba kau ingat ingat kembali (DJ ACAN Rimex)</span>
+                                            </a>
+                                        </h2>
+                                        <div class="button">
+                                            <a href="javascript:void(0);" onclick="playAudio(20,'23NZK5KlHPQ');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
+                                            <a title="DJ SEHARUSNYA AKU - Coba kau ingat ingat kembali (DJ ACAN Rimex)" href="https://santaiin.xyz/download?id=23NZK5KlHPQ&title=DJ SEHARUSNYA AKU - Coba kau ingat ingat kembali (DJ ACAN Rimex)" rel="nofollow">Download</a>
+                                            <a href="#" target="_blank" rel="nofollow">FAST DOWNLOAD</a>
+                                        </div>
+                                        <div class="divPlayer" id="player-20"></div>
+                                    </div>
+                                </div>
+                                                                <!-- End -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-sidebar">
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Lagu</span> Pilihan</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gagal-merangkai-hati" itemprop="url">Gagal Merangkai Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-dalam-hati" itemprop="url">Cinta Dalam Hati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro" itemprop="url">Cerito Loro</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gellen-martadinata-selamat-ulang-tahun" itemprop="url">Gellen Martadinata Selamat Ulang Tahun</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/aduh-mamae" itemprop="url">Aduh Mamae</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/eyes-blue-or-brown-cant-remember" itemprop="url">Eyes Blue Or Brown Can't Remember</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/angin-dalu-woro-widowati" itemprop="url">Angin Dalu Woro Widowati</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/ati-iki-dudu-dolanan" itemprop="url">Ati Iki Dudu Dolanan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-tanpa-tapi" itemprop="url">Cinta Tanpa Tapi</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/buruh-cod" itemprop="url">Buruh Cod</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/anneth-mungkin-hari-ini-esok-atau-nanti" itemprop="url">Anneth Mungkin Hari Ini Esok Atau Nanti</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bts-life-goes-on" itemprop="url">Bts Life Goes On</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tepung-kanji" itemprop="url">Tepung Kanji</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berbeza-kasta" itemprop="url">Berbeza Kasta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/emas-hantaran-safira-inema" itemprop="url">Emas Hantaran Safira Inema</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/antara-nyaman-dan-cinta" itemprop="url">Antara Nyaman Dan Cinta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/gimme-gimme-nct-127" itemprop="url">Gimme Gimme Nct 127</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/melukis-senja" itemprop="url">Melukis Senja</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bertaut" itemprop="url">Bertaut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/salam-tresno" itemprop="url">Salam Tresno</a></li>
+                                                           </ul>
+                        </div>
+                        <div class="sidebar">
+                            <h3 class="sidebar-title"><span class="highlight">Pencarian</span> Terakhir</h3>
+                            <ul class="chart">
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/lagu-dj" itemprop="url">Lagu Dj</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/futurevevo" itemprop="url">Futurevevo</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/berbeza-kasta" itemprop="url">Berbeza Kasta</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cerito-loro" itemprop="url">Cerito Loro</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/girl-in-the-mirror" itemprop="url">Girl In The Mirror</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/friendzone-cover-feby-putri" itemprop="url">Friendzone Cover Feby Putri</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/melukis-senja" itemprop="url">Melukis Senja</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/tepung-kanji" itemprop="url">Tepung Kanji</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/theofficialglorilla" itemprop="url">Theofficialglorilla</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/belum-siap-kehilangan" itemprop="url">Belum Siap Kehilangan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/coba-kau-ingat-ingat-kembali" itemprop="url">Coba Kau Ingat Ingat Kembali</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cinta-tanpa-tapi" itemprop="url">Cinta Tanpa Tapi</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/rodwave" itemprop="url">Rodwave</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/ati-iki-dudu-dolanan" itemprop="url">Ati Iki Dudu Dolanan</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/eyes-blue-or-brown-cant-remember" itemprop="url">Eyes Blue Or Brown Cant Remember</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/trimofficial" itemprop="url">Trimofficial</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/cidro-2" itemprop="url">Cidro 2</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/belly-gang-kushington" itemprop="url">Belly Gang Kushington</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/bertaut" itemprop="url">Bertaut</a></li>
+                                                            <li><i class="fas fa-headphones-alt"></i> <a href="https://santaiin.xyz/music/buruh-cod" itemprop="url">Buruh Cod</a></li>
+                                                    </div>
+                    </div>                </div>
+            </div>
+        </div>
+      <!-- Footer -->
+<div id="footer-container">
+            <div class="container">
+                <p class="copy">
+                    &copy; 2026 Santaiin MP3. All rights reserved.
+                </p>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="https://santaiin.xyz/page/disclaimer" title="Disclaimer">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/copyright" title="Copyright">Copyright</a>
+                    </li>
+                    <li>
+                        <a href="https://santaiin.xyz/page/term-of-services" title="Term Of Services">TOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function playAudio(id, ytid) {
+                remPlayer();
+                var html = '<audio src="https://www.youtube.com/watch?v=' + ytid + '" type="video/youtube" controls autoplay style="width:100%">Browser tidak support bro, coba update browser nya!</audio>';
+                $("#player-" + id).html(html);
+                renderPlayer();
+            }
+            function renderPlayer() {
+                $("audio,video").mediaelementplayer();
+            }
+            function remPlayer() {
+                $(".divPlayer").html("");
+            }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                        .then(function (registration) {
+                            console.log("PWA service worker ready");
+                            registration.update();
+                        })
+                        .catch(function (error) {
+                            console.log("Registration failed with " + error);
+                        });
+                });
+            }
+            var $ = jQuery.noConflict();
+            (function ($) {
+                "use strict";
+                jQuery(function ($) {
+                    $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+                    $(window).resize(function () {
+                        $.sidr("close", "menu");
+                    });
+                    $("#sidr-id-close-menu-button").click(function (e) {
+                        e.preventDefault();
+                        $.sidr("close", "menu");
+                    });
+                    $(".sidr-class-menu-item-has-children").click(function () {
+                        $(this)
+                            .find("ul.sidr-class-sub-menu")
+                            .slideToggle(function (e) {
+                                e.preventDefault();
+                            });
+                    });
+                    $(document.body).click(function (e) {
+                        if ($.sidr("status").opened) {
+                            var isBlur = true;
+                            if ($(e.target).closest(".sidr").length !== 0) {
+                                isBlur = false;
+                            }
+                            if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                                isBlur = false;
+                            }
+                            if (isBlur) {
+                                $.sidr("close", $.sidr("status").opened);
+                            }
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#youtube-audio, #youtube-video").mediaelementplayer();
+        });
+        jQuery(function ($) {
+            var collapsedSize = "40px";
+            $(".more-content").each(function () {
+                var h = this.scrollHeight;
+                console.log(h);
+                var div = $(this);
+                if (h > 30) {
+                    div.css("height", collapsedSize);
+                    div.after('<button class="more-button">Lihat Selengkapnya</button>');
+                    var link = div.next();
+                    link.click(function (e) {
+                        e.stopPropagation();
+                        if (link.text() != "Lihat lebih sedikit") {
+                            link.text("Lihat lebih sedikit");
+                            div.animate({ height: h });
+                        } else {
+                            div.animate({ height: collapsedSize });
+                            link.text("Lihat Selengkapnya");
+                        }
+                    });
+                }
+            });
+        });
+    })(jQuery);
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker
+                .register("https://downloadlagu123.biz/OneSignalSDKWorker.js")
+                .then(function (registration) {
+                    console.log("PWA service worker ready");
+                    registration.update();
+                })
+                .catch(function (error) {
+                    console.log("Registration failed with " + error);
+                });
+        });
+    }
+    var $ = jQuery.noConflict();
+    (function ($) {
+        "use strict";
+        jQuery(function ($) {
+            $("#mobile-menu").sidr({ name: "menu", source: "#top-nav", displace: false });
+            $(window).resize(function () {
+                $.sidr("close", "menu");
+            });
+            $("#sidr-id-close-menu-button").click(function (e) {
+                e.preventDefault();
+                $.sidr("close", "menu");
+            });
+            $(".sidr-class-menu-item-has-children").click(function () {
+                $(this)
+                    .find("ul.sidr-class-sub-menu")
+                    .slideToggle(function (e) {
+                        e.preventDefault();
+                    });
+            });
+            $(document.body).click(function (e) {
+                if ($.sidr("status").opened) {
+                    var isBlur = true;
+                    if ($(e.target).closest(".sidr").length !== 0) {
+                        isBlur = false;
+                    }
+                    if ($(e.target).closest(".js-sidr-trigger").length !== 0) {
+                        isBlur = false;
+                    }
+                    if (isBlur) {
+                        $.sidr("close", $.sidr("status").opened);
+                    }
+                }
+            });
+        });
+    })(jQuery);
+</script>
+    </body>
+</html>
