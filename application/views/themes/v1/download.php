@@ -58,13 +58,26 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
                     <div class="download-loading" aria-live="polite">
                         <span class="download-spinner"></span>
-                        <span id="download-status">Tunggu <strong id="download-countdown">3</strong> detik</span>
+                        <span>Tunggu <strong id="download-countdown">3</strong> detik, link download sedang disiapkan.</span>
                     </div>
 
-                    <div class="download-ready" hidden>
-                        <button type="button" id="download-final-button" class="download-ad-button">
-                            <i class="fas fa-download"></i> Download Sekarang
-                        </button>
+                    <div class="download-real-action" hidden>
+                        <div class="download-arrow-line">^^^^^^^</div>
+                        <button type="button" id="download-ad-button" class="download-ad-button">Download Ads</button>
+                        <div class="download-arrow-line">vvvvvvv</div>
+                        <div class="download-frame-box" data-frame-mp3="https://ytmp3.plus/button-api/#<?= rawurlencode($videoId); ?>|mp3" data-frame-mp4="https://ytmp3.plus/button-api/#<?= rawurlencode($videoId); ?>|mp4">
+                            <iframe
+                                id="download-frame"
+                                src="about:blank"
+                                width="300"
+                                height="54"
+                                title="Download"
+                                scrolling="no"
+                                loading="lazy"
+                                referrerpolicy="no-referrer"
+                                style="border:none;overflow:hidden;">
+                            </iframe>
+                        </div>
                     </div>
 
                     <div class="download-ad-after">
@@ -92,16 +105,15 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         var converter = document.getElementById('download-converter');
         var title = document.getElementById('download-converter-title');
         var countdown = document.getElementById('download-countdown');
-        var status = document.getElementById('download-status');
         var loading = converter ? converter.querySelector('.download-loading') : null;
-        var ready = converter ? converter.querySelector('.download-ready') : null;
-        var finalBtn = document.getElementById('download-final-button');
+        var realAction = converter ? converter.querySelector('.download-real-action') : null;
+        var frameBox = converter ? converter.querySelector('.download-frame-box') : null;
+        var frame = document.getElementById('download-frame');
         var popup = document.getElementById('download-popup-ad');
         var popupClose = document.querySelectorAll('[data-download-popup-close]');
+        var adButton = document.getElementById('download-ad-button');
         var adClickUrl = <?= json_encode($adClickUrl); ?>;
-        var videoId = <?= json_encode($videoId); ?>;
         var popupKey = 'downloadPopupSeen:' + <?= json_encode($videoId); ?>;
-        var downloadUrl = '';
         var timer = null;
 
         function openDownloadAdTab() {
@@ -137,53 +149,40 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             }
         }
 
-        function startDownload(format) {
+        function startDownloadGate(format) {
             var label = format === 'mp4' ? 'Download Video' : 'Download MP3';
+            var frameUrl = frameBox ? frameBox.getAttribute('data-frame-' + format) : '';
+            var seconds = 3;
 
-            if (!converter || !loading) return;
+            if (!converter || !frame || !frameUrl) return;
 
             window.clearInterval(timer);
             converter.hidden = false;
             loading.hidden = false;
-            if (ready) ready.hidden = true;
+            realAction.hidden = true;
+            frame.setAttribute('src', 'about:blank');
             title.textContent = label;
-            status.textContent = 'Mengkonversi, harap tunggu...';
+            if (adButton) adButton.textContent = label;
+            countdown.textContent = seconds;
 
             converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-            var proxyUrl = '<?= base_url('download/fetch'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format;
-
-            fetch(proxyUrl)
-                .then(function (res) { return res.json(); })
-                .then(function (data) {
-                    if (data.error || !data.downloadURL) {
-                        status.textContent = 'Gagal: ' + (data.message || 'unknown error');
-                        loading.querySelector('.download-spinner').style.display = 'none';
-                        return;
-                    }
-                    downloadUrl = data.downloadURL;
+            timer = window.setInterval(function () {
+                seconds -= 1;
+                countdown.textContent = seconds;
+                if (seconds <= 0) {
+                    window.clearInterval(timer);
                     loading.hidden = true;
-                    if (ready) ready.hidden = false;
-                    title.textContent = 'Download siap';
-                })
-                .catch(function (err) {
-                    status.textContent = 'Terjadi kesalahan, coba lagi.';
-                    loading.querySelector('.download-spinner').style.display = 'none';
-                });
-        }
-
-        if (finalBtn) {
-            finalBtn.addEventListener('click', function () {
-                if (!downloadUrl) return;
-                openDownloadAdTab();
-                window.location.href = downloadUrl;
-            });
+                    realAction.hidden = false;
+                    frame.setAttribute('title', label);
+                    frame.setAttribute('src', frameUrl);
+                }
+            }, 1000);
         }
 
         buttons.forEach(function (button) {
             button.addEventListener('click', function () {
                 var label = button.getAttribute('data-label') || button.textContent.trim();
-
                 if (button.getAttribute('data-ad-opened') !== '1') {
                     button.setAttribute('data-ad-opened', '1');
                     button.classList.add('is-ready');
@@ -191,19 +190,18 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                     openDownloadAdTab();
                     return;
                 }
-
-                startDownload(button.getAttribute('data-format') || 'mp3');
+                startDownloadGate(button.getAttribute('data-format') || 'mp3');
             });
         });
+
+        if (adButton) adButton.addEventListener('click', openDownloadAdTab);
 
         popupClose.forEach(function (button) {
             button.addEventListener('click', hideDownloadPopup);
         });
 
         document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                hideDownloadPopup();
-            }
+            if (event.key === 'Escape') hideDownloadPopup();
         });
 
         window.setTimeout(showAutoPopupOnce, 700);
