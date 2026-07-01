@@ -80,23 +80,30 @@ class Download extends CI_Controller {
 		$ch = curl_init();
 		curl_setopt_array($ch, [
 			CURLOPT_URL => $downloadUrl,
-			CURLOPT_RETURNTRANSFER => false,
+			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_FOLLOWLOCATION => true,
-			CURLOPT_TIMEOUT => 0,
+			CURLOPT_TIMEOUT => 60,
 			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
 			CURLOPT_SSL_VERIFYPEER => false,
 			CURLOPT_REFERER => 'https://api.ytmp3.biz/',
 		]);
-		header('Content-Type: audio/mpeg');
-		header('Content-Disposition: attachment; filename="' . $title . '.' . $ext . '"');
-		header('Cache-Control: no-cache, must-revalidate');
-		header('Expires: 0');
-		curl_exec($ch);
+		$data = curl_exec($ch);
 		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		$contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+		$error = curl_error($ch);
 		curl_close($ch);
 
-		if ($httpCode < 200 || $httpCode >= 300) show_error('Download failed');
-		exit;
+		if ($data === false || $data === '' || $httpCode < 200 || $httpCode >= 300) {
+			show_error('Download gagal: ' . ($error ?: "HTTP $httpCode"));
+			return;
+		}
+
+		$this->output
+			->set_content_type($contentType ?: 'audio/mpeg')
+			->set_header('Content-Disposition: attachment; filename="' . $title . '.' . $ext . '"')
+			->set_header('Cache-Control: no-cache, must-revalidate')
+			->set_header('Expires: 0')
+			->set_output($data);
 	}
 
 	private function _doConvert($convertUrl, $videoId, $format)
