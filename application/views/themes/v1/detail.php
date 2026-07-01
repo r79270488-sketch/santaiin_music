@@ -50,12 +50,9 @@
                                 <i class="fas fa-download"></i> Download Lagu
                             </a>
                             <div class="fast-download-slot">
-                                <div class="fast-download-title">Fast Download</div>
-                                <div style="padding:4px;">
-                                    <a href="#" class="primary-download js-own-ads" style="display:flex;width:100%;">
-                                        <i class="fas fa-bolt"></i> Download Cepat
-                                    </a>
-                                </div>
+                                <a href="#" class="primary-download js-own-ads" style="display:inline-flex;">
+                                    <i class="fas fa-bolt"></i> Download Cepat
+                                </a>
                             </div>
                         </section>
 

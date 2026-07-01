@@ -1069,20 +1069,8 @@ ul.socialicon li.text {
 }
 
 .fast-download-slot {
-    min-width: 0;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.fast-download-title {
-    padding: 6px 10px;
-    color: var(--muted);
-    border-bottom: 1px solid var(--border);
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
+    display: inline-flex;
+    margin-left: 8px;
 }
 
 .ad-slot-fast {
