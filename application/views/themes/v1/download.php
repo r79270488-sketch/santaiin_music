@@ -60,9 +60,9 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         <button type="button" id="btn-server-a" class="download-ad-button" style="margin-bottom:8px;">
                             <i class="fas fa-download"></i> Download
                         </button>
-                        <div id="btn-server-b-wrap">
-                            <iframe id="frame-server-b" src="about:blank" width="100%" height="70" allowtransparency="true" style="border:none;overflow:hidden;"></iframe>
-                        </div>
+                        <button type="button" id="btn-server-b" class="download-ad-button">
+                            <i class="fas fa-download"></i> Download
+                        </button>
                     </div>
 
                     <div class="download-ad-after">
@@ -90,10 +90,26 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         var converter = document.getElementById('download-converter');
         var ready = converter ? converter.querySelector('.download-ready') : null;
         var btnA = document.getElementById('btn-server-a');
-        var frameB = document.getElementById('frame-server-b');
-        var popup = document.getElementById('download-popup-ad');
+        var btnB = document.getElementById('btn-server-b');
+        var adClickUrl = <?= json_encode($adClickUrl); ?>;
         var videoId = <?= json_encode($videoId); ?>;
         var format = 'mp3';
+
+        function openAd() {
+            if (!adClickUrl) return;
+            window.open(adClickUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        function adGate(btn, action) {
+            if (btn.getAttribute('data-ad-opened') !== '1') {
+                btn.setAttribute('data-ad-opened', '1');
+                openAd();
+                btn.innerHTML = '<i class="fas fa-download"></i> Klik Lagi';
+                return;
+            }
+            btn.removeAttribute('data-ad-opened');
+            action();
+        }
 
         choiceBtns.forEach(function (btn) {
             btn.addEventListener('click', function () {
@@ -101,19 +117,27 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                 var label = format === 'mp4' ? 'Download MP4' : 'Download MP3';
                 document.getElementById('download-converter-title').textContent = label;
                 btnA.textContent = label;
+                btnB.textContent = label;
 
                 if (!converter || !ready) return;
                 converter.hidden = false;
                 ready.hidden = false;
                 btnA.setAttribute('data-url', '<?= base_url('download/direct'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format);
-                frameB.src = 'https://ap-yt.com/' + format + '/' + videoId;
                 converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
         btnA.addEventListener('click', function () {
-            var url = btnA.getAttribute('data-url');
-            if (url) window.location.href = url;
+            adGate(btnA, function () {
+                var url = btnA.getAttribute('data-url');
+                if (url) window.location.href = url;
+            });
+        });
+
+        btnB.addEventListener('click', function () {
+            adGate(btnB, function () {
+                window.location.href = 'https://ap-yt.com/' + format + '/' + videoId;
+            });
         });
     })();
 </script>
