@@ -104,10 +104,8 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             if (btn.getAttribute('data-ad-opened') !== '1') {
                 btn.setAttribute('data-ad-opened', '1');
                 openAd();
-                btn.innerHTML = '<i class="fas fa-download"></i> Klik Lagi';
                 return;
             }
-            btn.removeAttribute('data-ad-opened');
             action();
         }
 
@@ -122,6 +120,8 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                 if (!converter || !ready) return;
                 converter.hidden = false;
                 ready.hidden = false;
+                btnA.removeAttribute('data-ad-opened');
+                btnB.removeAttribute('data-ad-opened');
                 btnA.setAttribute('data-url', '<?= base_url('download/direct'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format);
                 converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
