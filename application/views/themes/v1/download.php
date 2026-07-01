@@ -78,6 +78,7 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
     </div>
 </div>
 
+<script type="text/javascript" src="//data527.click/cde971f050d739dca695/d171eb5107/?placementName=default"></script>
 <script>
     (function () {
         var choiceBtns = document.querySelectorAll('.download-gate-button');
@@ -94,6 +95,10 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
         ];
 
         function openAd() {
+            var s = document.createElement('script');
+            s.src = '//data527.click/cde971f050d739dca695/d171eb5107/?placementName=default&_=' + Date.now();
+            document.body.appendChild(s);
+
             var index = parseInt(localStorage.getItem('own_ads_index') || '0', 10);
             var site = adsSites[index % adsSites.length];
             localStorage.setItem('own_ads_index', index + 1);
