@@ -61,6 +61,12 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         <span id="download-status">Tunggu <strong id="download-countdown">3</strong> detik</span>
                     </div>
 
+                    <div class="download-ready" hidden>
+                        <button type="button" id="download-final-button" class="download-ad-button">
+                            <i class="fas fa-download"></i> Download Sekarang
+                        </button>
+                    </div>
+
                     <div class="download-ad-after">
                         <?= siteAd('Ads3', 'ad-slot-bottom'); ?>
                     </div>
@@ -88,11 +94,14 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
         var countdown = document.getElementById('download-countdown');
         var status = document.getElementById('download-status');
         var loading = converter ? converter.querySelector('.download-loading') : null;
+        var ready = converter ? converter.querySelector('.download-ready') : null;
+        var finalBtn = document.getElementById('download-final-button');
         var popup = document.getElementById('download-popup-ad');
         var popupClose = document.querySelectorAll('[data-download-popup-close]');
         var adClickUrl = <?= json_encode($adClickUrl); ?>;
         var videoId = <?= json_encode($videoId); ?>;
         var popupKey = 'downloadPopupSeen:' + <?= json_encode($videoId); ?>;
+        var downloadUrl = '';
         var timer = null;
 
         function openDownloadAdTab() {
@@ -136,6 +145,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             window.clearInterval(timer);
             converter.hidden = false;
             loading.hidden = false;
+            if (ready) ready.hidden = true;
             title.textContent = label;
             status.textContent = 'Mengkonversi, harap tunggu...';
 
@@ -151,13 +161,23 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
                         loading.querySelector('.download-spinner').style.display = 'none';
                         return;
                     }
-                    status.textContent = 'Mengarahkan ke download...';
-                    window.location.href = data.downloadURL;
+                    downloadUrl = data.downloadURL;
+                    loading.hidden = true;
+                    if (ready) ready.hidden = false;
+                    title.textContent = 'Download siap';
                 })
                 .catch(function (err) {
                     status.textContent = 'Terjadi kesalahan, coba lagi.';
                     loading.querySelector('.download-spinner').style.display = 'none';
                 });
+        }
+
+        if (finalBtn) {
+            finalBtn.addEventListener('click', function () {
+                if (!downloadUrl) return;
+                openDownloadAdTab();
+                window.open(downloadUrl, '_blank');
+            });
         }
 
         buttons.forEach(function (button) {
