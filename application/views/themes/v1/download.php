@@ -63,10 +63,10 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
 
                     <div class="download-ready" hidden>
                         <button type="button" id="btn-server-a" class="download-ad-button" style="margin-bottom:8px;">
-                            <i class="fas fa-download"></i> Download
+                            <i class="fas fa-download"></i> Download MP3
                         </button>
                         <button type="button" id="btn-server-b" class="download-ad-button">
-                            <i class="fas fa-download"></i> Download
+                            <i class="fas fa-download"></i> Download MP3
                         </button>
                     </div>
 
@@ -136,7 +136,7 @@ if (!empty($adHtml) && preg_match('/href=["\']([^"\']+)/i', $adHtml, $matches)) 
             btn.addEventListener('click', function () {
                 format = btn.getAttribute('data-format') || 'mp3';
                 var label = format === 'mp4' ? 'Download Video' : 'Download MP3';
-                document.querySelector('.download-converter-title').textContent = label;
+                document.getElementById('download-converter-title').textContent = label;
 
                 showLoading();
 
