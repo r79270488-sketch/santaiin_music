@@ -45,10 +45,30 @@ class Download extends CI_Controller {
 			return;
 		}
 
-		$initData = $this->_apiRequest('https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey));
-		if (!$initData || empty($initData['convertURL'])) {
+		$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey);
+		$initRaw = $this->_fetchUrl($initUrl);
+		if (!$initRaw) {
 			$this->output->set_content_type('application/json')->set_output(json_encode([
-				'error' => 1, 'message' => 'Init failed'
+				'error' => 1, 'message' => 'Init network error'
+			]));
+			return;
+		}
+		$initData = json_decode($initRaw, true);
+		if (!$initData) {
+			$this->output->set_content_type('application/json')->set_output(json_encode([
+				'error' => 1, 'message' => 'Init bad response: ' . substr($initRaw, 0, 200)
+			]));
+			return;
+		}
+		if (!empty($initData['error'])) {
+			$this->output->set_content_type('application/json')->set_output(json_encode([
+				'error' => 1, 'message' => 'Init error: ' . ($initData['message'] ?? json_encode($initData))
+			]));
+			return;
+		}
+		if (empty($initData['convertURL'])) {
+			$this->output->set_content_type('application/json')->set_output(json_encode([
+				'error' => 1, 'message' => 'Init no convertURL: ' . substr($initRaw, 0, 300)
 			]));
 			return;
 		}
@@ -109,13 +129,22 @@ class Download extends CI_Controller {
 	private function _getAuthKey()
 	{
 		$html = $this->_fetchUrl('https://api.ytmp3.biz/button/');
-		if (!$html) return '';
+		if (!$html) {
+			siteLogMessage('error', 'Download: button page fetch failed');
+			return '';
+		}
 
 		preg_match('/var json\s*=\s*JSON\.parse\(\'(.+?)\'\)/', $html, $m);
-		if (empty($m[1])) return '';
+		if (empty($m[1])) {
+			siteLogMessage('error', 'Download: regex failed, html=' . substr($html, 0, 500));
+			return '';
+		}
 
 		$j = json_decode($m[1], true);
-		if (!$j || count($j) < 3) return '';
+		if (!$j || count($j) < 3) {
+			siteLogMessage('error', 'Download: json decode failed');
+			return '';
+		}
 
 		list($codes, $reverse, $map) = $j;
 		$key = '';
