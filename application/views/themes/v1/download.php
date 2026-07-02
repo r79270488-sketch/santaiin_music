@@ -224,11 +224,18 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
                         return;
                     }
 
+                    if (data && data.error && attempt < 2) {
+                        window.setTimeout(function () {
+                            prepareDownload(attempt + 1);
+                        }, 1500);
+                        return;
+                    }
+
                     throw new Error(data && data.message ? data.message : 'Download belum siap');
                 })
-                .catch(function () {
+                .catch(function (error) {
                     setPreparingState(false);
-                    setStatus('Link belum siap. Klik Download lagi untuk mencoba ulang.');
+                    setStatus((error && error.message ? error.message : 'Link belum siap.') + ' Klik Download lagi untuk mencoba ulang.');
                 });
         }
 

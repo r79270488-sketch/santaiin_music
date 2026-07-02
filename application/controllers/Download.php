@@ -74,7 +74,15 @@ class Download extends CI_Controller {
 
 		$result = $this->_doConvert($initData['convertURL'], $videoId, $format, 4, $cookieFile);
 		if (empty($result['error']) && empty($result['pending']) && !empty($result['downloadURL'])) {
-			$result['downloadURL'] = $this->_createProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format, $cookieFile);
+			$proxyUrl = $this->_createValidatedProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format, $cookieFile, $videoId);
+			if (!$proxyUrl) {
+				$this->_json([
+					'error' => 1,
+					'message' => 'Provider download sedang error. Silakan klik Download lagi.'
+				]);
+				return;
+			}
+			$result['downloadURL'] = $proxyUrl;
 		}
 		$this->_json($result);
 	}
@@ -104,7 +112,9 @@ class Download extends CI_Controller {
 		if (!empty($result['pending'])) show_error('Download belum siap. Silakan kembali dan klik Download lagi.');
 		if (!empty($result['error'])) show_error($result['message']);
 
-		redirect($this->_createProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format, $cookieFile));
+		$proxyUrl = $this->_createValidatedProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format, $cookieFile, $videoId);
+		if (!$proxyUrl) show_error('Provider download sedang error. Silakan kembali dan klik Download lagi.', 200);
+		redirect($proxyUrl);
 	}
 
 	public function proxy()
@@ -114,6 +124,11 @@ class Download extends CI_Controller {
 
 		$payload = $this->_getProxyPayload($token);
 		if (!$payload || empty($payload['url'])) show_404();
+
+		if (!empty($payload['file']) && $this->_isProxyTempFile($payload['file']) && $this->_isValidDownloadFile($payload['file'])) {
+			$this->_sendLocalDownload($payload['file'], $payload['title'] ?? 'download', $payload['format'] ?? 'mp3');
+			return;
+		}
 
 		$this->_streamDownload($payload['url'], $payload['title'] ?? 'download', $payload['format'] ?? 'mp3', $payload['cookieFile'] ?? '');
 	}
@@ -318,13 +333,25 @@ class Download extends CI_Controller {
 		@file_put_contents($this->_downloadCachePath($videoId, $format), json_encode($data), LOCK_EX);
 	}
 
-	private function _createProxyUrl($downloadUrl, $title, $format, $cookieFile = '')
+	private function _createValidatedProxyUrl($downloadUrl, $title, $format, $cookieFile = '', $videoId = '')
+	{
+		$tempFile = $this->_downloadProviderFile($downloadUrl, $cookieFile);
+		if (!$tempFile) {
+			return '';
+		}
+
+		return $this->_createProxyUrl($downloadUrl, $title, $format, $cookieFile, $videoId, $tempFile);
+	}
+
+	private function _createProxyUrl($downloadUrl, $title, $format, $cookieFile = '', $videoId = '', $file = '')
 	{
 		$token = md5($downloadUrl . '|' . microtime(true) . '|' . mt_rand());
 		$payload = [
 			'url' => $downloadUrl,
 			'title' => $title,
 			'format' => $format,
+			'videoId' => $videoId,
+			'file' => $file,
 			'cookieFile' => $cookieFile,
 			'createdAt' => time()
 		];
@@ -351,75 +378,88 @@ class Download extends CI_Controller {
 
 	private function _streamDownload($downloadUrl, $title, $format, $cookieFile = '')
 	{
-		$extension = $format === 'mp4' ? 'mp4' : 'mp3';
-		$filename = $this->_safeFilename($title, $extension);
-
-		if (function_exists('curl_init')) {
-			$tempFile = $this->_cachePath('download_tmp_' . md5($downloadUrl . '|' . microtime(true)) . '.bin');
-			$fp = @fopen($tempFile, 'wb');
-			if (!$fp) {
-				show_error('Download temporary file failed', 500);
-				return;
-			}
-
-			$ch = curl_init();
-			curl_setopt_array($ch, [
-				CURLOPT_URL => $downloadUrl,
-				CURLOPT_FOLLOWLOCATION => true,
-				CURLOPT_MAXREDIRS => 5,
-				CURLOPT_CONNECTTIMEOUT => 8,
-				CURLOPT_TIMEOUT => 0,
-				CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-				CURLOPT_REFERER => 'https://api.ytmp3.biz/',
-				CURLOPT_SSL_VERIFYPEER => false,
-				CURLOPT_HEADER => false,
-				CURLOPT_FILE => $fp,
-			]);
-			$normalizedCookieFile = str_replace('\\', '/', (string) $cookieFile);
-			$cookiePrefix = str_replace('\\', '/', APPPATH . 'cache/download_cookie_');
-			if ($normalizedCookieFile && strpos($normalizedCookieFile, $cookiePrefix) === 0 && file_exists($cookieFile)) {
-				curl_setopt($ch, CURLOPT_COOKIEFILE, $cookieFile);
-				$cookieHeader = $this->_providerCookieHeader($cookieFile);
-				if ($cookieHeader !== '') {
-					curl_setopt($ch, CURLOPT_COOKIE, $cookieHeader);
-				}
-			}
-
-			$ok = curl_exec($ch);
-			$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-			$error = curl_error($ch);
-			curl_close($ch);
-			fclose($fp);
-
-			if ($ok === false || $httpCode >= 400 || !$this->_isValidDownloadFile($tempFile)) {
-				siteLogMessage('error', 'Download proxy failed: HTTP ' . $httpCode . ' ' . $error . ' URL: ' . $downloadUrl);
-				@unlink($tempFile);
-				show_error('Link download dari provider sedang error. Silakan kembali dan klik Download lagi.', 502);
-				return;
-			}
-
-			header('Content-Type: ' . ($extension === 'mp4' ? 'video/mp4' : 'audio/mpeg'));
-			header('Content-Disposition: attachment; filename="' . $filename . '"');
-			header('Content-Length: ' . filesize($tempFile));
-			header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-			header('Pragma: no-cache');
-
-			$read = @fopen($tempFile, 'rb');
-			if ($read) {
-				while (!feof($read)) {
-					echo fread($read, 8192);
-					if (ob_get_level() > 0) {
-						@ob_flush();
-					}
-					flush();
-				}
-				fclose($read);
-			}
-			@unlink($tempFile);
+		$tempFile = $this->_downloadProviderFile($downloadUrl, $cookieFile);
+		if ($tempFile) {
+			$this->_sendLocalDownload($tempFile, $title, $format);
 			return;
 		}
 
-		redirect($downloadUrl);
+		show_error('Link download dari provider sedang error. Silakan kembali dan klik Download lagi.', 200);
+	}
+
+	private function _downloadProviderFile($downloadUrl, $cookieFile = '')
+	{
+		if (!function_exists('curl_init')) {
+			return '';
+		}
+
+		$tempFile = $this->_cachePath('download_tmp_' . md5($downloadUrl . '|' . microtime(true)) . '.bin');
+		$fp = @fopen($tempFile, 'wb');
+		if (!$fp) {
+			return '';
+		}
+
+		$ch = curl_init();
+		curl_setopt_array($ch, [
+			CURLOPT_URL => $downloadUrl,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_MAXREDIRS => 5,
+			CURLOPT_CONNECTTIMEOUT => 8,
+			CURLOPT_TIMEOUT => 0,
+			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+			CURLOPT_REFERER => 'https://api.ytmp3.biz/',
+			CURLOPT_SSL_VERIFYPEER => false,
+			CURLOPT_HEADER => false,
+			CURLOPT_FILE => $fp,
+		]);
+		$normalizedCookieFile = str_replace('\\', '/', (string) $cookieFile);
+		$cookiePrefix = str_replace('\\', '/', APPPATH . 'cache/download_cookie_');
+		if ($normalizedCookieFile && strpos($normalizedCookieFile, $cookiePrefix) === 0 && file_exists($cookieFile)) {
+			curl_setopt($ch, CURLOPT_COOKIEFILE, $cookieFile);
+			$cookieHeader = $this->_providerCookieHeader($cookieFile);
+			if ($cookieHeader !== '') {
+				curl_setopt($ch, CURLOPT_COOKIE, $cookieHeader);
+			}
+		}
+
+		$ok = curl_exec($ch);
+		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		$error = curl_error($ch);
+		curl_close($ch);
+		fclose($fp);
+
+		if ($ok === false || $httpCode >= 400 || !$this->_isValidDownloadFile($tempFile)) {
+			siteLogMessage('error', 'Download provider file failed: HTTP ' . $httpCode . ' ' . $error . ' URL: ' . $downloadUrl);
+			@unlink($tempFile);
+			return '';
+		}
+
+		return $tempFile;
+	}
+
+	private function _sendLocalDownload($path, $title, $format)
+	{
+		$extension = $format === 'mp4' ? 'mp4' : 'mp3';
+		$filename = $this->_safeFilename($title, $extension);
+
+		header('Content-Type: ' . ($extension === 'mp4' ? 'video/mp4' : 'audio/mpeg'));
+		header('Content-Disposition: attachment; filename="' . $filename . '"');
+		header('Content-Length: ' . filesize($path));
+		header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+		header('Pragma: no-cache');
+
+		$read = @fopen($path, 'rb');
+		if ($read) {
+			while (!feof($read)) {
+				echo fread($read, 8192);
+				if (ob_get_level() > 0) {
+					@ob_flush();
+				}
+				flush();
+			}
+			fclose($read);
+		}
+		@unlink($path);
 	}
 
 	private function _isValidDownloadFile($path)
@@ -441,6 +481,14 @@ class Download extends CI_Controller {
 		}
 
 		return true;
+	}
+
+	private function _isProxyTempFile($path)
+	{
+		$normalizedPath = str_replace('\\', '/', (string) $path);
+		$tempPrefix = str_replace('\\', '/', APPPATH . 'cache/download_tmp_');
+
+		return $normalizedPath !== '' && strpos($normalizedPath, $tempPrefix) === 0 && file_exists($path);
 	}
 
 	private function _safeFilename($title, $extension)
