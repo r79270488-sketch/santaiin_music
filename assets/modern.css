@@ -1120,12 +1120,13 @@ ul.socialicon li.text {
   max-width: 760px;
   margin: 0 auto 22px;
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   align-items: center;
 }
 
 .primary-download {
+  width: 100%;
   min-height: 40px;
   display: inline-flex;
   align-items: center;
@@ -1145,19 +1146,12 @@ ul.socialicon li.text {
 
 .fast-download-slot {
   min-height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  color: #fff !important;
-  background: var(--accent);
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 800;
-  padding: 0 14px;
+  display: flex;
 }
-.fast-download-slot:hover {
-  background: var(--accent-strong);
+
+.fast-download-slot .primary-download {
+  width: 100%;
+  min-height: 40px;
 }
 .ad-slot-fast {
   margin: 0 !important;

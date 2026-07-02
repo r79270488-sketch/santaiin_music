@@ -103,7 +103,6 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
     </div>
 </div>
 
-<?php if ($downloadType === ''): ?>
 <div id="download-popup-ad" class="download-popup-ad" hidden>
     <div class="download-popup-backdrop" data-download-popup-close></div>
     <div class="download-popup-box" role="dialog" aria-modal="true">
@@ -114,16 +113,11 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
     </div>
 </div>
 
+<?php if ($downloadType === ''): ?>
 <script type="text/javascript" src="//data527.click/cde971f050d739dca695/d171eb5107/?placementName=default"></script>
 <script>
     (function () {
         var choiceBtns = document.querySelectorAll('.download-gate-button');
-        var converter = document.getElementById('download-converter');
-        var ready = converter ? converter.querySelector('.download-ready') : null;
-        var btnA = document.getElementById('btn-server-a');
-        var btnB = document.getElementById('btn-server-b');
-        var videoId = <?= json_encode($videoId); ?>;
-        var format = 'mp3';
 
         var adsSites = [
             { name: 'SaktiPlay', query: 'saktiplay' },
@@ -137,15 +131,6 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             window.open('https://www.google.com/search?q=' + encodeURIComponent(site.query), '_blank', 'noopener,noreferrer');
         }
 
-        function adGate(btn, action) {
-            if (btn.getAttribute('data-ad-opened') !== '1') {
-                btn.setAttribute('data-ad-opened', '1');
-                openAd();
-                return;
-            }
-            action();
-        }
-
         function triggerPopup() {
             var s = document.createElement('script');
             s.src = '//data527.click/cde971f050d739dca695/d171eb5107/?placementName=default&_=' + Date.now();
@@ -155,40 +140,13 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
         choiceBtns.forEach(function (btn) {
             btn.addEventListener('click', function () {
                 triggerPopup();
-                format = btn.getAttribute('data-format') || 'mp3';
+                openAd();
 
-                if (format === 'mp3') {
-                    var nextUrl = new URL(window.location.href);
-                    nextUrl.searchParams.set('type', 'mp3');
+                var nextUrl = new URL(window.location.href);
+                nextUrl.searchParams.set('type', btn.getAttribute('data-format') || 'mp3');
+                window.setTimeout(function () {
                     window.location.href = nextUrl.toString();
-                    return;
-                }
-
-                var label = format === 'mp4' ? 'Download MP4' : 'Download MP3';
-                document.getElementById('download-converter-title').textContent = label;
-                btnA.textContent = label;
-                btnB.textContent = label;
-
-                if (!converter || !ready) return;
-                converter.hidden = false;
-                ready.hidden = false;
-                btnA.removeAttribute('data-ad-opened');
-                btnB.removeAttribute('data-ad-opened');
-                btnA.setAttribute('data-url', '<?= base_url('download/direct'); ?>?id=' + encodeURIComponent(videoId) + '&format=' + format);
-                converter.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-
-        btnA.addEventListener('click', function () {
-            adGate(btnA, function () {
-                var url = btnA.getAttribute('data-url');
-                if (url) window.location.href = url;
-            });
-        });
-
-        btnB.addEventListener('click', function () {
-            adGate(btnB, function () {
-                window.location.href = 'https://ap-yt.com/' + format + '/' + videoId;
+                }, 150);
             });
         });
     })();
@@ -201,12 +159,30 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             { name: 'HokyToto777', query: 'hokytoto777' }
         ];
         var adStateKey = 'download_final_ad_opened_' + <?= json_encode($videoId); ?> + '_' + <?= json_encode($downloadType); ?>;
+        var popup = document.getElementById('download-popup-ad');
 
         function openAd() {
             var index = parseInt(localStorage.getItem('own_ads_index') || '0', 10);
             var site = adsSites[index % adsSites.length];
             localStorage.setItem('own_ads_index', index + 1);
             window.open('https://www.google.com/search?q=' + encodeURIComponent(site.query), '_blank', 'noopener,noreferrer');
+        }
+
+        function closePopup() {
+            if (!popup) return;
+            popup.hidden = true;
+            document.body.classList.remove('download-popup-open');
+        }
+
+        if (popup) {
+            window.setTimeout(function () {
+                popup.hidden = false;
+                document.body.classList.add('download-popup-open');
+            }, 300);
+
+            popup.querySelectorAll('[data-download-popup-close]').forEach(function (button) {
+                button.addEventListener('click', closePopup);
+            });
         }
 
         document.querySelectorAll('.js-final-download').forEach(function (button) {
