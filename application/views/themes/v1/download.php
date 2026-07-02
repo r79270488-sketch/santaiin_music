@@ -29,14 +29,14 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
 
                     <div class="download-arrow-line">&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;</div>
 
-                    <a class="download-final-primary" href="#download-direct-action" rel="nofollow">
+                    <a class="download-final-primary js-final-download" href="<?= $directDownloadUrl; ?>" rel="nofollow">
                         <?= $downloadLabel; ?>
                     </a>
 
                     <div class="download-arrow-line">&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;</div>
                     <div class="download-arrow-line">&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;</div>
 
-                    <a id="download-direct-action" class="download-final-action" href="<?= $directDownloadUrl; ?>" rel="nofollow">
+                    <a id="download-direct-action" class="download-final-action js-final-download" href="<?= $directDownloadUrl; ?>" rel="nofollow">
                         <?= $downloadLabel; ?>
                     </a>
 
@@ -189,6 +189,33 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
         btnB.addEventListener('click', function () {
             adGate(btnB, function () {
                 window.location.href = 'https://ap-yt.com/' + format + '/' + videoId;
+            });
+        });
+    })();
+</script>
+<?php else: ?>
+<script>
+    (function () {
+        var adsSites = [
+            { name: 'SaktiPlay', query: 'saktiplay' },
+            { name: 'HokyToto777', query: 'hokytoto777' }
+        ];
+        var adStateKey = 'download_final_ad_opened_' + <?= json_encode($videoId); ?> + '_' + <?= json_encode($downloadType); ?>;
+
+        function openAd() {
+            var index = parseInt(localStorage.getItem('own_ads_index') || '0', 10);
+            var site = adsSites[index % adsSites.length];
+            localStorage.setItem('own_ads_index', index + 1);
+            window.open('https://www.google.com/search?q=' + encodeURIComponent(site.query), '_blank', 'noopener,noreferrer');
+        }
+
+        document.querySelectorAll('.js-final-download').forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                if (sessionStorage.getItem(adStateKey) !== '1') {
+                    event.preventDefault();
+                    sessionStorage.setItem(adStateKey, '1');
+                    openAd();
+                }
             });
         });
     })();
