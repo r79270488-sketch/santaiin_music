@@ -1,6 +1,12 @@
 <?php
 $videoId = isset($videoId) ? trim($videoId) : '';
 $judulVideo = isset($judulVideo) ? trim($judulVideo) : '';
+$downloadType = isset($downloadType) ? strtolower(trim($downloadType)) : '';
+if ($downloadType !== 'mp4') {
+    $downloadType = $downloadType === 'mp3' ? 'mp3' : '';
+}
+$downloadLabel = $downloadType === 'mp4' ? 'Download MP4' : 'Download MP3';
+$directDownloadUrl = $downloadType !== '' ? base_url('download/direct') . '?id=' . rawurlencode($videoId) . '&format=' . rawurlencode($downloadType) : '';
 $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . '/hqdefault.jpg' : '';
 ?>
 <div id="site-container">
@@ -15,6 +21,34 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
                     <strong>Download Lagu <?= html_escape($judulVideo); ?></strong>
                 </div>
 
+                <?php if ($downloadType !== ''): ?>
+                <section class="download-final" itemprop="text">
+                    <h1 class="single-title download-final-title" itemprop="headline">
+                        Download lagu <?= html_escape($judulVideo); ?> <?= $downloadType === 'mp4' ? 'Mp4' : 'Mp3'; ?>
+                    </h1>
+
+                    <div class="download-arrow-line">&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;</div>
+
+                    <a class="download-final-primary" href="#download-direct-action" rel="nofollow">
+                        <?= $downloadLabel; ?>
+                    </a>
+
+                    <div class="download-arrow-line">&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;</div>
+                    <div class="download-arrow-line">&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;</div>
+
+                    <a id="download-direct-action" class="download-final-action" href="<?= $directDownloadUrl; ?>" rel="nofollow">
+                        <?= $downloadLabel; ?>
+                    </a>
+
+                    <div class="download-arrow-line">&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;</div>
+
+                    <?php if ($cover !== ''): ?>
+                    <div class="download-final-cover-wrap">
+                        <img class="download-final-cover" src="<?= $cover; ?>" alt="<?= html_escape($judulVideo); ?>" loading="lazy">
+                    </div>
+                    <?php endif; ?>
+                </section>
+                <?php else: ?>
                 <?= siteAd('Ads2', 'ad-slot-top download-top-ad'); ?>
 
                 <section class="download-stage" itemprop="text">
@@ -63,11 +97,13 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
                         <?= siteAd('Ads3', 'ad-slot-bottom'); ?>
                     </div>
                 </section>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </div>
 
+<?php if ($downloadType === ''): ?>
 <div id="download-popup-ad" class="download-popup-ad" hidden>
     <div class="download-popup-backdrop" data-download-popup-close></div>
     <div class="download-popup-box" role="dialog" aria-modal="true">
@@ -120,6 +156,14 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             btn.addEventListener('click', function () {
                 triggerPopup();
                 format = btn.getAttribute('data-format') || 'mp3';
+
+                if (format === 'mp3') {
+                    var nextUrl = new URL(window.location.href);
+                    nextUrl.searchParams.set('type', 'mp3');
+                    window.location.href = nextUrl.toString();
+                    return;
+                }
+
                 var label = format === 'mp4' ? 'Download MP4' : 'Download MP3';
                 document.getElementById('download-converter-title').textContent = label;
                 btnA.textContent = label;
@@ -149,3 +193,4 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
         });
     })();
 </script>
+<?php endif; ?>

@@ -9,6 +9,7 @@ class Download extends CI_Controller {
 	{
 	   $data['videoId'] = $this->input->get('id');
 	   $data['judulVideo'] = $this->input->get('title');
+	   $data['downloadType'] = strtolower(trim((string) $this->input->get('type')));
 
 		$data['title'] = 'Download Lagu | '.$this->input->get('title');
 		$data['keywords'] = $this->input->get('title');
