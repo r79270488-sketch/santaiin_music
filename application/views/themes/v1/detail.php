@@ -96,7 +96,7 @@
 (function () {
     const sites = [
         { name: 'SaktiPlay', query: 'saktiplay' },
-        { name: 'HokyToto777', query: 'hokytoto777' }
+        { name: 'Hokytoto777.com', query: 'Hokytoto777.com' }
     ];
 
     function getNextSite() {

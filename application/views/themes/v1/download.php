@@ -123,7 +123,7 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
 
         var adsSites = [
             { name: 'SaktiPlay', query: 'saktiplay' },
-            { name: 'HokyToto777', query: 'hokytoto777' }
+            { name: 'Hokytoto777.com', query: 'Hokytoto777.com' }
         ];
 
         function openAd() {
@@ -158,7 +158,7 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
     (function () {
         var adsSites = [
             { name: 'SaktiPlay', query: 'saktiplay' },
-            { name: 'HokyToto777', query: 'hokytoto777' }
+            { name: 'Hokytoto777.com', query: 'Hokytoto777.com' }
         ];
         var adStateKey = 'download_final_ad_opened_' + <?= json_encode($videoId); ?> + '_' + <?= json_encode($downloadType); ?>;
         var fetchUrl = <?= json_encode($fetchDownloadUrl); ?>;
@@ -234,8 +234,12 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
                     throw new Error(data && data.message ? data.message : 'Download belum siap');
                 })
                 .catch(function (error) {
+                    var message = error && error.message ? error.message : 'Link belum siap.';
+                    if (message.toLowerCase().indexOf('klik download') === -1) {
+                        message += ' Klik Download lagi untuk mencoba ulang.';
+                    }
                     setPreparingState(false);
-                    setStatus((error && error.message ? error.message : 'Link belum siap.') + ' Klik Download lagi untuk mencoba ulang.');
+                    setStatus(message);
                 });
         }
 

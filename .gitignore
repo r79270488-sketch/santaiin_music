@@ -4,3 +4,5 @@ application/cache/download_auth_key.txt
 application/cache/download_proxy_*.json
 application/cache/download_cookie_*.txt
 application/cache/download_tmp_*.bin
+application/cache/debug_cookie_*.txt
+application/cache/*.tmp

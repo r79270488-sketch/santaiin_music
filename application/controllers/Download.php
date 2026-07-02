@@ -7,6 +7,7 @@ class Download extends CI_Controller {
 	const DOWNLOAD_CACHE_TTL = 0;
 	const PROXY_TOKEN_TTL = 300;
 	const AUTH_CACHE_TTL = 1800;
+	const PROVIDER_ATTEMPTS = 3;
 
 	public function index()
 	{
@@ -47,43 +48,7 @@ class Download extends CI_Controller {
 			return;
 		}
 
-		$cookieFile = $this->_providerCookiePath(md5($videoId . '|' . $format . '|' . microtime(true) . '|' . mt_rand()));
-		$authKey = $this->_getAuthKey();
-		if (!$authKey) {
-			$this->_json([
-				'error' => 1, 'message' => 'Failed to get auth key'
-			]);
-			return;
-		}
-
-		$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time();
-		$initRaw = $this->_fetchUrl($initUrl, 12, $cookieFile);
-		if (!$initRaw) {
-			$this->_json([
-				'error' => 1, 'message' => 'Init network error'
-			]);
-			return;
-		}
-		$initData = json_decode($initRaw, true);
-		if (!$initData || !empty($initData['error']) || empty($initData['convertURL'])) {
-			$this->_json([
-				'error' => 1, 'message' => 'Init failed'
-			]);
-			return;
-		}
-
-		$result = $this->_doConvert($initData['convertURL'], $videoId, $format, 4, $cookieFile);
-		if (empty($result['error']) && empty($result['pending']) && !empty($result['downloadURL'])) {
-			$proxyUrl = $this->_createValidatedProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format, $cookieFile, $videoId);
-			if (!$proxyUrl) {
-				$this->_json([
-					'error' => 1,
-					'message' => 'Provider download sedang error. Silakan klik Download lagi.'
-				]);
-				return;
-			}
-			$result['downloadURL'] = $proxyUrl;
-		}
+		$result = $this->_prepareDownload($videoId, $format, 4, self::PROVIDER_ATTEMPTS);
 		$this->_json($result);
 	}
 
@@ -99,22 +64,10 @@ class Download extends CI_Controller {
 			redirect($cached['downloadURL']);
 		}
 
-		$cookieFile = $this->_providerCookiePath(md5($videoId . '|' . $format . '|' . microtime(true) . '|' . mt_rand()));
-		$authKey = $this->_getAuthKey();
-		if (!$authKey) show_error('Auth failed');
-
-		$initRaw = $this->_fetchUrl('https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time(), 12, $cookieFile);
-		if (!$initRaw) show_error('Init failed');
-		$initData = json_decode($initRaw, true);
-		if (!$initData || empty($initData['convertURL'])) show_error('Init failed');
-
-		$result = $this->_doConvert($initData['convertURL'], $videoId, $format, 8, $cookieFile);
+		$result = $this->_prepareDownload($videoId, $format, 8, self::PROVIDER_ATTEMPTS);
 		if (!empty($result['pending'])) show_error('Download belum siap. Silakan kembali dan klik Download lagi.');
 		if (!empty($result['error'])) show_error($result['message']);
-
-		$proxyUrl = $this->_createValidatedProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format, $cookieFile, $videoId);
-		if (!$proxyUrl) show_error('Provider download sedang error. Silakan kembali dan klik Download lagi.', 200);
-		redirect($proxyUrl);
+		redirect($result['downloadURL']);
 	}
 
 	public function proxy()
@@ -184,6 +137,54 @@ class Download extends CI_Controller {
 			'error' => 0,
 			'downloadURL' => $data['downloadURL'],
 			'title' => $data['title'] ?? ''
+		];
+	}
+
+	private function _prepareDownload($videoId, $format, $maxPolls, $attempts = 1)
+	{
+		$authKey = $this->_getAuthKey();
+		if (!$authKey) {
+			return ['error' => 1, 'message' => 'Auth provider gagal'];
+		}
+
+		$lastResult = null;
+		for ($attempt = 1; $attempt <= max(1, (int) $attempts); $attempt++) {
+			$cookieFile = $this->_providerCookiePath(md5($videoId . '|' . $format . '|' . microtime(true) . '|' . mt_rand()));
+			$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time();
+			$initRaw = $this->_fetchUrl($initUrl, 12, $cookieFile);
+			if (!$initRaw) {
+				$lastResult = ['error' => 1, 'message' => 'Init provider gagal'];
+				continue;
+			}
+
+			$initData = json_decode($initRaw, true);
+			if (!$initData || !empty($initData['error']) || empty($initData['convertURL'])) {
+				$lastResult = ['error' => 1, 'message' => 'Init provider gagal'];
+				continue;
+			}
+
+			$result = $this->_doConvert($initData['convertURL'], $videoId, $format, $maxPolls, $cookieFile);
+			$lastResult = $result;
+			if (!empty($result['pending']) || !empty($result['error']) || empty($result['downloadURL'])) {
+				continue;
+			}
+
+			$proxyUrl = $this->_createValidatedProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format, $cookieFile, $videoId);
+			if ($proxyUrl) {
+				$result['downloadURL'] = $proxyUrl;
+				$result['attempts'] = $attempt;
+				return $result;
+			}
+
+			$lastResult = [
+				'error' => 1,
+				'message' => 'Provider belum bisa menyiapkan file untuk video ini. Coba beberapa saat lagi atau pilih lagu lain.'
+			];
+		}
+
+		return $lastResult ?: [
+			'error' => 1,
+			'message' => 'Provider belum bisa menyiapkan file untuk video ini. Coba beberapa saat lagi atau pilih lagu lain.'
 		];
 	}
 
