@@ -1,2 +1,3 @@
 application/cache/download_*.json
 application/cache/download_auth_key.txt
+application/cache/download_proxy_*.json

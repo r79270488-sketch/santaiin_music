@@ -4,7 +4,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Download extends CI_Controller {
-	const DOWNLOAD_CACHE_TTL = 900;
+	const DOWNLOAD_CACHE_TTL = 0;
+	const PROXY_TOKEN_TTL = 300;
 	const AUTH_CACHE_TTL = 1800;
 
 	public function index()
@@ -72,7 +73,7 @@ class Download extends CI_Controller {
 
 		$result = $this->_doConvert($initData['convertURL'], $videoId, $format, 4);
 		if (empty($result['error']) && empty($result['pending']) && !empty($result['downloadURL'])) {
-			$this->_setCachedDownload($videoId, $format, $result);
+			$result['downloadURL'] = $this->_createProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format);
 		}
 		$this->_json($result);
 	}
@@ -100,16 +101,19 @@ class Download extends CI_Controller {
 		$result = $this->_doConvert($initData['convertURL'], $videoId, $format, 8);
 		if (!empty($result['pending'])) show_error('Download belum siap. Silakan kembali dan klik Download lagi.');
 		if (!empty($result['error'])) show_error($result['message']);
-		$this->_setCachedDownload($videoId, $format, $result);
 
-		redirect($result['downloadURL']);
+		redirect($this->_createProxyUrl($result['downloadURL'], $result['title'] ?? $videoId, $format));
 	}
 
 	public function proxy()
 	{
-		$downloadUrl = $this->input->get('url');
-		if (empty($downloadUrl)) show_404();
-		redirect($downloadUrl);
+		$token = (string) $this->input->get('token');
+		if ($token === '' || !preg_match('/^[a-f0-9]{32}$/', $token)) show_404();
+
+		$payload = $this->_getProxyPayload($token);
+		if (!$payload || empty($payload['url'])) show_404();
+
+		$this->_streamDownload($payload['url'], $payload['title'] ?? 'download', $payload['format'] ?? 'mp3');
 	}
 
 	private function _doConvert($convertUrl, $videoId, $format, $maxPolls = 0)
@@ -271,6 +275,10 @@ class Download extends CI_Controller {
 
 	private function _getCachedDownload($videoId, $format)
 	{
+		if (self::DOWNLOAD_CACHE_TTL <= 0) {
+			return null;
+		}
+
 		$cacheFile = $this->_downloadCachePath($videoId, $format);
 		if (!file_exists($cacheFile) || (time() - filemtime($cacheFile)) >= self::DOWNLOAD_CACHE_TTL) {
 			return null;
@@ -304,9 +312,103 @@ class Download extends CI_Controller {
 		@file_put_contents($this->_downloadCachePath($videoId, $format), json_encode($data), LOCK_EX);
 	}
 
+	private function _createProxyUrl($downloadUrl, $title, $format)
+	{
+		$token = md5($downloadUrl . '|' . microtime(true) . '|' . mt_rand());
+		$payload = [
+			'url' => $downloadUrl,
+			'title' => $title,
+			'format' => $format,
+			'createdAt' => time()
+		];
+
+		@file_put_contents($this->_proxyTokenPath($token), json_encode($payload), LOCK_EX);
+
+		return 'download/proxy?token=' . $token;
+	}
+
+	private function _getProxyPayload($token)
+	{
+		$cacheFile = $this->_proxyTokenPath($token);
+		if (!file_exists($cacheFile) || (time() - filemtime($cacheFile)) >= self::PROXY_TOKEN_TTL) {
+			return null;
+		}
+
+		$payload = json_decode((string) @file_get_contents($cacheFile), true);
+		if (!$payload || empty($payload['url']) || strpos($payload['url'], 'https://ydl.ymcdn.org/') !== 0) {
+			return null;
+		}
+
+		return $payload;
+	}
+
+	private function _streamDownload($downloadUrl, $title, $format)
+	{
+		$extension = $format === 'mp4' ? 'mp4' : 'mp3';
+		$filename = $this->_safeFilename($title, $extension);
+
+		if (function_exists('curl_init')) {
+			$ch = curl_init();
+			curl_setopt_array($ch, [
+				CURLOPT_URL => $downloadUrl,
+				CURLOPT_FOLLOWLOCATION => true,
+				CURLOPT_MAXREDIRS => 5,
+				CURLOPT_CONNECTTIMEOUT => 8,
+				CURLOPT_TIMEOUT => 0,
+				CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+				CURLOPT_REFERER => 'https://api.ytmp3.biz/',
+				CURLOPT_SSL_VERIFYPEER => false,
+				CURLOPT_HEADER => false,
+				CURLOPT_WRITEFUNCTION => function ($ch, $chunk) {
+					echo $chunk;
+					if (ob_get_level() > 0) {
+						@ob_flush();
+					}
+					flush();
+					return strlen($chunk);
+				},
+			]);
+
+			header('Content-Type: ' . ($extension === 'mp4' ? 'video/mp4' : 'audio/mpeg'));
+			header('Content-Disposition: attachment; filename="' . $filename . '"');
+			header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+			header('Pragma: no-cache');
+
+			$ok = curl_exec($ch);
+			$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+			$error = curl_error($ch);
+			curl_close($ch);
+
+			if ($ok === false || $httpCode >= 400) {
+				siteLogMessage('error', 'Download proxy failed: HTTP ' . $httpCode . ' ' . $error . ' URL: ' . $downloadUrl);
+			}
+			return;
+		}
+
+		redirect($downloadUrl);
+	}
+
+	private function _safeFilename($title, $extension)
+	{
+		$title = html_entity_decode((string) $title, ENT_QUOTES, 'UTF-8');
+		$title = preg_replace('/[^A-Za-z0-9 ._-]+/', '', $title);
+		$title = preg_replace('/\s+/', ' ', $title);
+		$title = trim($title);
+		if ($title === '') {
+			$title = 'download';
+		}
+
+		return substr($title, 0, 120) . '.' . $extension;
+	}
+
 	private function _downloadCachePath($videoId, $format)
 	{
 		return $this->_cachePath('download_' . md5($videoId . '|' . $format) . '.json');
+	}
+
+	private function _proxyTokenPath($token)
+	{
+		return $this->_cachePath('download_proxy_' . $token . '.json');
 	}
 
 	private function _cachePath($name)
