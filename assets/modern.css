@@ -632,6 +632,22 @@ ul.socialicon li.text {
   background: #e5525b;
 }
 
+.download-final-primary.is-loading,
+.download-final-action.is-loading {
+  cursor: wait;
+  opacity: 0.82;
+  pointer-events: none;
+}
+
+.download-status {
+  min-height: 20px;
+  margin: 10px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .download-final-cover-wrap {
   max-width: 260px;
   margin: 18px auto 0;

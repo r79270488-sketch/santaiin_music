@@ -4,6 +4,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Download extends CI_Controller {
+	const DOWNLOAD_CACHE_TTL = 900;
+	const AUTH_CACHE_TTL = 1800;
 
 	public function index()
 	{
@@ -31,39 +33,48 @@ class Download extends CI_Controller {
 		$videoId = $this->input->get('id');
 		$format = $this->input->get('format');
 		if (empty($videoId) || strlen($videoId) !== 11) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
+			$this->_json([
 				'error' => 1, 'message' => 'Invalid video ID'
-			]));
+			]);
 			return;
 		}
 		if ($format !== 'mp4') $format = 'mp3';
 
+		$cached = $this->_getCachedDownload($videoId, $format);
+		if ($cached) {
+			$this->_json($cached);
+			return;
+		}
+
 		$authKey = $this->_getAuthKey();
 		if (!$authKey) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
+			$this->_json([
 				'error' => 1, 'message' => 'Failed to get auth key'
-			]));
+			]);
 			return;
 		}
 
 		$initUrl = 'https://a.ymcdn.org/api/v1/init?a=' . urlencode($authKey) . '&_=' . time();
 		$initRaw = $this->_fetchUrl($initUrl);
 		if (!$initRaw) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
+			$this->_json([
 				'error' => 1, 'message' => 'Init network error'
-			]));
+			]);
 			return;
 		}
 		$initData = json_decode($initRaw, true);
 		if (!$initData || !empty($initData['error']) || empty($initData['convertURL'])) {
-			$this->output->set_content_type('application/json')->set_output(json_encode([
+			$this->_json([
 				'error' => 1, 'message' => 'Init failed'
-			]));
+			]);
 			return;
 		}
 
-		$result = $this->_doConvert($initData['convertURL'], $videoId, $format);
-		$this->output->set_content_type('application/json')->set_output(json_encode($result));
+		$result = $this->_doConvert($initData['convertURL'], $videoId, $format, 4);
+		if (empty($result['error']) && empty($result['pending']) && !empty($result['downloadURL'])) {
+			$this->_setCachedDownload($videoId, $format, $result);
+		}
+		$this->_json($result);
 	}
 
 	public function direct()
@@ -73,6 +84,11 @@ class Download extends CI_Controller {
 		if (empty($videoId) || strlen($videoId) !== 11) show_404();
 		if ($format !== 'mp4') $format = 'mp3';
 
+		$cached = $this->_getCachedDownload($videoId, $format);
+		if ($cached && !empty($cached['downloadURL'])) {
+			redirect($cached['downloadURL']);
+		}
+
 		$authKey = $this->_getAuthKey();
 		if (!$authKey) show_error('Auth failed');
 
@@ -81,8 +97,10 @@ class Download extends CI_Controller {
 		$initData = json_decode($initRaw, true);
 		if (!$initData || empty($initData['convertURL'])) show_error('Init failed');
 
-		$result = $this->_doConvert($initData['convertURL'], $videoId, $format);
+		$result = $this->_doConvert($initData['convertURL'], $videoId, $format, 8);
+		if (!empty($result['pending'])) show_error('Download belum siap. Silakan kembali dan klik Download lagi.');
 		if (!empty($result['error'])) show_error($result['message']);
+		$this->_setCachedDownload($videoId, $format, $result);
 
 		redirect($result['downloadURL']);
 	}
@@ -94,7 +112,7 @@ class Download extends CI_Controller {
 		redirect($downloadUrl);
 	}
 
-	private function _doConvert($convertUrl, $videoId, $format)
+	private function _doConvert($convertUrl, $videoId, $format, $maxPolls = 0)
 	{
 		$url = $convertUrl . '&v=' . urlencode($videoId) . '&f=' . $format;
 		$data = $this->_apiRequest($url);
@@ -112,28 +130,33 @@ class Download extends CI_Controller {
 			$redirects++;
 		}
 
-		if (!empty($data['progressURL']) && empty($data['downloadURL'])) {
-			return ['error' => 1, 'message' => 'Conversion in progress, try again'];
+		if (empty($data['downloadURL']) && !empty($data['progressURL'])) {
+			$polls = 0;
+			while ($polls < $maxPolls) {
+				sleep(1);
+				$progressData = $this->_apiRequest($data['progressURL']);
+				if ($progressData && !empty($progressData['downloadURL'])) {
+					$data = $progressData;
+					break;
+				}
+				if ($progressData && isset($progressData['progress']) && $progressData['progress'] >= 3) {
+					break;
+				}
+				$polls++;
+			}
+
+			if (empty($data['downloadURL'])) {
+				$url = $convertUrl . '&v=' . urlencode($videoId) . '&f=' . $format;
+				$data = $this->_apiRequest($url);
+			}
 		}
 
 		if (empty($data['downloadURL'])) {
-			if (!empty($data['progressURL'])) {
-				$polls = 0;
-				while ($polls < 30) {
-					$progressData = $this->_apiRequest($data['progressURL']);
-					if ($progressData && isset($progressData['progress']) && $progressData['progress'] >= 3) {
-						break;
-					}
-					$polls++;
-					sleep(2);
-				}
-			}
-
-			$url = $convertUrl . '&v=' . urlencode($videoId) . '&f=' . $format;
-			$data = $this->_apiRequest($url);
-			if (!$data || empty($data['downloadURL'])) {
-				return ['error' => 1, 'message' => 'Conversion timeout'];
-			}
+			return [
+				'error' => 0,
+				'pending' => 1,
+				'message' => 'Download sedang disiapkan'
+			];
 		}
 
 		return [
@@ -145,7 +168,15 @@ class Download extends CI_Controller {
 
 	private function _getAuthKey()
 	{
-		$html = $this->_fetchUrl('https://api.ytmp3.biz/button/');
+		$cacheFile = $this->_cachePath('download_auth_key.txt');
+		if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < self::AUTH_CACHE_TTL) {
+			$cachedKey = trim((string) @file_get_contents($cacheFile));
+			if (strlen($cachedKey) === 32) {
+				return $cachedKey;
+			}
+		}
+
+		$html = $this->_fetchUrl('https://api.ytmp3.biz/button/', 8);
 		if (!$html) {
 			siteLogMessage('error', 'Download: button page fetch failed');
 			return '';
@@ -170,7 +201,11 @@ class Download extends CI_Controller {
 			$key .= chr($codes[$n] - $map[$len - 1 - $n]);
 		}
 		if ($reverse) $key = strrev($key);
-		return substr($key, 0, 32);
+		$key = substr($key, 0, 32);
+		if (strlen($key) === 32) {
+			@file_put_contents($cacheFile, $key, LOCK_EX);
+		}
+		return $key;
 	}
 
 	private function _apiRequest($url)
@@ -181,8 +216,9 @@ class Download extends CI_Controller {
 		return $res ? json_decode($res, true) : null;
 	}
 
-	private function _fetchUrl($url)
+	private function _fetchUrl($url, $timeout = 12)
 	{
+		$timeout = max(3, (int) $timeout);
 		if (function_exists('curl_init')) {
 			$ch = curl_init();
 			curl_setopt_array($ch, [
@@ -190,7 +226,8 @@ class Download extends CI_Controller {
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_FOLLOWLOCATION => true,
 				CURLOPT_MAXREDIRS => 5,
-				CURLOPT_TIMEOUT => 30,
+				CURLOPT_CONNECTTIMEOUT => min(5, $timeout),
+				CURLOPT_TIMEOUT => $timeout,
 				CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
 				CURLOPT_REFERER => 'https://api.ytmp3.biz/',
 				CURLOPT_SSL_VERIFYPEER => false,
@@ -209,7 +246,7 @@ class Download extends CI_Controller {
 		$ctx = stream_context_create([
 			'http' => [
 				'ignore_errors' => true,
-				'timeout' => 30,
+				'timeout' => $timeout,
 				'follow_location' => true,
 				'max_redirects' => 5,
 				'header' => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\r\nReferer: https://api.ytmp3.biz/\r\nAccept: */*\r\n"
@@ -219,5 +256,61 @@ class Download extends CI_Controller {
 		$result = @file_get_contents($url, false, $ctx);
 		if ($result === false) return false;
 		return $result;
+	}
+
+	private function _json($payload)
+	{
+		if (ob_get_level() > 0 && ob_get_length()) {
+			@ob_clean();
+		}
+
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($payload));
+	}
+
+	private function _getCachedDownload($videoId, $format)
+	{
+		$cacheFile = $this->_downloadCachePath($videoId, $format);
+		if (!file_exists($cacheFile) || (time() - filemtime($cacheFile)) >= self::DOWNLOAD_CACHE_TTL) {
+			return null;
+		}
+
+		$cache = json_decode((string) @file_get_contents($cacheFile), true);
+		if (!$cache || empty($cache['downloadURL'])) {
+			return null;
+		}
+
+		return [
+			'error' => 0,
+			'cached' => 1,
+			'downloadURL' => $cache['downloadURL'],
+			'title' => isset($cache['title']) ? $cache['title'] : ''
+		];
+	}
+
+	private function _setCachedDownload($videoId, $format, $result)
+	{
+		if (empty($result['downloadURL'])) {
+			return;
+		}
+
+		$data = [
+			'downloadURL' => $result['downloadURL'],
+			'title' => isset($result['title']) ? $result['title'] : '',
+			'createdAt' => time()
+		];
+
+		@file_put_contents($this->_downloadCachePath($videoId, $format), json_encode($data), LOCK_EX);
+	}
+
+	private function _downloadCachePath($videoId, $format)
+	{
+		return $this->_cachePath('download_' . md5($videoId . '|' . $format) . '.json');
+	}
+
+	private function _cachePath($name)
+	{
+		return APPPATH . 'cache/' . $name;
 	}
 }

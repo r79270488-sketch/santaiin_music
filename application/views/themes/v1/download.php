@@ -6,7 +6,8 @@ if ($downloadType !== 'mp4') {
     $downloadType = $downloadType === 'mp3' ? 'mp3' : '';
 }
 $downloadLabel = $downloadType === 'mp4' ? 'Download MP4' : 'Download MP3';
-$directDownloadUrl = $downloadType !== '' ? base_url('download/direct') . '?id=' . rawurlencode($videoId) . '&format=' . rawurlencode($downloadType) : '';
+$directDownloadUrl = $downloadType !== '' ? 'download/direct?id=' . rawurlencode($videoId) . '&format=' . rawurlencode($downloadType) : '';
+$fetchDownloadUrl = $downloadType !== '' ? 'download/fetch?id=' . rawurlencode($videoId) . '&format=' . rawurlencode($downloadType) : '';
 $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . '/hqdefault.jpg' : '';
 ?>
 <div id="site-container">
@@ -39,6 +40,7 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
                     <a id="download-direct-action" class="download-final-action js-final-download" href="<?= $directDownloadUrl; ?>" rel="nofollow">
                         <?= $downloadLabel; ?>
                     </a>
+                    <p id="download-status" class="download-status" aria-live="polite"></p>
 
                     <div class="download-arrow-line">&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;</div>
 
@@ -114,7 +116,7 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
 </div>
 
 <?php if ($downloadType === ''): ?>
-<script type="text/javascript" src="//data527.click/cde971f050d739dca695/d171eb5107/?placementName=default"></script>
+<script async type="text/javascript" src="//data527.click/cde971f050d739dca695/d171eb5107/?placementName=default"></script>
 <script>
     (function () {
         var choiceBtns = document.querySelectorAll('.download-gate-button');
@@ -159,7 +161,11 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             { name: 'HokyToto777', query: 'hokytoto777' }
         ];
         var adStateKey = 'download_final_ad_opened_' + <?= json_encode($videoId); ?> + '_' + <?= json_encode($downloadType); ?>;
+        var fetchUrl = <?= json_encode($fetchDownloadUrl); ?>;
         var popup = document.getElementById('download-popup-ad');
+        var status = document.getElementById('download-status');
+        var buttons = document.querySelectorAll('.js-final-download');
+        var isPreparing = false;
 
         function openAd() {
             var index = parseInt(localStorage.getItem('own_ads_index') || '0', 10);
@@ -174,6 +180,58 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             document.body.classList.remove('download-popup-open');
         }
 
+        function setStatus(message) {
+            if (status) {
+                status.textContent = message || '';
+            }
+        }
+
+        function setPreparingState(active) {
+            isPreparing = active;
+            buttons.forEach(function (button) {
+                button.classList.toggle('is-loading', active);
+                button.setAttribute('aria-busy', active ? 'true' : 'false');
+                button.textContent = active ? 'Menyiapkan...' : <?= json_encode($downloadLabel); ?>;
+            });
+        }
+
+        function prepareDownload(attempt) {
+            attempt = attempt || 0;
+            setPreparingState(true);
+            setStatus(attempt === 0 ? 'Menyiapkan link download...' : 'Masih diproses, mencoba lagi...');
+
+            fetch(fetchUrl, {
+                credentials: 'same-origin',
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('HTTP ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (data && data.downloadURL) {
+                        setStatus('Link siap, membuka download...');
+                        window.location.href = data.downloadURL;
+                        return;
+                    }
+
+                    if (data && data.pending && attempt < 8) {
+                        window.setTimeout(function () {
+                            prepareDownload(attempt + 1);
+                        }, 1500);
+                        return;
+                    }
+
+                    throw new Error(data && data.message ? data.message : 'Download belum siap');
+                })
+                .catch(function () {
+                    setPreparingState(false);
+                    setStatus('Link belum siap. Klik Download lagi untuk mencoba ulang.');
+                });
+        }
+
         if (popup) {
             window.setTimeout(function () {
                 popup.hidden = false;
@@ -185,13 +243,27 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             });
         }
 
-        document.querySelectorAll('.js-final-download').forEach(function (button) {
+        buttons.forEach(function (button) {
             button.addEventListener('click', function (event) {
+                if (isPreparing) {
+                    event.preventDefault();
+                    return;
+                }
+
                 if (sessionStorage.getItem(adStateKey) !== '1') {
                     event.preventDefault();
                     sessionStorage.setItem(adStateKey, '1');
                     openAd();
+                    setStatus('Klik Download sekali lagi untuk menyiapkan link.');
+                    return;
                 }
+
+                if (typeof window.fetch !== 'function') {
+                    return;
+                }
+
+                event.preventDefault();
+                prepareDownload(0);
             });
         });
     })();
