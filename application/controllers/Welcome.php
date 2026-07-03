@@ -9,16 +9,16 @@ class Welcome extends CI_Controller
         $newReleases = [];
 
         try {
-            $popularSongs = getYoutubePopularMusic(12, 'ID');
+            $popularSongs = getCachedYoutubePopularMusic(12, 'ID');
         } catch (Throwable $e) {
-            log_message('error', 'YouTube popular music error: ' . $e->getMessage());
+            log_message('error', 'Cached popular music error: ' . $e->getMessage());
             $popularSongs = [];
         }
 
         try {
-            $newReleases = getAppleNewReleases('id', 12);
+            $newReleases = getCachedAppleNewReleases('id', 12);
         } catch (Throwable $e) {
-            log_message('error', 'Apple new releases error: ' . $e->getMessage());
+            log_message('error', 'Cached Apple new releases error: ' . $e->getMessage());
             $newReleases = [];
         }
 

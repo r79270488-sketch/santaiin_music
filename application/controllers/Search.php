@@ -11,7 +11,7 @@ class Search extends CI_Controller {
         $putfile = autoSearchSitemap(strtolower($replace));
        
         
-        $youtubepencarian = getYoutubeSearch($replace);
+        $youtubepencarian = getCachedYoutubeSearch($replace);
         
         $datas['music'] = $youtubepencarian;
         $datas['title_parameter'] = ucwords($replace);

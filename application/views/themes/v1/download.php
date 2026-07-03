@@ -6,8 +6,9 @@ if ($downloadType !== 'mp4') {
     $downloadType = $downloadType === 'mp3' ? 'mp3' : '';
 }
 $downloadLabel = $downloadType === 'mp4' ? 'Download MP4' : 'Download MP3';
-$directDownloadUrl = $downloadType !== '' ? 'download/direct?id=' . rawurlencode($videoId) . '&format=' . rawurlencode($downloadType) : '';
-$fetchDownloadUrl = $downloadType !== '' ? 'download/fetch?id=' . rawurlencode($videoId) . '&format=' . rawurlencode($downloadType) : '';
+$providerButtonBaseUrl = $downloadType !== '' && $videoId !== '' ? 'https://api.ytmp3.biz/button/#' . rawurlencode($videoId) . '|' . rawurlencode($downloadType) : '';
+$providerPrimaryUrl = $providerButtonBaseUrl !== '' ? $providerButtonBaseUrl . '|04124b|ffffff' : '';
+$providerActionUrl = $providerButtonBaseUrl !== '' ? $providerButtonBaseUrl . '|f0646b|ffffff' : '';
 $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . '/hqdefault.jpg' : '';
 ?>
 <div id="site-container">
@@ -30,17 +31,18 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
 
                     <div class="download-arrow-line">&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;</div>
 
-                    <a class="download-final-primary js-final-download" href="<?= $directDownloadUrl; ?>" rel="nofollow">
-                        <?= $downloadLabel; ?>
-                    </a>
+                    <div class="download-provider-gate">
+                        <iframe class="download-provider-frame download-provider-frame-primary" src="<?= html_escape($providerPrimaryUrl); ?>" width="300" height="52" title="<?= html_escape($downloadLabel); ?>"></iframe>
+                        <button type="button" class="download-provider-ad-layer" aria-label="<?= html_escape($downloadLabel); ?>"></button>
+                    </div>
 
                     <div class="download-arrow-line">&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;</div>
                     <div class="download-arrow-line">&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;</div>
 
-                    <a id="download-direct-action" class="download-final-action js-final-download" href="<?= $directDownloadUrl; ?>" rel="nofollow">
-                        <?= $downloadLabel; ?>
-                    </a>
-                    <p id="download-status" class="download-status" aria-live="polite"></p>
+                    <div class="download-provider-gate">
+                        <iframe id="download-direct-action" class="download-provider-frame download-provider-frame-action" src="<?= html_escape($providerActionUrl); ?>" width="300" height="48" title="<?= html_escape($downloadLabel); ?>"></iframe>
+                        <button type="button" class="download-provider-ad-layer" aria-label="<?= html_escape($downloadLabel); ?>"></button>
+                    </div>
 
                     <div class="download-arrow-line">&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;</div>
 
@@ -156,16 +158,12 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
 <?php else: ?>
 <script>
     (function () {
+        var popup = document.getElementById('download-popup-ad');
+        var adStateKey = 'download_final_ad_opened_' + <?= json_encode($videoId); ?> + '_' + <?= json_encode($downloadType); ?>;
         var adsSites = [
             { name: 'SaktiPlay', query: 'saktiplay' },
             { name: 'Hokytoto777.com', query: 'Hokytoto777.com' }
         ];
-        var adStateKey = 'download_final_ad_opened_' + <?= json_encode($videoId); ?> + '_' + <?= json_encode($downloadType); ?>;
-        var fetchUrl = <?= json_encode($fetchDownloadUrl); ?>;
-        var popup = document.getElementById('download-popup-ad');
-        var status = document.getElementById('download-status');
-        var buttons = document.querySelectorAll('.js-final-download');
-        var isPreparing = false;
 
         function openAd() {
             var index = parseInt(localStorage.getItem('own_ads_index') || '0', 10);
@@ -180,69 +178,6 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             document.body.classList.remove('download-popup-open');
         }
 
-        function setStatus(message) {
-            if (status) {
-                status.textContent = message || '';
-            }
-        }
-
-        function setPreparingState(active) {
-            isPreparing = active;
-            buttons.forEach(function (button) {
-                button.classList.toggle('is-loading', active);
-                button.setAttribute('aria-busy', active ? 'true' : 'false');
-                button.textContent = active ? 'Menyiapkan...' : <?= json_encode($downloadLabel); ?>;
-            });
-        }
-
-        function prepareDownload(attempt) {
-            attempt = attempt || 0;
-            setPreparingState(true);
-            setStatus(attempt === 0 ? 'Menyiapkan link download...' : 'Masih diproses, mencoba lagi...');
-
-            fetch(fetchUrl, {
-                credentials: 'same-origin',
-                headers: { 'Accept': 'application/json' }
-            })
-                .then(function (response) {
-                    if (!response.ok) {
-                        throw new Error('HTTP ' + response.status);
-                    }
-                    return response.json();
-                })
-                .then(function (data) {
-                    if (data && data.downloadURL) {
-                        setStatus('Link siap, membuka download...');
-                        window.location.href = data.downloadURL;
-                        return;
-                    }
-
-                    if (data && data.pending && attempt < 8) {
-                        window.setTimeout(function () {
-                            prepareDownload(attempt + 1);
-                        }, 1500);
-                        return;
-                    }
-
-                    if (data && data.error && attempt < 2) {
-                        window.setTimeout(function () {
-                            prepareDownload(attempt + 1);
-                        }, 1500);
-                        return;
-                    }
-
-                    throw new Error(data && data.message ? data.message : 'Download belum siap');
-                })
-                .catch(function (error) {
-                    var message = error && error.message ? error.message : 'Link belum siap.';
-                    if (message.toLowerCase().indexOf('klik download') === -1) {
-                        message += ' Klik Download lagi untuk mencoba ulang.';
-                    }
-                    setPreparingState(false);
-                    setStatus(message);
-                });
-        }
-
         if (popup) {
             window.setTimeout(function () {
                 popup.hidden = false;
@@ -254,27 +189,18 @@ $cover = $videoId !== '' ? 'https://i.ytimg.com/vi/' . rawurlencode($videoId) . 
             });
         }
 
-        buttons.forEach(function (button) {
-            button.addEventListener('click', function (event) {
-                if (isPreparing) {
-                    event.preventDefault();
-                    return;
-                }
+        document.querySelectorAll('.download-provider-ad-layer').forEach(function (button) {
+            if (sessionStorage.getItem(adStateKey) === '1') {
+                button.hidden = true;
+                return;
+            }
 
-                if (sessionStorage.getItem(adStateKey) !== '1') {
-                    event.preventDefault();
-                    sessionStorage.setItem(adStateKey, '1');
-                    openAd();
-                    setStatus('Klik Download sekali lagi untuk menyiapkan link.');
-                    return;
-                }
-
-                if (typeof window.fetch !== 'function') {
-                    return;
-                }
-
-                event.preventDefault();
-                prepareDownload(0);
+            button.addEventListener('click', function () {
+                sessionStorage.setItem(adStateKey, '1');
+                openAd();
+                document.querySelectorAll('.download-provider-ad-layer').forEach(function (layer) {
+                    layer.hidden = true;
+                });
             });
         });
     })();

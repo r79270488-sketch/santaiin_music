@@ -50,6 +50,290 @@ function siteLogMessage($level, $message)
     error_log(strtoupper($level) . ': ' . $message);
 }
 
+function musicDataConfig($key, $default = null)
+{
+    $ci =& get_instance();
+    $ci->config->load('music_data', true);
+    $value = $ci->config->item($key, 'music_data');
+
+    return $value === null ? $default : $value;
+}
+
+function musicLiveFallbackEnabled()
+{
+    return (bool) musicDataConfig('music_live_fallback', false);
+}
+
+function musicCacheKey($key)
+{
+    return musicDataConfig('music_cache_prefix', 'music:') . $key;
+}
+
+function musicRedis()
+{
+    static $redis = false;
+
+    if ($redis !== false) {
+        return $redis;
+    }
+
+    $driver = musicDataConfig('music_cache_driver', 'auto');
+    if ($driver === 'file' || !class_exists('Redis')) {
+        $redis = null;
+        return null;
+    }
+
+    try {
+        $client = new Redis();
+        $client->connect(
+            musicDataConfig('music_redis_host', '127.0.0.1'),
+            (int) musicDataConfig('music_redis_port', 6379),
+            (float) musicDataConfig('music_redis_timeout', 1.0)
+        );
+
+        $password = musicDataConfig('music_redis_password', '');
+        if ($password !== '') {
+            $client->auth($password);
+        }
+
+        $database = (int) musicDataConfig('music_redis_database', 0);
+        if ($database > 0) {
+            $client->select($database);
+        }
+
+        $redis = $client;
+        return $redis;
+    } catch (Throwable $e) {
+        siteLogMessage('error', 'Redis unavailable: ' . $e->getMessage());
+        $redis = null;
+        return null;
+    }
+}
+
+function musicCacheFile($key)
+{
+    $dir = rtrim(musicDataConfig('music_cache_path', APPPATH . 'cache/music_data/'), '/\\') . DIRECTORY_SEPARATOR;
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0777, true);
+    }
+
+    return $dir . md5($key) . '.json';
+}
+
+function musicCacheGet($key)
+{
+    $key = musicCacheKey($key);
+    $redis = musicRedis();
+
+    if ($redis) {
+        $raw = $redis->get($key);
+        if ($raw !== false && $raw !== null) {
+            $data = json_decode($raw, true);
+            if (is_array($data)) {
+                return $data;
+            }
+        }
+    }
+
+    $file = musicCacheFile($key);
+    if (!file_exists($file)) {
+        return null;
+    }
+
+    $payload = json_decode((string) @file_get_contents($file), true);
+    if (!$payload || !isset($payload['expires_at']) || $payload['expires_at'] < time()) {
+        @unlink($file);
+        return null;
+    }
+
+    return $payload['value'];
+}
+
+function musicCacheSet($key, $value, $ttl)
+{
+    $key = musicCacheKey($key);
+    $ttl = max(60, (int) $ttl);
+    $redis = musicRedis();
+
+    if ($redis) {
+        $redis->setex($key, $ttl, json_encode($value));
+        return true;
+    }
+
+    $file = musicCacheFile($key);
+    return (bool) @file_put_contents($file, json_encode([
+        'expires_at' => time() + $ttl,
+        'value' => $value,
+    ]), LOCK_EX);
+}
+
+function musicCacheDeleteByPrefix($prefix)
+{
+    $prefix = musicCacheKey($prefix);
+    $redis = musicRedis();
+
+    if ($redis) {
+        foreach ($redis->keys($prefix . '*') as $key) {
+            $redis->del($key);
+        }
+    }
+
+    $dir = rtrim(musicDataConfig('music_cache_path', APPPATH . 'cache/music_data/'), '/\\') . DIRECTORY_SEPARATOR;
+    if (!is_dir($dir)) {
+        return;
+    }
+
+    foreach (glob($dir . '*.json') as $file) {
+        @unlink($file);
+    }
+}
+
+function musicSongModel()
+{
+    static $model = false;
+
+    if ($model !== false) {
+        return $model;
+    }
+
+    try {
+        $ci =& get_instance();
+        $ci->load->model('Song_model', 'song_model');
+        $model = $ci->song_model->isEnabled() ? $ci->song_model : null;
+    } catch (Throwable $e) {
+        siteLogMessage('error', 'Song model unavailable: ' . $e->getMessage());
+        $model = null;
+    }
+
+    return $model;
+}
+
+function getCachedYoutubePopularMusic($limit = 12, $region = 'ID')
+{
+    $limit = max(1, min(25, (int) $limit));
+    $region = strtoupper($region);
+    $cacheKey = 'youtube:popular:' . $region . ':' . $limit;
+
+    $cached = musicCacheGet($cacheKey);
+    if (is_array($cached)) {
+        return $cached;
+    }
+
+    $model = musicSongModel();
+    if ($model) {
+        $items = $model->getPopularYoutube($limit);
+        if (!empty($items)) {
+            musicCacheSet($cacheKey, $items, musicDataConfig('music_cache_ttl_popular', 3600));
+            return $items;
+        }
+    }
+
+    $legacyCache = musicLegacyFileCache('youtube_popular_music_' . $region . '_' . $limit . '.json');
+    if (is_array($legacyCache)) {
+        musicCacheSet($cacheKey, $legacyCache, musicDataConfig('music_cache_ttl_popular', 3600));
+        return $legacyCache;
+    }
+
+    if (!musicLiveFallbackEnabled()) {
+        return [];
+    }
+
+    $items = getYoutubePopularMusic($limit, $region);
+    if ($model && !empty($items)) {
+        $model->upsertMany($items, 'youtube');
+    }
+    if (!empty($items)) {
+        musicCacheSet($cacheKey, $items, musicDataConfig('music_cache_ttl_popular', 3600));
+    }
+
+    return $items;
+}
+
+function getCachedYoutubeSearch($query, $limit = 20)
+{
+    $query = trim((string) $query);
+    if ($query === '') {
+        return [];
+    }
+
+    $limit = max(1, min(50, (int) $limit));
+    $cacheKey = 'youtube:search:' . md5(strtolower($query)) . ':' . $limit;
+
+    $cached = musicCacheGet($cacheKey);
+    if (is_array($cached)) {
+        return $cached;
+    }
+
+    $model = musicSongModel();
+    if ($model) {
+        $items = $model->searchYoutube($query, $limit);
+        if (!empty($items)) {
+            musicCacheSet($cacheKey, $items, musicDataConfig('music_cache_ttl_search', 21600));
+            return $items;
+        }
+    }
+
+    $legacyCache = musicLegacyFileCache('search_' . md5(strtolower($query)) . '.json');
+    if (is_array($legacyCache)) {
+        musicCacheSet($cacheKey, $legacyCache, musicDataConfig('music_cache_ttl_search', 21600));
+        return $legacyCache;
+    }
+
+    if (!musicLiveFallbackEnabled()) {
+        return [];
+    }
+
+    $items = getYoutubeSearch($query);
+    if ($model && !empty($items)) {
+        $model->upsertMany($items, 'youtube');
+    }
+    if (!empty($items)) {
+        musicCacheSet($cacheKey, $items, musicDataConfig('music_cache_ttl_search', 21600));
+    }
+
+    return $items;
+}
+
+function getCachedAppleNewReleases($country = 'id', $limit = 12)
+{
+    $country = strtolower($country);
+    $limit = max(1, min(50, (int) $limit));
+    $cacheKey = 'apple:new_releases:' . $country . ':' . $limit;
+
+    $cached = musicCacheGet($cacheKey);
+    if (is_array($cached)) {
+        return $cached;
+    }
+
+    $legacyCache = musicLegacyFileCache('apple_new_releases_' . $country . '_' . $limit . '.json');
+    if (is_array($legacyCache)) {
+        musicCacheSet($cacheKey, $legacyCache, musicDataConfig('music_cache_ttl_popular', 3600));
+        return $legacyCache;
+    }
+
+    if (!musicLiveFallbackEnabled()) {
+        return [];
+    }
+
+    $items = getAppleNewReleases($country, $limit);
+    if (!empty($items)) {
+        musicCacheSet($cacheKey, $items, musicDataConfig('music_cache_ttl_popular', 3600));
+    }
+
+    return $items;
+}
+
+function musicLegacyFileCache($filename)
+{
+    $path = APPPATH . 'cache/' . basename($filename);
+    if (!file_exists($path)) {
+        return null;
+    }
+
+    $data = json_decode((string) @file_get_contents($path), true);
+    return is_array($data) ? $data : null;
+}
+
 
 function siteBase($key){
 	
@@ -1003,8 +1287,6 @@ function refreshKeywordFilesIfNeeded()
 
 function get_kw()
 {
-	refreshKeywordFilesIfNeeded();
-
 	$kw1 = file(FCPATH.'keywoard/kw1.txt',FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	shuffle($kw1);
 	$kw1 = array_slice($kw1,0,20);
@@ -1013,8 +1295,6 @@ function get_kw()
 
 function getSitemap($limit)
 {
-	refreshKeywordFilesIfNeeded();
-
 	$sitemap = file(FCPATH.'keywoard/sitemap.txt',FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 	shuffle($sitemap);
 	$sitemap = array_slice($sitemap,0,$limit);

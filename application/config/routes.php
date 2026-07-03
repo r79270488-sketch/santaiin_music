@@ -8,6 +8,7 @@ $route['download/fetch'] = 'Download/fetch';
 $route['download/direct'] = 'Download/direct';
 $route['download/proxy'] = 'Download/proxy';
 $route['download'] = 'Download/index/$1';
+$route['admin/music-data'] = 'Music_admin/index';
 $route['search'] = 'Search/cari';
 $route['sitemap.xml'] = 'Sitemap/index';
 

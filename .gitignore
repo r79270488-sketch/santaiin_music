@@ -6,3 +6,6 @@ application/cache/download_cookie_*.txt
 application/cache/download_tmp_*.bin
 application/cache/debug_cookie_*.txt
 application/cache/*.tmp
+application/cache/music_data/
+application/logs/*
+!application/logs/index.html
