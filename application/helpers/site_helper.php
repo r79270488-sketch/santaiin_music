@@ -257,7 +257,7 @@ function getCachedYoutubeSearch($query, $limit = 20)
     }
 
     $limit = max(1, min(50, (int) $limit));
-    $cacheKey = 'youtube:search:' . md5(strtolower($query)) . ':' . $limit;
+    $cacheKey = 'youtube:search:v4:' . md5(strtolower($query)) . ':' . $limit;
 
     $cached = musicCacheGet($cacheKey);
     if (is_array($cached)) {
@@ -279,6 +279,18 @@ function getCachedYoutubeSearch($query, $limit = 20)
         return $legacyCache;
     }
 
+    $appleMatches = getCachedAppleReleaseSearchMatches($query, $limit);
+    if (!empty($appleMatches)) {
+        musicCacheSet($cacheKey, $appleMatches, musicDataConfig('music_cache_ttl_search', 21600));
+        return $appleMatches;
+    }
+
+    $legacyOutputMatches = getLegacyOutputCacheSearchMatches($query, $limit);
+    if (!empty($legacyOutputMatches)) {
+        musicCacheSet($cacheKey, $legacyOutputMatches, musicDataConfig('music_cache_ttl_search', 21600));
+        return $legacyOutputMatches;
+    }
+
     if (!musicLiveFallbackEnabled()) {
         return [];
     }
@@ -287,11 +299,267 @@ function getCachedYoutubeSearch($query, $limit = 20)
     if ($model && !empty($items)) {
         $model->upsertMany($items, 'youtube');
     }
-    if (!empty($items)) {
-        musicCacheSet($cacheKey, $items, musicDataConfig('music_cache_ttl_search', 21600));
+    musicCacheSet($cacheKey, $items, musicDataConfig('music_cache_ttl_search', 21600));
+
+    return $items;
+}
+
+function normalizeMusicSearchText($value)
+{
+    $value = strtolower(html_entity_decode((string) $value, ENT_QUOTES, 'UTF-8'));
+    $value = preg_replace('/[^a-z0-9\x{00C0}-\x{024F}]+/u', ' ', $value);
+    $value = preg_replace('/\s+/', ' ', $value);
+
+    return trim($value);
+}
+
+function musicSearchTokens($value)
+{
+    $normalized = normalizeMusicSearchText($value);
+
+    if ($normalized === '') {
+        return [];
+    }
+
+    $stopWords = [
+        'lagu' => true,
+        'mp3' => true,
+        'download' => true,
+        'official' => true,
+        'video' => true,
+        'audio' => true,
+        'music' => true,
+        'lirik' => true,
+        'lyrics' => true,
+        'lyric' => true,
+        'feat' => true,
+        'ft' => true,
+        'dan' => true,
+        'the' => true,
+    ];
+    $tokens = [];
+
+    foreach (preg_split('/\s+/', $normalized) as $token) {
+        if (strlen($token) < 2 || isset($stopWords[$token])) {
+            continue;
+        }
+
+        $tokens[$token] = $token;
+    }
+
+    return array_values($tokens);
+}
+
+function musicSearchMatchScore($query, $candidate)
+{
+    $tokens = musicSearchTokens($query);
+    $haystack = normalizeMusicSearchText($candidate);
+
+    if (empty($tokens) || $haystack === '') {
+        return 0;
+    }
+
+    $score = 0;
+
+    foreach ($tokens as $token) {
+        if (strpos($haystack, $token) !== false) {
+            $score++;
+        }
+    }
+
+    return $score;
+}
+
+function getCachedAppleReleaseSearchMatches($query, $limit = 20)
+{
+    $releases = getCachedAppleNewReleases('id', 50);
+
+    if (empty($releases)) {
+        $releases = getCachedAppleNewReleases('id', 12);
+    }
+
+    if (empty($releases)) {
+        return [];
+    }
+
+    $matches = [];
+    $minimumScore = minimumMusicMatchScore($query);
+
+    foreach ($releases as $item) {
+        $title = $item['songName'] ?? trim(($item['artistName'] ?? '') . ' - ' . ($item['name'] ?? ''), ' -');
+        $score = musicSearchMatchScore($query, $title);
+
+        if ($score < $minimumScore) {
+            continue;
+        }
+
+        $item['_score'] = $score;
+        $matches[] = $item;
+    }
+
+    usort($matches, function ($a, $b) {
+        if (($a['_score'] ?? 0) === ($b['_score'] ?? 0)) {
+            return strcmp($b['releaseDate'] ?? '', $a['releaseDate'] ?? '');
+        }
+
+        return ($b['_score'] ?? 0) <=> ($a['_score'] ?? 0);
+    });
+
+    $results = [];
+    foreach (array_slice($matches, 0, $limit) as $item) {
+        $title = $item['songName'] ?? trim(($item['artistName'] ?? '') . ' - ' . ($item['name'] ?? ''), ' -');
+        $results[] = [
+            'id' => '',
+            'judul' => $title,
+            'artist' => $item['artistName'] ?? '',
+            'description' => 'Rilis terbaru dari Apple Music.',
+            'thumbnails' => $item['thumbNail'] ?? '',
+            'uploader' => $item['artistName'] ?? '',
+            'duration' => 0,
+            'previewUrl' => '',
+            'externalUrl' => $item['url'] ?? '',
+            'source' => 'apple',
+        ];
+    }
+
+    return $results;
+}
+
+function minimumMusicMatchScore($query)
+{
+    $tokens = musicSearchTokens($query);
+
+    return count($tokens) <= 1 ? 1 : min(count($tokens), max(2, min(4, (int) ceil(count($tokens) * 0.45))));
+}
+
+function getLegacyOutputCacheSearchMatches($query, $limit = 20)
+{
+    if (!class_exists('DOMDocument')) {
+        return [];
+    }
+
+    $files = glob(APPPATH . 'cache/*');
+
+    if (empty($files)) {
+        return [];
+    }
+
+    $minimumScore = minimumMusicMatchScore($query);
+    $matches = [];
+
+    foreach ($files as $file) {
+        if (!is_file($file) || preg_match('/\.(json|txt|html)$/i', $file)) {
+            continue;
+        }
+
+        $html = (string) @file_get_contents($file);
+        if ($html === '' || strpos($html, 'search-content') === false || strpos($html, '/detail/') === false) {
+            continue;
+        }
+
+        $marker = 'ENDCI--->';
+        $markerPos = strpos($html, $marker);
+        if ($markerPos !== false) {
+            $html = substr($html, $markerPos + strlen($marker));
+        }
+
+        $rows = parseLegacySearchRows($html);
+        foreach ($rows as $row) {
+            $score = musicSearchMatchScore($query, $row['judul'] . ' ' . $row['uploader']);
+
+            if ($score < $minimumScore) {
+                continue;
+            }
+
+            $key = $row['id'] !== '' ? $row['id'] : strtolower($row['judul']);
+            if (!isset($matches[$key]) || $score > $matches[$key]['_score']) {
+                $row['_score'] = $score;
+                $matches[$key] = $row;
+            }
+        }
+    }
+
+    if (empty($matches)) {
+        return [];
+    }
+
+    usort($matches, function ($a, $b) {
+        return ($b['_score'] ?? 0) <=> ($a['_score'] ?? 0);
+    });
+
+    $items = [];
+    foreach (array_slice($matches, 0, $limit) as $match) {
+        unset($match['_score']);
+        $items[] = $match;
     }
 
     return $items;
+}
+
+function parseLegacySearchRows($html)
+{
+    $previous = libxml_use_internal_errors(true);
+    $dom = new DOMDocument();
+    $loaded = $dom->loadHTML('<?xml encoding="UTF-8">' . $html);
+    libxml_clear_errors();
+    libxml_use_internal_errors($previous);
+
+    if (!$loaded) {
+        return [];
+    }
+
+    $xpath = new DOMXPath($dom);
+    $nodes = $xpath->query('//*[contains(concat(" ", normalize-space(@class), " "), " search-content ")]');
+    $rows = [];
+
+    foreach ($nodes as $node) {
+        $link = $xpath->query('.//a[contains(@href, "/detail/")]', $node)->item(0);
+        $image = $xpath->query('.//img', $node)->item(0);
+
+        if (!$link) {
+            continue;
+        }
+
+        $href = $link->getAttribute('href');
+        $titleNode = $xpath->query('.//*[@itemprop="name"]', $node)->item(0);
+        $title = $titleNode ? trim($titleNode->textContent) : '';
+
+        if ($title === '' && $image) {
+            $title = trim($image->getAttribute('alt'));
+        }
+
+        if ($title === '') {
+            $title = preg_replace('/\s+mp3$/i', '', trim($link->getAttribute('title')));
+        }
+
+        if ($title === '') {
+            continue;
+        }
+
+        $id = '';
+        if (preg_match('~/detail/([^/?#]+)~', $href, $match)) {
+            $slug = $match[1];
+            $parts = explode('-', $slug, 2);
+            $id = $parts[0];
+        }
+
+        if ($id === '') {
+            continue;
+        }
+
+        $rows[] = [
+            'id' => $id,
+            'judul' => html_entity_decode($title, ENT_QUOTES, 'UTF-8'),
+            'artist' => '',
+            'description' => '',
+            'thumbnails' => $image ? $image->getAttribute('src') : '',
+            'uploader' => '',
+            'duration' => 0,
+            'url_detail' => single_permalink($id, $title),
+        ];
+    }
+
+    return $rows;
 }
 
 function getCachedAppleNewReleases($country = 'id', $limit = 12)
@@ -1324,16 +1592,16 @@ function refreshKeywordFilesIfNeeded()
 
 function get_kw()
 {
+    refreshKeywordFilesIfNeeded();
 	$kw1 = file(FCPATH.'keywoard/kw1.txt',FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-	shuffle($kw1);
 	$kw1 = array_slice($kw1,0,20);
 	return $kw1;
 }
 
 function getSitemap($limit)
 {
+    refreshKeywordFilesIfNeeded();
 	$sitemap = file(FCPATH.'keywoard/sitemap.txt',FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-	shuffle($sitemap);
 	$sitemap = array_slice($sitemap,0,$limit);
 	return $sitemap;
 }

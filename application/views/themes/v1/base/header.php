@@ -119,6 +119,13 @@
                         'Lagu Jpop',
                         'Lagu India Bollywood',
                     ];
+
+                    $releaseMenu = [];
+                    try {
+                        $releaseMenu = array_slice(getCachedAppleNewReleases('id', 50), 0, 8);
+                    } catch (Throwable $e) {
+                        $releaseMenu = [];
+                    }
                     ?>
                     <?php
                     $uri = trim(uri_string(), '/');
@@ -139,8 +146,20 @@
                         <li class="merah<?= $isViralHits ? ' current-menu-item' : ''; ?>">
                             <a href="<?= search_permalink('lagu viral hits'); ?>" title="Lagu Viral Hits" itemprop="url"><span itemprop="name">Viral Hits</span></a>
                         </li>
-                        <li class="biru-tua<?= $isRilisTerbaru ? ' current-menu-item' : ''; ?>">
-                            <a href="<?= search_permalink('rilis terbaru'); ?>" title="Rilis Terbaru" itemprop="url"><span itemprop="name">Rilis Terbaru</span></a>
+                        <li class="biru-tua menu-item-has-children col-2<?= $isRilisTerbaru ? ' current-menu-item' : ''; ?>">
+                            <a href="#" rel="nofollow"><span itemprop="name">Rilis Terbaru</span></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="<?= search_permalink('rilis terbaru'); ?>" title="Semua Rilis Terbaru" itemprop="url"><span itemprop="name">Semua Rilis Terbaru</span></a>
+                                </li>
+                                <?php foreach ($releaseMenu as $release): ?>
+                                <?php $releaseTitle = $release['songName'] ?? trim(($release['artistName'] ?? '') . ' - ' . ($release['name'] ?? ''), ' -'); ?>
+                                <?php if ($releaseTitle === '') continue; ?>
+                                <li class="menu-item">
+                                    <a href="<?= search_permalink($releaseTitle); ?>" title="Lagu <?= html_escape($releaseTitle); ?>" itemprop="url"><span itemprop="name"><?= html_escape($releaseTitle); ?></span></a>
+                                </li>
+                                <?php endforeach; ?>
+                            </ul>
                         </li>
                         <li class="ungu<?= $isViralTiktok ? ' current-menu-item' : ''; ?>">
                             <a href="<?= search_permalink('lagu viral tiktok'); ?>" title="Lagu Viral Tiktok" itemprop="url"><span itemprop="name">Viral Tiktok</span></a>

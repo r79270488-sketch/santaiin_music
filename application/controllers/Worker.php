@@ -83,13 +83,49 @@ class Worker extends CI_Controller
         $startedAt = date('Y-m-d H:i:s');
         $limit = max(1, min(50, (int) $limit));
         $country = strtolower($country ?: 'id');
+        $youtubeSaved = 0;
 
         try {
             $this->workerDelay();
             $items = getAppleNewReleases($country, $limit);
             musicCacheSet('apple:new_releases:' . $country . ':' . min($limit, 12), array_slice($items, 0, 12), musicDataConfig('music_cache_ttl_popular', 3600));
-            $this->scrape_log_model->write('apple', 'sync_apple', 'success', 'sync_apple completed country=' . $country, count($items), count($items), $startedAt);
-            $this->line('sync_apple completed found=' . count($items));
+
+            if ($this->song_model->isEnabled()) {
+                foreach ($items as $item) {
+                    $query = $item['songName'] ?? trim(($item['artistName'] ?? '') . ' - ' . ($item['name'] ?? ''), ' -');
+
+                    if ($query === '') {
+                        continue;
+                    }
+
+                    $this->workerDelay();
+                    $youtube = searchYoutubeOneVideo($query . ' official audio');
+
+                    if (empty($youtube['id'])) {
+                        continue;
+                    }
+
+                    $youtube['published_at'] = $item['releaseDate'] ?? null;
+                    $youtube['meta_title'] = 'Download Lagu ' . $query . ' MP3';
+                    $youtube['meta_description'] = 'Download dan dengarkan lagu ' . $query . ' MP3 terbaru dari Santaiin MP3.';
+
+                    if ($this->song_model->upsert($youtube, 'youtube')) {
+                        $youtubeSaved++;
+                    }
+                }
+            }
+
+            if (!empty($items)) {
+                refreshKeywordFile(FCPATH . 'keywoard/kw1.txt', array_column($items, 'songName'), 100);
+                refreshKeywordFile(FCPATH . 'keywoard/sitemap.txt', array_column($items, 'songName'), 50);
+            }
+
+            musicCacheDeleteByPrefix('youtube:popular');
+            musicCacheDeleteByPrefix('youtube:search');
+
+            $message = 'sync_apple completed country=' . $country . ' youtube_saved=' . $youtubeSaved;
+            $this->scrape_log_model->write('apple', 'sync_apple', 'success', $message, count($items), $youtubeSaved, $startedAt);
+            $this->line($message . ' found=' . count($items));
         } catch (Throwable $e) {
             $this->scrape_log_model->write('apple', 'sync_apple', 'error', $e->getMessage(), 0, 0, $startedAt);
             $this->line('sync_apple error: ' . $e->getMessage());

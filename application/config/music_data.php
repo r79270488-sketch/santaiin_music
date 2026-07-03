@@ -6,7 +6,7 @@ $config['music_cache_prefix'] = 'music:';
 $config['music_cache_path'] = APPPATH . 'cache/music_data/';
 $config['music_cache_ttl_popular'] = 60 * 60;
 $config['music_cache_ttl_search'] = 6 * 60 * 60;
-$config['music_live_fallback'] = FALSE;
+$config['music_live_fallback'] = TRUE;
 
 $config['music_redis_host'] = '127.0.0.1';
 $config['music_redis_port'] = 6379;

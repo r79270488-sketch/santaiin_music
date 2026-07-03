@@ -28,6 +28,10 @@
                                 <?php
                                     $previewUrl = isset($item['previewUrl']) ? $item['previewUrl'] : '';
                                     $safeTitle = isset($item['judul']) ? $item['judul'] : '';
+                                    $isAppleFallback = empty($item['id']) && !empty($item['externalUrl']);
+                                    $itemUrl = $isAppleFallback ? $item['externalUrl'] : single_permalink($item['id'],$safeTitle);
+                                    $previewJson = html_escape(json_encode($previewUrl));
+                                    $titleJson = html_escape(json_encode($safeTitle));
                                 ?>
                                 <div class="clearfix search-content track-row" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
                                     <span itemprop="position" content="<?= $i; ?>"></span>
@@ -36,17 +40,26 @@
                                     </div>
                                     <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
                                         <h2 class="content-title">
-                                            <a href="<?= single_permalink($item['id'],$safeTitle);?>" title="<?= html_escape($safeTitle);?> mp3" itemprop="url" rel="nofollow">
+                                            <a href="<?= html_escape($itemUrl);?>" title="<?= html_escape($safeTitle);?> mp3" itemprop="url" rel="nofollow<?= $isAppleFallback ? ' noopener' : ''; ?>"<?= $isAppleFallback ? ' target="_blank"' : ''; ?>>
                                                 <span itemprop="name"><?= html_escape($safeTitle);?></span>
                                             </a>
                                         </h2>
                                         <div class="button track-actions">
-                                            <a href="javascript:void(0);" onclick="playAudio(<?= $i;?>, <?= json_encode($previewUrl); ?>, <?= json_encode($safeTitle); ?>);" title="Dengarkan preview audio" rel="nofollow">
+                                            <?php if ($isAppleFallback): ?>
+                                            <a href="<?= html_escape($item['externalUrl']); ?>" title="Buka di Apple Music" target="_blank" rel="nofollow noopener">
+                                                <i class="fas fa-music"></i> Apple Music
+                                            </a>
+                                            <a href="<?= search_permalink($safeTitle); ?>" title="Cari sumber download <?= html_escape($safeTitle); ?>" rel="nofollow">
+                                                <i class="fas fa-search"></i> Cari Download
+                                            </a>
+                                            <?php else: ?>
+                                            <a href="javascript:void(0);" onclick="playAudio(<?= $i;?>, <?= $previewJson; ?>, <?= $titleJson; ?>);" title="Dengarkan preview audio" rel="nofollow">
                                                 <i class="fas fa-play"></i> Play Audio
                                             </a>
                                             <a title="<?= html_escape($safeTitle);?>" href="<?= base_url('download')?>?id=<?= urlencode($item['id']);?>&title=<?= urlencode($safeTitle);?>" rel="nofollow">
                                                 <i class="fas fa-download"></i> Download
                                             </a>
+                                            <?php endif; ?>
                                             <a href="https://www.google.com/search?q=saktiplay" class="js-own-ads" target="_blank" rel="nofollow noopener">FAST DOWNLOAD</a>
                                         </div>
                                         <div class="divPlayer" id="player-<?= $i;?>"></div>

@@ -156,7 +156,103 @@ class Song_model extends CI_Model
             ->get()
             ->result_array();
 
+        if (empty($rows)) {
+            return $this->searchYoutubeRelaxed($query, $limit);
+        }
+
         return $this->toListItems($rows);
+    }
+
+    private function searchYoutubeRelaxed($query, $limit = 20)
+    {
+        $tokens = $this->searchTokens($query);
+
+        if (empty($tokens)) {
+            return [];
+        }
+
+        $this->db
+            ->from('songs')
+            ->where('source', 'youtube')
+            ->where('status', 'active')
+            ->group_start();
+
+        foreach ($tokens as $index => $token) {
+            if ($index === 0) {
+                $this->db->like('title', $token);
+            } else {
+                $this->db->or_like('title', $token);
+            }
+
+            $this->db->or_like('artist', $token);
+        }
+
+        $rows = $this->db
+            ->group_end()
+            ->order_by('published_at IS NULL', 'ASC', false)
+            ->order_by('published_at', 'DESC')
+            ->order_by('updated_at', 'DESC')
+            ->limit(max($limit * 4, $limit))
+            ->get()
+            ->result_array();
+
+        if (empty($rows)) {
+            return [];
+        }
+
+        usort($rows, function ($a, $b) use ($tokens) {
+            return $this->rowScore($b, $tokens) <=> $this->rowScore($a, $tokens);
+        });
+
+        return $this->toListItems(array_slice($rows, 0, $limit));
+    }
+
+    private function searchTokens($query)
+    {
+        $query = strtolower(html_entity_decode((string) $query, ENT_QUOTES, 'UTF-8'));
+        $query = preg_replace('/[^a-z0-9\x{00C0}-\x{024F}]+/u', ' ', $query);
+        $parts = preg_split('/\s+/', trim($query));
+        $stopWords = [
+            'lagu' => true,
+            'mp3' => true,
+            'download' => true,
+            'official' => true,
+            'video' => true,
+            'audio' => true,
+            'music' => true,
+            'lirik' => true,
+            'lyrics' => true,
+            'lyric' => true,
+            'feat' => true,
+            'ft' => true,
+            'dan' => true,
+            'the' => true,
+        ];
+        $tokens = [];
+
+        foreach ($parts as $part) {
+            if (strlen($part) < 2 || isset($stopWords[$part])) {
+                continue;
+            }
+
+            $tokens[$part] = $part;
+        }
+
+        return array_values($tokens);
+    }
+
+    private function rowScore($row, $tokens)
+    {
+        $haystack = strtolower(html_entity_decode(($row['title'] ?? '') . ' ' . ($row['artist'] ?? ''), ENT_QUOTES, 'UTF-8'));
+        $score = 0;
+
+        foreach ($tokens as $token) {
+            if (strpos($haystack, $token) !== false) {
+                $score++;
+            }
+        }
+
+        return $score;
     }
 
     public function findYoutubeById($youtubeId)

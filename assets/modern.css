@@ -1632,7 +1632,7 @@ html[data-theme="dark"] .featured {
   }
 
   .brand-fallback {
-    display: inline-flex;
+    display: none;
   }
 
   .site-logo {
