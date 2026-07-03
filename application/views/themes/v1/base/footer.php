@@ -20,10 +20,52 @@
         <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
         <script type="text/javascript">
-            function playAudio(id, ytid) {
+            function renderAudioPlayer(id, audioUrl, title) {
                 $(".divPlayer").html("");
-                var html = '<iframe width="100%" height="200" src="https://www.youtube.com/embed/' + ytid + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width:100%"></iframe>';
+                var safeTitle = $("<div>").text(title || "Preview audio").html();
+                var safeUrl = $("<div>").text(audioUrl).html();
+                var html = '<div class="audio-preview">' +
+                    '<div class="audio-preview-title">' + safeTitle + '</div>' +
+                    '<audio controls autoplay preload="none" src="' + safeUrl + '"></audio>' +
+                    '</div>';
                 $("#player-" + id).html(html);
+            }
+
+            function renderAudioMessage(id, message, loading) {
+                $(".divPlayer").html("");
+                $("#player-" + id).html(
+                    '<div class="audio-preview audio-preview-empty">' +
+                    '<i class="fas ' + (loading ? 'fa-spinner fa-spin' : 'fa-info-circle') + '"></i> ' +
+                    $("<div>").text(message).html() +
+                    '</div>'
+                );
+            }
+
+            function playAudio(id, audioUrl, title) {
+                if (audioUrl) {
+                    renderAudioPlayer(id, audioUrl, title);
+                    return;
+                }
+
+                renderAudioMessage(id, "Mencari preview audio...", true);
+
+                fetch("<?= base_url('audio/preview'); ?>?q=" + encodeURIComponent(title || ""), {
+                    headers: { "Accept": "application/json" }
+                })
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        if (data && data.ok && data.previewUrl) {
+                            renderAudioPlayer(id, data.previewUrl, title);
+                            return;
+                        }
+
+                        renderAudioMessage(id, "Preview audio belum tersedia. Gunakan tombol Download untuk membuka converter.", false);
+                    })
+                    .catch(function () {
+                        renderAudioMessage(id, "Preview audio gagal dimuat. Coba lagi nanti.", false);
+                    });
             }
             if ("serviceWorker" in navigator) {
                 window.addEventListener("load", function () {

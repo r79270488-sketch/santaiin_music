@@ -1,27 +1,27 @@
 <!-- Header -->
         <div id="site-container">
             <div class="container">
-                <div class="info">Silahkan anda mendownload lagu secara gratis disini hanya untuk review. Jika anda menyukainya, silahkan beli lagu yang asli</div>
+                <div class="info intro-copy">Silahkan anda mendownload lagu secara gratis disini hanya untuk review. Jika anda menyukainya, silahkan beli lagu yang asli</div>
                 <?= siteAd('Ads2', 'ad-slot-top');?>
                 <div class="row" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
                     <h1 class="screen-reader-text" itemprop="headline">Download Lagu Gratis</h1>
                     <div class="col-md-main">
                         <h3 class="main-title"><span class="highlight">Lagu</span> Terpopuler</h3>
-                        <div class="success" itemprop="text">
+                        <div class="success intro-copy" itemprop="text">
                             <?= siteBase('textDesc');?>
                         </div>
                         <?php
                             foreach ($trending as $data):
                                 
                         ?>
-                        <div class="clearfix list-content">
+                        <div class="clearfix list-content track-row">
                             <div class="content-left pull-left">
                                 <a href="<?= single_permalink($data['id'],$data['judul']);?>" title="Download Lagu <?=$data['judul']; ?>" itemprop="url">
                                     <img
                                         src="<?=$data['thumbnails']; ?>"
                                         alt="<?=$data['judul']; ?>"
-                                        width="55"
-                                        height="55"
+                                        width="60"
+                                        height="60"
                                         loading="lazy"
                                         itemprop="image"
                                     />
@@ -43,22 +43,22 @@
                         <?= siteAd('Ads3', 'ad-slot-inline');?>
 
                         <h3 class="main-title"><span class="highlight">Rilis</span> Terbaru</h3>
-                        <div class="success" itemprop="text">
+                        <div class="success intro-copy" itemprop="text">
                         <?= siteBase('textDesc');?>
                         </div>
                         <?php
                             foreach ($indonesia as $data):
                                 
                         ?>
-                        <div class="clearfix list-content">
+                        <div class="clearfix list-content track-row">
                             <div class="clearfix">
                                 <div class="content-left pull-left">
                                 <a href="<?= search_permalink($data['songName']);?>" title="Download Lagu <?=$data['songName']; ?>" itemprop="url">
                                     <img
                                         src="<?=$data['thumbNail']; ?>"
                                         alt="<?=$data['songName']; ?>"
-                                        width="55"
-                                        height="55"
+                                        width="60"
+                                        height="60"
                                         loading="lazy"
                                         itemprop="image"
                                     />

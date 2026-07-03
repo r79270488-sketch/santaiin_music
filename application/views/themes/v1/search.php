@@ -4,7 +4,7 @@
                 <div class="row" itemscope="itemscope" itemtype="http://schema.org/MusicAlbum">
                     <div class="col-md-main">
                         <h1 class="main-title" itemprop="headline"><span class="highlight">Download Lagu MP3</span> <?= $title_parameter;?></h1>
-                        <div class="success" itemprop="text">
+                        <div class="success intro-copy" itemprop="text">
                             <p>Download lagu mp3 <?= $title_parameter;?> gratis. <?= $title_parameter;?> planetlagu, download mp3 <?= $title_parameter;?>, download <?= $title_parameter;?> lagu123.</p>
                             <p>Terdapat sekitar 10 pencarian lagu yang dapat anda download dan dengarkan. Jika hasilnya tidak berisi lagu yang anda cari, cobalah mencari lagu dengan nama artis atau dengan nama lagu tersebut.</p>
                         </div>
@@ -25,20 +25,28 @@
                                     foreach ($music as $item) {
                                         $i++;
                                     ?>
-                                <div class="clearfix search-content" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                <?php
+                                    $previewUrl = isset($item['previewUrl']) ? $item['previewUrl'] : '';
+                                    $safeTitle = isset($item['judul']) ? $item['judul'] : '';
+                                ?>
+                                <div class="clearfix search-content track-row" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
                                     <span itemprop="position" content="<?= $i; ?>"></span>
                                     <div class="content-left pull-left">
-                                        <img src="<?= $item['thumbnails'];?>" alt="<?= $item['judul'];?>" width="120" height="90" loading="lazy" itemprop="image" />
+                                        <img src="<?= html_escape($item['thumbnails']);?>" alt="<?= html_escape($safeTitle);?>" width="76" height="76" loading="lazy" itemprop="image" />
                                     </div>
                                     <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
                                         <h2 class="content-title">
-                                            <a href="<?= single_permalink($item['id'],$item['judul']);?>" title="<?= $item['judul'];?> mp3" itemprop="url" rel="nofollow">
-                                                <span itemprop="name"><?= $item['judul'];?></span>
+                                            <a href="<?= single_permalink($item['id'],$safeTitle);?>" title="<?= html_escape($safeTitle);?> mp3" itemprop="url" rel="nofollow">
+                                                <span itemprop="name"><?= html_escape($safeTitle);?></span>
                                             </a>
                                         </h2>
-                                        <div class="button">
-                                            <a href="javascript:void(0);" onclick="playAudio(<?= $i;?>,'<?= $item['id'];?>');" title="Dengarkan lagu Maroon 5 - Memories (Official Video)" rel="nofollow">Play</a>
-                                            <a title="<?= $item['judul'];?>" href="<?= base_url('download')?>?id=<?=$item['id'];?>&title=<?= $item['judul'];?>" rel="nofollow">Download</a>
+                                        <div class="button track-actions">
+                                            <a href="javascript:void(0);" onclick="playAudio(<?= $i;?>, <?= json_encode($previewUrl); ?>, <?= json_encode($safeTitle); ?>);" title="Dengarkan preview audio" rel="nofollow">
+                                                <i class="fas fa-play"></i> Play Audio
+                                            </a>
+                                            <a title="<?= html_escape($safeTitle);?>" href="<?= base_url('download')?>?id=<?= urlencode($item['id']);?>&title=<?= urlencode($safeTitle);?>" rel="nofollow">
+                                                <i class="fas fa-download"></i> Download
+                                            </a>
                                             <a href="https://www.google.com/search?q=saktiplay" class="js-own-ads" target="_blank" rel="nofollow noopener">FAST DOWNLOAD</a>
                                         </div>
                                         <div class="divPlayer" id="player-<?= $i;?>"></div>
