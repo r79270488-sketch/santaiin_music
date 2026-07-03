@@ -59,11 +59,9 @@
         <meta name="twitter:description" content="<?= html_escape($pageDescription); ?>" />
         <meta name="twitter:image" content="<?= html_escape($ogImage); ?>" />
         <!-- Stylesheet -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:wght@300;400;600;700&display=swap" type="text/css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelementplayer.min.css" integrity="sha256-ji1bfJaTGnyscoc7LzcV9yNJy5vGKJ0frO3KJo1oaGQ=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://use.fontawesome.com" crossorigin />
+        <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" /></noscript>
         <script>
             (function () {
                 var theme = localStorage.getItem('musicTheme') || 'light';
@@ -82,7 +80,7 @@
                     <div class="brand-row clearfix">
                         <div class="logo">
                             <a class="brand-link" href="<?= base_url();?>" title="<?= sitebase('siteName'); ?>" itemprop="url">
-                                <img class="site-logo" src="<?= sitebase('siteLogo'); ?>" alt="<?= sitebase('siteName'); ?>" title="<?= sitebase('siteName'); ?>" width="200" height="40" itemprop="image" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+                                <img class="site-logo" src="<?= sitebase('siteLogo'); ?>" alt="" aria-hidden="true" title="<?= sitebase('siteName'); ?>" width="42" height="42" itemprop="image" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
                                 <span class="brand-fallback"><i class="fas fa-music"></i> <?= sitebase('siteName'); ?></span>
                             </a>
                             <a id="mobile-menu" class="pull-right" href="#menu" rel="nofollow"><i class="fas fa-bars"></i><span class="screen-reader-text">Mobile Menu</span></a>
@@ -174,8 +172,9 @@
         <div class="theme-toolbar floating-theme-toolbar" aria-label="Pilihan tampilan">
             <button type="button" class="theme-toggle" data-theme-choice="light" title="Tema terang"><i class="fas fa-sun"></i></button>
             <button type="button" class="theme-toggle" data-theme-choice="dark" title="Tema gelap"><i class="fas fa-moon"></i></button>
-            <button type="button" class="accent-swatch" data-accent="pink" title="Warna pink">Pink</button>
-            <button type="button" class="accent-swatch" data-accent="blue" title="Warna biru">Blue</button>
-            <button type="button" class="accent-swatch" data-accent="green" title="Warna hijau">Green</button>
-            <button type="button" class="accent-swatch" data-accent="amber" title="Warna amber">Amber</button>
+            <button type="button" class="accent-swatch" data-accent="pink" title="Warna pink" aria-label="Warna pink"></button>
+            <button type="button" class="accent-swatch" data-accent="blue" title="Warna biru" aria-label="Warna biru"></button>
+            <button type="button" class="accent-swatch" data-accent="green" title="Warna hijau" aria-label="Warna hijau"></button>
+            <button type="button" class="accent-swatch" data-accent="amber" title="Warna amber" aria-label="Warna amber"></button>
         </div>
+        <main id="main-content" role="main">

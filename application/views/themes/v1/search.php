@@ -32,7 +32,7 @@
                                 <div class="clearfix search-content track-row" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
                                     <span itemprop="position" content="<?= $i; ?>"></span>
                                     <div class="content-left pull-left">
-                                        <img src="<?= html_escape($item['thumbnails']);?>" alt="<?= html_escape($safeTitle);?>" width="76" height="76" loading="lazy" itemprop="image" />
+                                        <img src="<?= html_escape(smallMusicThumbnail($item['thumbnails']));?>" alt="<?= html_escape($safeTitle);?>" width="76" height="76" loading="lazy" itemprop="image" />
                                     </div>
                                     <div class="content-right" itemprop="item" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
                                         <h2 class="content-title">

@@ -1,3 +1,4 @@
+        </main>
 <div id="footer-container">
             <div class="container">
                 <p class="copy">
@@ -18,7 +19,6 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sidr@2.2.1/dist/jquery.sidr.min.js" integrity="sha256-/VeucihXSoNSfLiRfsWg/5RKp4eTTuW4Wnl28lm3rjE=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.9/build/mediaelement-and-player.min.js" integrity="sha256-bGz/0MMW4d9dsyq3BEXee8f377noiWxTibmRZqWvvYI=" crossorigin="anonymous"></script>
         <script type="text/javascript">
             function renderAudioPlayer(id, audioUrl, title) {
                 $(".divPlayer").html("");
@@ -69,14 +69,21 @@
             }
             if ("serviceWorker" in navigator) {
                 window.addEventListener("load", function () {
-                    navigator.serviceWorker
-                        .register("<?= siteAsset('sw.js'); ?>", { scope: "/" })
+                    var scriptUrl = "<?= base_url('sw.js'); ?>";
+                    var registerWorker = function () {
+                        return navigator.serviceWorker.register(scriptUrl, { scope: "/" });
+                    };
+
+                    navigator.serviceWorker.getRegistration("/")
                         .then(function (registration) {
-                            console.log("PWA service worker ready");
-                            registration.update();
+                            if (registration && registration.active && registration.active.scriptURL.indexOf("?v=") !== -1) {
+                                return registration.unregister().then(registerWorker);
+                            }
+
+                            return registerWorker();
                         })
-                        .catch(function (error) {
-                            console.log("Registration failed with " + error);
+                        .catch(function () {
+                            return null;
                         });
                 });
             }
@@ -106,8 +113,6 @@
 
                         $menu.css("left", -width);
                     }
-
-                    $("#youtube-audio, #youtube-video").mediaelementplayer();
                     $("#mobile-menu").sidr({
                         name: "menu",
                         source: "#top-nav",
@@ -149,6 +154,30 @@
                     });
                 });
             })(jQuery);
+
+            (function () {
+                function labelAdFrames() {
+                    document.querySelectorAll('.ad-slot iframe:not([title])').forEach(function (frame, index) {
+                        frame.setAttribute('title', 'Iklan sponsor ' + (index + 1));
+                    });
+
+                    document.querySelectorAll('body > a > img:not([width])').forEach(function (img) {
+                        img.setAttribute('width', img.naturalWidth || 728);
+                    });
+
+                    document.querySelectorAll('body > a > img:not([height])').forEach(function (img) {
+                        img.setAttribute('height', img.naturalHeight || 90);
+                    });
+                }
+
+                if ('MutationObserver' in window) {
+                    var observer = new MutationObserver(labelAdFrames);
+                    observer.observe(document.documentElement, { childList: true, subtree: true });
+                }
+
+                window.addEventListener('load', labelAdFrames);
+                labelAdFrames();
+            })();
         </script>
 <script src="<?= siteAsset('assets/theme.js');?>"></script>
 <?= siteBase('AdsPopup');?>

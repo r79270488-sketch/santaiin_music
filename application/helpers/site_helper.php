@@ -393,6 +393,21 @@ function siteAsset($path)
     return $prefix . '/' . $path . '?v=' . $version;
 }
 
+function smallMusicThumbnail($url)
+{
+    $url = (string) $url;
+
+    if (strpos($url, 'i.ytimg.com') === false) {
+        return $url;
+    }
+
+    return str_replace(
+        ['maxresdefault.jpg', 'sddefault.jpg', 'hqdefault.jpg'],
+        'mqdefault.jpg',
+        $url
+    );
+}
+
 function search_permalink($str){
     return base_url('music/'.url_title($str));
 }
@@ -913,9 +928,9 @@ function getYoutubeSearch($query){
             'id' => $videoId,
             'judul' => $title,
             'description' => $item['snippet']['description'] ?? '',
-            'thumbnails' => $item['snippet']['thumbnails']['high']['url']
-                ?? $item['snippet']['thumbnails']['medium']['url']
+            'thumbnails' => $item['snippet']['thumbnails']['medium']['url']
                 ?? $item['snippet']['thumbnails']['default']['url']
+                ?? $item['snippet']['thumbnails']['high']['url']
                 ?? '',
             'uploader' => $item['snippet']['channelTitle'] ?? '',
             'duration' => $duration,

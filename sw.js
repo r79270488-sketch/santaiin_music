@@ -1,4 +1,4 @@
-const CACHE_NAME = 'santaiin-mp3-pwa-v2';
+const CACHE_NAME = 'santaiin-mp3-pwa-v3';
 const APP_SHELL = [
     '/',
     '/offline.html',
@@ -14,7 +14,11 @@ self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(function (cache) {
-                return cache.addAll(APP_SHELL);
+                return Promise.all(APP_SHELL.map(function (url) {
+                    return cache.add(url).catch(function () {
+                        return null;
+                    });
+                }));
             })
             .then(function () {
                 return self.skipWaiting();
@@ -104,7 +108,10 @@ self.addEventListener('fetch', function (event) {
                     return response;
                 })
                 .catch(function () {
-                    return cached;
+                    return cached || new Response('', {
+                        status: 504,
+                        statusText: 'Offline'
+                    });
                 });
 
             return cached || networkFetch;

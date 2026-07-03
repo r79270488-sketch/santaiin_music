@@ -6,7 +6,7 @@
                 <div class="row" itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
                     <h1 class="screen-reader-text" itemprop="headline">Download Lagu Gratis</h1>
                     <div class="col-md-main">
-                        <h3 class="main-title"><span class="highlight">Lagu</span> Terpopuler</h3>
+                        <h2 class="main-title"><span class="highlight">Lagu</span> Terpopuler</h2>
                         <div class="success intro-copy" itemprop="text">
                             <?= siteBase('textDesc');?>
                         </div>
@@ -18,7 +18,7 @@
                             <div class="content-left pull-left">
                                 <a href="<?= single_permalink($data['id'],$data['judul']);?>" title="Download Lagu <?=$data['judul']; ?>" itemprop="url">
                                     <img
-                                        src="<?=$data['thumbnails']; ?>"
+                                        src="<?= html_escape(smallMusicThumbnail($data['thumbnails'])); ?>"
                                         alt="<?=$data['judul']; ?>"
                                         width="60"
                                         height="60"
@@ -42,7 +42,7 @@
                        
                         <?= siteAd('Ads3', 'ad-slot-inline');?>
 
-                        <h3 class="main-title"><span class="highlight">Rilis</span> Terbaru</h3>
+                        <h2 class="main-title"><span class="highlight">Rilis</span> Terbaru</h2>
                         <div class="success intro-copy" itemprop="text">
                         <?= siteBase('textDesc');?>
                         </div>
@@ -55,7 +55,7 @@
                                 <div class="content-left pull-left">
                                 <a href="<?= search_permalink($data['songName']);?>" title="Download Lagu <?=$data['songName']; ?>" itemprop="url">
                                     <img
-                                        src="<?=$data['thumbNail']; ?>"
+                                        src="<?= html_escape(smallMusicThumbnail($data['thumbNail'])); ?>"
                                         alt="<?=$data['songName']; ?>"
                                         width="60"
                                         height="60"
