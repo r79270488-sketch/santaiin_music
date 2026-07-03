@@ -217,7 +217,7 @@ span.highlight {
 }
 
 #top-nav {
-  background: var(--surface-soft) !important;
+  background: color-mix(in srgb, var(--surface) 92%, var(--surface-soft)) !important;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   margin-bottom: 0 !important;
@@ -226,8 +226,8 @@ span.highlight {
 .top-menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 10px 0 !important;
+  gap: 2px;
+  padding: 0 !important;
 }
 
 .top-menu > li,
@@ -236,12 +236,21 @@ span.highlight {
 }
 
 .top-menu > li > a {
-  color: var(--text) !important;
-  background: var(--surface) !important;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 9px 12px !important;
+  min-height: 46px;
+  display: inline-flex !important;
+  align-items: center;
+  color: var(--muted) !important;
+  background: transparent !important;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0 13px !important;
   letter-spacing: 0;
+  line-height: 1.2;
+  transition:
+    color 0.16s ease,
+    background-color 0.16s ease,
+    border-color 0.16s ease;
 }
 
 .top-menu > li.home > a,
@@ -251,21 +260,22 @@ span.highlight {
 .top-menu > li.ungu > a,
 .top-menu > li.hijau > a,
 .top-menu > li.biru-muda > a {
-  background: var(--surface) !important;
+  background: transparent !important;
 }
 
 .top-menu > li > a:hover,
 .top-menu > li.current-menu-item > a {
-  color: #fff !important;
-  background: var(--accent) !important;
-  border-color: var(--accent);
+  color: var(--text) !important;
+  background: color-mix(in srgb, var(--accent) 8%, transparent) !important;
+  border-bottom-color: var(--accent);
 }
 
 .top-menu .sub-menu {
   background: var(--surface) !important;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: var(--shadow) !important;
+  border-radius: 6px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18) !important;
+  padding: 8px !important;
 }
 
 .top-menu .sub-menu:after {
@@ -274,7 +284,10 @@ span.highlight {
 
 .top-menu .sub-menu a {
   color: var(--text) !important;
-  border-radius: 6px;
+  border: 0;
+  border-radius: 4px;
+  min-height: 34px;
+  padding: 8px 10px !important;
 }
 
 .top-menu .sub-menu > li:hover > a {
@@ -1261,6 +1274,49 @@ ul.socialicon li.text {
   overflow: hidden;
 }
 
+.lazy-video {
+  background: #05070b;
+}
+
+.lazy-video-button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  background: #05070b;
+  border: 0;
+  cursor: pointer;
+}
+
+.lazy-video-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+  opacity: 0.72;
+}
+
+.lazy-video-button span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  font-weight: 800;
+  transform: translate(-50%, -50%);
+}
+
 /* Playlist-style lists: lighter than card blocks */
 .intro-copy {
   background: transparent !important;
@@ -1387,6 +1443,41 @@ ul.socialicon li.text {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.45;
+}
+
+/* Softer home sections: remove framed AI-looking panels */
+.info.intro-copy,
+.success.intro-copy {
+  padding: 0 0 12px !important;
+  margin: 0 0 18px !important;
+  color: var(--text) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 72%, transparent) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.success.intro-copy p {
+  margin-bottom: 4px;
+}
+
+.sidebar {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 0 0 18px !important;
+  box-shadow: none !important;
+}
+
+.sidebar-title {
+  min-height: auto !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  color: var(--text);
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
 }
 
 html[data-theme="dark"] .detail-cover,

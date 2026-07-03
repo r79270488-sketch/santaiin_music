@@ -420,7 +420,7 @@ function getSongLyrics($title)
         return '';
     }
 
-    $cacheFile = FCPATH . 'application/cache/lyrics_' . md5(strtolower($query)) . '.txt';
+    $cacheFile = songLyricsCachePath($query);
     $cacheTime = 7 * 24 * 60 * 60;
 
     if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheTime) {
@@ -456,6 +456,28 @@ function getSongLyrics($title)
     }
 
     return '';
+}
+
+function songLyricsCachePath($query)
+{
+    return FCPATH . 'application/cache/lyrics_' . md5(strtolower($query)) . '.txt';
+}
+
+function getCachedSongLyrics($title)
+{
+    $query = cleanSongTitleForLyrics($title);
+
+    if ($query === '') {
+        return '';
+    }
+
+    $cacheFile = songLyricsCachePath($query);
+
+    if (!file_exists($cacheFile)) {
+        return '';
+    }
+
+    return trim((string) file_get_contents($cacheFile));
 }
 
 function get_title($str){

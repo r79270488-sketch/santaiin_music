@@ -223,6 +223,32 @@ class Song_model extends CI_Model
         ];
     }
 
+    public function sitemapRows($limit = 1000)
+    {
+        if (!$this->enabled) {
+            return [];
+        }
+
+        $rows = $this->db
+            ->select('source_id, title, updated_at, created_at')
+            ->where('source', 'youtube')
+            ->where('status', 'active')
+            ->order_by('updated_at', 'DESC')
+            ->limit(max(1, min(5000, (int) $limit)))
+            ->get('songs')
+            ->result_array();
+
+        $items = [];
+        foreach ($rows as $row) {
+            $items[] = [
+                'loc' => single_permalink($row['source_id'], $row['title']),
+                'lastmod' => $row['updated_at'] ?: $row['created_at'],
+            ];
+        }
+
+        return $items;
+    }
+
     private function toListItems($rows)
     {
         $items = [];

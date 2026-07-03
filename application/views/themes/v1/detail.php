@@ -2,8 +2,8 @@
             <div class="container">
                 <div class="row detail-layout" itemscope="itemscope" itemtype="http://schema.org/MusicRecording">
                     <div class="col-md-12">
-                        <?php $cover = 'https://i.ytimg.com/vi/' . $id_video . '/hqdefault.jpg'; ?>
-                        <?php $lyrics = getSongLyrics($title_meta); ?>
+                        <?php $cover = !empty($cover) ? $cover : 'https://i.ytimg.com/vi/' . $id_video . '/hqdefault.jpg'; ?>
+                        <?php $lyrics = getCachedSongLyrics($title_meta); ?>
                         <?php $lyricsQuery = cleanSongTitleForLyrics($title_meta); ?>
                         <script type="application/ld+json">
                         {
@@ -11,10 +11,10 @@
                             "@type": "MusicRecording",
                             "name": "<?= str_replace('"', '\"', $title_meta); ?>",
                             "url": "<?= base_url(uri_string()); ?>",
-                            "image": "https://i.ytimg.com/vi/<?= $id_video; ?>/hqdefault.jpg",
+                            "image": "<?= str_replace('"', '\"', $cover); ?>",
                             "byArtist": {
                                 "@type": "MusicGroup",
-                                "name": "<?= str_replace('"', '\"', $title_meta); ?>"
+                                "name": "<?= str_replace('"', '\"', !empty($artist) ? $artist : $title_meta); ?>"
                             }
                         }
                         </script>
@@ -73,8 +73,11 @@
                             <h3>Video Musik</h3>
                             <div class="featured text-center clearfix">
                                 <div id="video" class="tab-pane">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<?= $id_video; ?>?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                                    <div class="embed-responsive embed-responsive-16by9 lazy-video" data-video-id="<?= html_escape($id_video); ?>">
+                                        <button type="button" class="lazy-video-button" aria-label="Putar video musik">
+                                            <img src="<?= html_escape($cover); ?>" alt="<?= html_escape($title_meta); ?>" loading="lazy" />
+                                            <span><i class="fas fa-play"></i> Putar Video</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -111,6 +114,21 @@
             e.preventDefault();
             const site = getNextSite();
             window.open('https://www.google.com/search?q=' + encodeURIComponent(site.query), '_blank', 'noopener,noreferrer');
+        });
+    });
+})();
+</script>
+<script>
+(function () {
+    document.querySelectorAll('.lazy-video').forEach(function (wrap) {
+        var button = wrap.querySelector('.lazy-video-button');
+        if (!button) return;
+
+        button.addEventListener('click', function () {
+            var videoId = wrap.getAttribute('data-video-id');
+            if (!videoId) return;
+
+            wrap.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         });
     });
 })();

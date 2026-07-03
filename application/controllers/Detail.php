@@ -22,9 +22,33 @@ class Detail extends CI_Controller
       $title = str_replace("-", " ", $title_id);
     }
 
+    $song = null;
+    try {
+      $this->load->model("Song_model", "song_model");
+      if ($this->song_model->isEnabled()) {
+        $song = $this->song_model->findYoutubeById($id);
+      }
+    } catch (Throwable $e) {
+      $song = null;
+    }
+
+    if (!empty($song["title"])) {
+      $title = $song["title"];
+    }
+
+    $artist = !empty($song["artist"]) ? $song["artist"] : "";
+    $thumbnail = !empty($song["thumbnail"]) ? $song["thumbnail"] : "https://i.ytimg.com/vi/" . $id . "/hqdefault.jpg";
+
     $data["id_video"] = $id;
     $data["title_meta"] = $title;
     $data["title"] = $title;
+    $data["artist"] = $artist;
+    $data["cover"] = $thumbnail;
+    $data["meta_title"] = "Download Lagu " . $title . " MP3";
+    $data["meta_description"] = "Download lagu " . $title . " MP3, dengarkan preview audio, lihat lirik, dan buka converter cepat di Santaiin MP3.";
+    $data["canonical_url"] = single_permalink($id, $title);
+    $data["og_image"] = $thumbnail;
+    $data["og_type"] = "music.song";
     $data["keywords"] =
       "Download MP3 Gratis,download lagu gratis, download lagu terbaru, download lagu populer, download lagu dangdut, download lagu pop indonesia," .
       $title;
@@ -37,4 +61,3 @@ class Detail extends CI_Controller
     $this->load->view("themes/v1/base/footer", $data);
   }
 }
-

@@ -5,14 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="profile" href="https://gmpg.org/xfn/11" />
-        <title><?= sitebase('siteName'); ?> <?= $title; ?></title>
+        <?php
+            $pageTitle = isset($meta_title) && $meta_title !== '' ? $meta_title : trim(sitebase('siteName') . ' ' . $title);
+            $pageDescription = isset($meta_description) && $meta_description !== '' ? $meta_description : sitebase('siteDesc');
+            $pageKeywords = trim(sitebase('siteKeywords') . ', ' . ($keywords ?? ''), ', ');
+            $canonicalUrl = isset($canonical_url) && $canonical_url !== '' ? $canonical_url : base_url(uri_string());
+            $robotsMeta = isset($robots_meta) && $robots_meta !== '' ? $robots_meta : 'index, follow';
+            $ogImage = isset($og_image) && $og_image !== '' ? $og_image : siteAsset('assets/icons/icon-512.png');
+            $ogType = isset($og_type) && $og_type !== '' ? $og_type : 'website';
+        ?>
+        <title><?= html_escape($pageTitle); ?></title>
 		<!-- Meta -->
-        <meta name="description" content="<?= sitebase('siteDesc'); ?>" />
-        <meta property="og:description" content="<?= sitebase('siteDesc'); ?>" />
+        <meta name="description" content="<?= html_escape($pageDescription); ?>" />
+        <meta property="og:description" content="<?= html_escape($pageDescription); ?>" />
         <meta property="og:site_name" content="<?= sitebase('siteName'); ?>" />
-		<meta name="keywords" content="<?= sitebase('siteKeywords'); ?>, <?= $keywords;?>">
+		<meta name="keywords" content="<?= html_escape($pageKeywords); ?>">
 		<meta name="author" content="<?= sitebase('siteAuthor'); ?>">
-        <meta property="og:title" content="Download Lagu <?= $title; ?>" />
+        <meta property="og:title" content="<?= html_escape($pageTitle); ?>" />
         
         <meta name="theme-color" content="#d91f5c" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -20,11 +29,11 @@
         <meta name="apple-mobile-web-app-title" content="<?= sitebase('siteName'); ?>" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="googlebot" content="index, follow" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="<?= html_escape($robotsMeta); ?>" />
         <link rel="manifest" href="<?= siteAsset('manifest.webmanifest'); ?>" />
         <link rel="icon" type="image/svg+xml" href="<?= siteAsset('assets/icons/icon.svg'); ?>" />
         <link rel="apple-touch-icon" href="<?= siteAsset('assets/icons/icon-192.png'); ?>" />
-        <link rel="canonical" href="<?= base_url(uri_string()); ?>" />
+        <link rel="canonical" href="<?= html_escape($canonicalUrl); ?>" />
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -41,14 +50,14 @@
             }
         }
         </script>
-        <meta property="og:url" content="<?= base_url(uri_string()); ?>" />
-        <meta property="og:type" content="website" />
+        <meta property="og:url" content="<?= html_escape($canonicalUrl); ?>" />
+        <meta property="og:type" content="<?= html_escape($ogType); ?>" />
         <meta property="og:locale" content="id_ID" />
-        <meta property="og:image" content="<?= siteAsset('assets/icons/icon-512.png'); ?>" />
+        <meta property="og:image" content="<?= html_escape($ogImage); ?>" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="<?= sitebase('siteName'); ?> <?= $title; ?>" />
-        <meta name="twitter:description" content="<?= sitebase('siteDesc'); ?>" />
-        <meta name="twitter:image" content="<?= siteAsset('assets/icons/icon-512.png'); ?>" />
+        <meta name="twitter:title" content="<?= html_escape($pageTitle); ?>" />
+        <meta name="twitter:description" content="<?= html_escape($pageDescription); ?>" />
+        <meta name="twitter:image" content="<?= html_escape($ogImage); ?>" />
         <!-- Stylesheet -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

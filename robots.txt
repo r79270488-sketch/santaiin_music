@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://santaiin.xyz/sitemap.xml
+Sitemap: https://santaiin.xyz/sitemap.xml
