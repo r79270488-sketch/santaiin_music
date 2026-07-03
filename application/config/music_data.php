@@ -18,4 +18,4 @@ $config['music_worker_delay_min_ms'] = 500;
 $config['music_worker_delay_max_ms'] = 2000;
 $config['music_worker_max_requests'] = 60;
 
-$config['music_admin_token'] = '';
+$config['music_admin_token'] = 'ead3929d7d3a46e53c64e942b6e5462bfd95f38acb5f1ecf';
